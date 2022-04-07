@@ -29,6 +29,7 @@ p {
   cursor: pointer;
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   line-height: 3;
   opacity: 0;
 }
