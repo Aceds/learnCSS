@@ -1,0 +1,69 @@
+p {
+  width: 600px;
+  font-size: 18px;
+  color: #666;
+}
+
+.hover-show {
+  position: relative;
+  a {
+    background-size: 100% 100%, 0 100px;
+    background: linear-gradient(90deg, #ff5722, #ff5722),
+      linear-gradient(90deg, #aaa, #aaa) no-repeat 100% 100%, 0 100%;
+    cursor: pointer;
+    color: transparent;
+    -webkit-background-clip: text;
+    line-height: 3;
+    opacity: 0;
+  }
+  .hover-btn {
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    &:hover {
+      background: #eee;
+    }
+  }
+  .hover-btn:hover ~ p a {
+    transition: 1.2s background 0.3s ease-out, 0.8s line-height ease-out,
+      0.6s opacity ease-in;
+    background-size: 0 100px, 100% 100%;
+    color: transparent;
+    line-height: 1;
+    opacity: 1;
+  }
+  /*简单控制半透明黑色遮罩出现*/
+  a::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s all linear;
+    opacity: 0;
+  }
+  .hover-btn:hover ~ p a::before {
+    opacity: 1;
+  }
+  /*a {
+    background: linear-gradient(90deg, #999, #999),
+    linear-gradient(90deg, #fc0, #fc0);
+    background-size: 100% 100%, 0 100px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%, 0 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .hover-btn:hover ~ p a {
+    transition: .8s all linear;
+    background-size: 0 100px, 100% 100%;
+  }*/
+}

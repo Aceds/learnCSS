@@ -1,0 +1,32 @@
+.logo {
+  position: relative;
+  width: 500px;
+  height: 100px;
+  font-size: 0;
+  cursor: pointer;
+  background: url("img/logo.svg") no-repeat center/contain;
+  margin: 50px auto;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 113px;
+    top: -18px;
+    width: 32px;
+    height: 32px;
+    background: url("img/icon.svg") no-repeat 0 / cover;
+    animation: random 1s -0.7s steps(10) infinite;
+    animation-play-state: paused;
+    //animation-delay: -.7s;
+  }
+  &:hover {
+    &::after {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes random {
+  100% {
+    background-position: 100%;
+  }
+}

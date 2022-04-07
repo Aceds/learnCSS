@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* Box sizing rules
+Normalize.css 是不推荐这么做的，大部分元素的 box-sizing 其实都是 content-box，但是，对于实际开发，全部元素都设置为 border-box 其实是更便于操作的一种方式。
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/*
+scroll-behavior: smooth 意为平滑滚动，当然这里是设置给了 html:focus-within 伪类，而不是直接给 html 赋予平滑滚动，这样做的目的是只对使用键盘 tab 键切换焦点页面时，让页面进行平滑滚动切换，带来更好的使用体验。如果我们设置了如下 CSS：
+html {
+  scroll-behavior: smooth;
+}
+可能会起到一起副作用，譬如，当我们在页面查找元素时候（使用 Ctrl + F、或者 Mac 的 Commond + F），这段 CSS 代码可能会严重延缓我们的查找速度
+*/
+/* Set core body defaults */
+html {
+  font-size: 625%;
+}
+body {
+  color: #333;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font:.13rem/1.5 'PingFang SC', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* https://github.com/chokcoco/iCSS/issues/118
+  使用 CSS prefers-* 规范，提升网站的可访问性与健壮性
+prefers-reduced-motion: reduce，开启了该规则后，相当于告诉用户代理，希望他看到的页面，可以删除或替换掉一些会让部分视觉运动障碍者不适的动画类型。*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --primary-bg-color: #274530;
+  --accent-text-color: #edb361;
+  --spacing-unit: 0.5;
+}

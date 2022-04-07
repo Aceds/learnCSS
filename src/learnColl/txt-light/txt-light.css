@@ -10,6 +10,7 @@
   font-size: 10vmin;
   background-color: #000;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -22,6 +23,7 @@
   height: 100%;
   background-image: linear-gradient(120deg, transparent 0%, transparent 4vmin, var(--lightColor) 8vmin, transparent 12vmin, transparent 16vmin, var(--lightColor) 20vmin, transparent 24vmin, transparent 28vmin, var(--lightColor) 32vmin, transparent 36vmin, transparent 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   z-index: 1;
   background-size: 200% 100%;
   background-repeat: no-repeat;
