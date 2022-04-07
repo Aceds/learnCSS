@@ -1,0 +1,198 @@
+一、语义化
+根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。
+
+二、Why？
+    1、为了裸奔时好看；
+    2、用户体验：例如title、alt用于解释名词或解释图片信息、label标签的活用；
+    3、有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+    4、方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+    5、便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。
+
+三、注意
+    1、尽可能少的使用无语义的标签div和span；
+    2、在语义不明显时，既可以使用div或者p时，尽量用p, 因为p在默认情况下有上下间距，对兼容特殊终端有利；
+    3、不要使用纯样式标签，如：b、font、u等，改用css设置。
+    4、需要强调的文本，可以包含在strong或者em标签中（浏览器预设样式，能用CSS指定就不用他们），strong默认样式是加粗（不要用b），em是斜体（不用i）；
+    5、使用表格时，标题要用caption，表头用thead，主体部分用tbody包围，尾部用tfoot包围。表头和一般单元格要区分开，表头用th，单元格用td；
+    6、表单域要用fieldset标签包起来，并用legend标签说明表单的用途；
+    7、每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在label标签中设置for=someld来让说明文本和相对应的input关联起来。
+
+    <fieldset>
+        <legend>some text</legend>
+        <input type="text" value="haha" />
+    </fieldset>
+
+
+语义化标签：
+
+    <header></header>       页眉
+
+    <hgroup></hgroup>       页面上的一个标题组合一个标题和一个子标题，或者标语的组合
+
+    <nav></nav>             导航 （包含链接的的一个列表）
+
+    <footer></footer>       页脚 页面的底部 或者 版块底部
+
+    <section> </section>    页面上的版块用于划分页面上的不同区域,或者划分文章里不同的节
+
+    <article></article >    用来在页面中表示一套结构完整且独立的内容部分,可以用来呈现论坛的一个帖子，
+                            杂志或报纸中的一篇文章，一篇博客，用户提交的评论内容，可互动的页面模块挂件等。
+
+    <aside></aside>         元素标签可以包含与当前页面或主要内容相关的引用、侧边栏、广告、nav元素组，以及其他类似的有别与主要内容的部分。
+
+                            aside 的内容应该与 article 的内容相关。被包含在<article>中作为主要内容的附属信息部分，
+                            其中的内容以是与当前文章有关的引用、词汇列表等在<article>之外使用，作为页面或站点全局的附属信息部分；
+                            最典型的形式是侧边栏(sidebar)，其中的内容可以是友情链接、附属导航或广告单元等。
+
+    <figure></figure>      用于对元素进行组合。一般用于图片或视频
+    <figcaption><figcaption>figure的子元素 用于对figure的内容 进行说明
+                            <figure>
+                            　　<img src=“miaov.png”/>(注意没有alt)
+                            　　<figcaption>photo and copy</figcaption>
+                            </figure>
+
+    <time></time>           用来表现时间或日期  <p> 我们在每天早上 <time>9:00</time> 开始营业。 </p>参数
+
+    <datalist></datalist>   选项列表。与 input 元素配合使用，来定义 input 可能的值。
+                            <input type="text" list="valList" />
+                                <datalist id="valList">
+                                <option value="javascript">javascript</option>
+                                <option value="html">html</option>
+                                <option value="css">css</option>
+                            </datalist>
+
+    <details></details>     用于描述文档或文档某个部分的细节
+                            该元素用于摘录引用等 应该与页面的主要内容区分开的其他内容
+                            Open 属性默认展开
+
+    < summary></summary>    details 元素的标题
+                            <details>
+                                <summary>标题</summary>
+                                <p>内容细节</p>
+                            </details>
+
+    <dialog></dialog>       定义一段对话
+                            <dialog>
+                            　　<dt>老师</dt>
+                            　　<dd>2+2 等于？</dd>
+                            　　<dt>学生</dt>
+                            　　<dd>4</dd>
+                            　　<dt>老师</dt>
+                            　　<dd>答对了！</dd>
+                            </dialog>
+
+    <address></address>     定义文章 或页面作者的详细联系信息
+    <mark></mark>           需要标记的词或句子
+    <keygen>                给表单添加一个公钥
+                            <form action="http://www.baidu.com" method="get">
+                            　　用户: <input type="text" name="usr_name" />
+                            　　公钥: <keygen name="security" />
+                            　　<input type="submit" />
+                            </form>
+
+    <progress><progress>    定义进度条
+                            <progress max="100" value="76">
+                            　　<span>76</span>%
+                            </progress>
+
+    IE下的兼容
+
+    标签
+    针对IE6-8这些不支持HTML5语义化标签的浏览器我们可以使用javascript来解决他们 方法如下：
+    在页面的头部加下：
+    <script>
+        document.createElement(“header”);
+        document.createElement(“nav”);
+        document.createElement(“footer”);
+        ……
+    </script>
+
+    以上的元素都是块元素(除了<figcaption>).
+
+    为了让这些块及元素在所有版本的浏览器中生效，你需要在样式表文件中设置一下属性 (以下样式代码可以让旧版本浏览器支持本章介绍的块级元素):
+
+    header, section, footer, aside, nav, article, figure{
+        display: block;
+    }
+    HTML5语义化标签在IE6-8下，我们用js创建出来之后，他是不会有任何默认样式的甚至是 display，所以在样式表里 要对这些标签定义一下 它默认的display
+
+    IE8 及更早IE版本无法在这些元素中渲染CSS效果，以至于你不能使用 <header>, <section>, <footer>, <aside>, <nav>, <article>, <figure>,
+    或者其他的HTML5 elements.
+
+    解决办法:你可以使用HTML5 Shiv Javascript脚本来解决IE的兼容问题。HTML5 Shiv下载地址：http://code.google.com/p/html5shiv/
+
+    下载后，将以下代码放入的网页中：
+
+    <!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+    <![endif]-->
+    以上代码在浏览器小于IE9版本时会加载html5shiv.js文件. 你必须将其放置于<head> 元素中，因为 IE浏览器需要在头部加载后渲染这些HTML5的新元素
+
+
+    form新增控件以及特性
+
+    新的输入型控件
+    email:      电子邮箱文本框，跟普通的没什么区别
+                当输入不是邮箱的时候，验证通不过
+                移动端的键盘会有变化
+    tel:        电话号码
+    url:        网页的URL
+    search:     搜索引擎
+    chrome下输入文字后，会多出一个关闭的X
+    range:      特定范围内的数值选择器
+    min、max、step( 步数 )
+
+    新的输入型控件_2
+    number :        只能包含数字的输入框
+    color :         颜色选择器
+    datetime :      显示完整日期
+    datetime-local: 显示完整日期，不含时区
+    time :          显示时间，不含时区
+    date :          显示日期
+    week :          显示周
+    month :         显示月
+
+    新的表单特性和函数
+    placeholder :   输入框提示信息             例子 : 微博的密码框提示
+    autocomplete :  是否保存用户输入值           默认为on，关闭提示选择off
+    autofocus :     指定表单获取输入焦点
+    list和datalist: 为输入框构造一个选择列表     list值为datalist标签的id
+    required :      此项必填，不能为空
+    Pattern :       正则验证 pattern="\d{1,5}“
+    Formaction 在submit里定义提交地址
+
+    表单验证
+    validity对象，通过下面的valid可以查看验证是否通过，如果八种验证都通过返回true，一种验证失败返回false
+    oText.addEventListener("invalid",fn1,false);
+    ev.preventDefault()
+    valueMissing : 输入值为空时
+    typeMismatch : 控件值与预期类型不匹配
+    patternMismatch : 输入值不满足pattern正则
+    tooLong : 超过maxLength最大限制
+    rangeUnderflow : 验证的range最小值
+    rangeOverflow：验证的range最大值
+    stepMismatch: 验证range 的当前值 是否符合min、max及step的规则
+    customError 不符合自定义验证
+    setCustomValidity(); 自定义验证
+
+    表单验证
+    Invalid事件 : 验证反馈 input.addEventListener('invalid',fn,false)
+    阻止默认验证：ev.preventDefault()
+    formnovalidate属性 : 关闭验证
+
+
+
+
+命名规范:https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+
+o-:Object           表示某物是一个对象，并且它可以在任意数量的不相关上下文中使用，而不是你当前所看到的上下文。
+c-:Components       表示某物是一个组件。 这是一个具体的、特定于实现的UI。
+u-:Utility          表示这个类是一个公共类。 它有一个非常特定的角色(通常只提供一个声明)，不应该被绑定或更改。
+t-:Theme            表示类负责向视图添加Theme。 它让我们知道UI组件当前的装饰性外观可能是由于主题的存在。
+s-:Scope            表示类创建了一个新的样式上下文或Scope。 类似于主题，但不一定是装饰性的。
+is-\has-:           表示有问题的UI部分由于状态或条件目前以某种方式样式化。
+_:                  表示这个类是最糟糕的最糟糕的一个hack!
+js-:                表示这部分DOM有一些行为作用于它，并且JavaScript绑定到它来提供该行为。
+qa-:                表示qa或测试工程团队正在运行一个自动化的UI测试，需要找到或绑定到DOM的这些部分。
+                    与JavaScript名称空间一样，这基本上只是为非css目的保留DOM中的钩子。
+

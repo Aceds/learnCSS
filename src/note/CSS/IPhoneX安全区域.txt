@@ -1,0 +1,166 @@
+https://www.jianshu.com/p/4e410eddff66
+最近写小程序时，遇到了 iPhoneX 底部小黑线与内容重叠的问题，实际上是iPhoneX安全区域的适配问题，了解清楚这个问题花了挺多时间的，也实操出了结果，忍不住来总结总结。
+
+本文目录
+前言
+· 内容与小黑线重叠情况说明
+1.安全区域含义
+2.微信小程序适配iPhoneX底部小黑条(Home Indicator)
+（1）适配方案一：使用已知底部小黑条高度34px/68rpx来适配（不推荐）
+（2）适配方案二：使用微信官方API，getSystemInfo()中的safeArea对象进行适配（推荐）
+（3）适配方案三：使用苹果官方推出的css函数env()、constant()来适配 （推荐）
+3.H5适配iPhoneX底部小黑条(Home Indicator)
+· 适配方案：使用苹果官方推出的css函数env()、constant()来适配 （推荐）
+
+前言
+在苹果 iPhoneX 、iPhone XR等设备上，可以看到物理Home键被取消，改为底部小黑条替代home键功能。微信小程序和 h5 网页需要针对这种情况进行适配，否则可能会遇到底部按钮或选项卡栏与底部黑线重叠的情况，如下图。
+
+iPhoneX小黑条与按钮重叠.jpg
+1. 安全区域是什么意思？
+想要解决内容与小黑线重叠的问题，我们需要先了解清楚苹果对于安全区域的定义。
+
+安全区域
+安全区域指的是一个可视窗口范围，处于安全区域的内容不受圆角(corners)、齐刘海(sensor housing)、小黑条(Home Indicator)的影响。
+
+看看苹果官方给的这2张图就明白了，中间蓝色区域即为安全区域。也就是说，适配安全区域也就是让小程序或者H5的内容显示在蓝色区域部分。
+
+iphone-安全区域.png
+同时安全区域是在IOS11之后并且是iPhoneX及以上机型才有的，所以需要适配的是这一类机型（为了方便，下文中统称这类需要适配的机型为iPhoneX），更老的机型则不需要考虑适配问题。
+
+2. 在微信小程序上适配安全区域
+三种方案：
+
+使用已知底部小黑条高度34px/68rpx来适配（不推荐）
+使用微信官方API，getSystemInfo()中的safeArea对象进行适配（推荐）
+使用苹果官方推出的css函数env()、constant()适配（推荐）
+方案一：使用已知底部小黑条高度34px/68rpx来适配（不推荐）
+这是比较老的方法，跟方案2、3比已经不推荐了，大家可以了解了解，着急可以直接看方案2和3。
+
+从网上了解到，iPhone底部的小黑条（Home Indicator）高度是34px，实际我也在真机确认了是34px，所以可以根据该值，设置底部按钮或选项卡的margin-bottom、padding-bottom、height等，或者添加一个div来占位小黑条的位置。
+
+这样做要有一个前提，需要判断当前机型是需要适配安全区域的机型。
+
+问题：如何判断当前机型是需要适配安全区域
+2种方案：
+
+使用wx.getSystemInfoSync()的model属性判断
+使用wx.getSystemInfoSync()中的screenHeight和safeArea对象的bottom属性判断
+方法一：使用wx.getSystemInfoSync()的model属性判断
+已知市面上已有的带安全区域的苹果设备包括iPhone X、iPhone XR、iPhone XS Max、iPhone 11、iPhone 11 Pro、iPhone 11 Pro Max，所以可以直接从getSystemInfoSync()方法中拿到model属性进行判断。iPhone系列微信还未适配手机的model返回值为unknown(iphone)，也可以提前做适配。
+
+let IPHONE_X = /iphone x/i
+let IPHONE_X_11 = /iphone 11/i
+let IPHONE_UNKNOWN = /unknown\(iphone\)/i
+
+//方法一：使用model判断是否是IPhoneX及其他包含安全区域的机型手机
+const isIPhoneX = () => {
+  let model = wx.getSystemInfoSync().model
+  return (model.search(IPHONE_X) > -1 || model.search(IPHONE_X_11) > -1 ||
+    model.search(IPHONE_UNKNOWN) > -1)
+}
+
+//也可以使用正则表达式判断
+const isIPhoneXRegex = () => {
+  let model = wx.getSystemInfoSync().model
+  return (/iphone\sx/i.test(model)
+    || (/iphone/i.test(model) && /unknown/.test(model))
+    || /iphone\s11/i.test(model))
+}
+方法二：使用wx.getSystemInfoSync()中的screenHeight和safeArea对象的bottom属性判断
+这里使用screenHeight而不是windowHeight，因为bottom是以屏幕左上角为原点开始计算的，所以需要的是屏幕高度，对比screenHeight和bottom，如果相等则说明不需要适配，不相等则需要适配。
+
+注意：如果使用微信开发者工具中的模拟器，screenHeight和bottom始终是相等的，需要用真机来测试。
+
+//方法二：使用wx.getSystemInfoSync()中的screenHeight和safeArea的bottom判断
+const isIPhoneX = () => {
+  let screenHeight = wx.getSystemInfoSync().screenHeight
+  let bottom = wx.getSystemInfoSync().safeArea.bottom
+  return screenHeight !== bottom
+}
+解决了如何判断设备是iPhoneX的问题，就可以写代码了。
+
+<view class="bottom-button {{isIpX ? 'view-IPX' : ''}}">底部按钮</view>
+方案二：使用微信官方API，getSystemInfo()中的safeArea对象进行适配（推荐）
+使用wx. getSystemInfo()中的safeArea对象获取底部小黑条的高度
+
+step 1：使用上面讲的方法先判断是否是需要适配的iPhone机型
+step 2：如果是需要适配的机型，使用safeArea中的bottom，得到安全区域底部纵坐标，然后使用screenHeight减去bottom就能得到小黑条的高度。保存到localstorage里面，全局都可以使用。
+
+image.png
+方案三：使用苹果官方推出适配方案css函数env()、constant()来适配 （推荐）
+苹果官方推荐使用env()，constant()来适配，建议使用该方案，不需要管数值具体是多少。这2个方法是什么呢？
+
+env()和constant()，是IOS11新增特性，Webkit的css函数，用于设定安全区域与边界的距离，有4个预定义变量：
+safe-area-inset-left：安全区域距离左边边界的距离
+safe-area-inset-right：安全区域距离右边边界的距离
+safe-area-inset-top：安全区域距离顶部边界的距离
+safe-area-inset-bottom ：安全距离底部边界的距离
+因为目标是需要对底部小黑条做适配，所以只需要关注safe-area-inset-bottom这个值。
+
+而env()和constant()函数有个必要的使用前提，当网页设置viewport-fit=cover的时候才生效，根据微信小程序的表现和我在实际真机测试时这两个函数生效，推测小程序里的viewport-fit默认是cover。
+
+有一点要注意，在IOS11.2系统以前，可以使用constant()函数，但是在IOS11.2系统以后，这个函数就被废弃了，被env()函数替代了。官方原话如下：
+
+The env() function shipped in iOS 11 with the name constant(). Beginning with Safari Technology Preview 41 and the iOS 11.2 beta, constant() has been removed and replaced with env(). You can use the CSS fallback mechanism to support both versions, if necessary, but should prefer env() going forward.
+
+所以我们在做屏幕适配时，需要这样写：
+
+padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+注意：env()和constant()需要同时存在，而且顺序不能换。
+
+3. 在H5上适配安全区域
+在H5上适配安全区域就方便多了，采用viewport+env+constant方案。
+
+viewport-fit 默认有3个值：
+
+contain：可视窗口完全包含网页内容（左图）
+cover：网页内容完全覆盖可视窗口（右图）
+auto：默认值，此值不影响初始布局视图端口，并且整个web页面都是可查看的。
+contain和cover具体区别如下图：
+
+viewport属性.png
+而我们需要将viewport设置为cover，env和constant才能生效。设置代码如下：
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+同时设置env和constant代码，同样env()和constant()需要同时存在，而且顺序不能换。
+
+/* 可以通过增加padding-bottom来适配 */
+padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+
+/* 可以通过margin-bottom来适配 */
+margin-bottom: constant(safe-area-inset-bottom);
+margin-bottom: env(safe-area-inset-bottom);
+
+/* 或者改变高度*/
+height: calc(55px +  constant(safe-area-inset-bottom));
+height: calc(55px +  env(safe-area-inset-bottom));
+也可以在底部添加一个空白的div颜色块来做适配。
+
+还有一种是使用 @supports 隔离兼容样式
+
+可以使用 @supports 来隔离兼容样式，当浏览器支持bottom: constant(safe-area-inset-bottom)或者bottom: env(safe-area-inset-bottom)的时候，bottom-button类就会新增margin-bottom的样式
+
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+    .bottom-button {
+        margin-bottom: constant(safe-area-inset-bottom);
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+}
+以上就是我对iPhoneX安全区域(Safe Area)底部小黑条在微信小程序和H5适配的总结。
+
+如果对你有帮助的话，点赞、评论、赞赏都是对我的鼓励，也是支持我写下去的动力，谢谢！
+
+参考文章：
+
+网页适配 iPhoneX，就是这么简单
+苹果官方开发者文档关于屏幕适配的说明
+微信小程序吸底区域适配iPhone X
+微信小程序适配 iPhone X 总结
+本文原创发布于微信公众号「程序员张晴天」，欢迎关注第一时间获取最新分享，一起进步。
+
+https://upload-images.jianshu.io/upload_images/2530160-1305949cab6dc67c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+
+注意
+当给html body 设置高度100%的时候会自动增加安全区域，所以非必要的时候不要用这个用法，想尽办法用其他方法替换

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.face-wechat {
+  width: 240px;
+  height: 240px;
+  margin: 20px;
+  background: #f5f5fa;
+}
+
+.face-wechat li {
+  background: #ecaa71;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.face-wechat li:only-child {
+  height: 100%;
+}
+
+.face-wechat li:first-child:nth-last-child(2),
+.face-wechat li:first-child:nth-last-child(2) + li {
+  width: 50%;
+  height: 50%;
+}
+
+.face-wechat li:first-child:nth-last-child(2) + li {
+  margin-left: auto;
+}
+
+.face-wechat li:first-child:nth-last-child(3),
+.face-wechat li:first-child:nth-last-child(3) ~ li {
+  width: 50%;
+  height: 50%;
+}
+
+.face-wechat li:first-child:nth-last-child(3) {
+  margin: 0 auto;
+}
+
+.face-wechat li:first-child:nth-last-child(3) ~ li {
+  float: left;
+}
+
+.face-wechat li:first-child:nth-last-child(4),
+.face-wechat li:first-child:nth-last-child(4) ~ li {
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+.face-wechat li:first-child:nth-last-child(5), .face-wechat li:first-child:nth-last-child(6) {
+  width: 160px;
+  height: 160px;
+  float: left;
+}
+
+.face-wechat li:first-child:nth-last-child(5) ~ li,
+.face-wechat li:first-child:nth-last-child(6) ~ li {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.face-wechat li:first-child:nth-last-child(7), .face-wechat li:first-child:nth-last-child(8), .face-wechat li:first-child:nth-last-child(9),
+.face-wechat li:first-child:nth-last-child(7) ~ li,
+.face-wechat li:first-child:nth-last-child(8) ~ li,
+.face-wechat li:first-child:nth-last-child(9) ~ li {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.face-wechat li:first-child:nth-last-child(7) {
+  float: none;
+  margin: 0 auto;
+}
+
+.face-wechat li:first-child:nth-last-child(8) {
+  margin-left: 40px;
+}

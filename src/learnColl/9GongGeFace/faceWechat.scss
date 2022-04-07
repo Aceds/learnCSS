@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.face-wechat {
+  width: 240px;
+  height: 240px;
+  margin: 20px;
+  background: #f5f5fa;
+  li {
+    background: #ecaa71;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    //1个
+    &:only-child {
+      height: 100%;
+    }
+    //2个
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) + li {
+      width: 50%;
+      height: 50%;
+    }
+    &:first-child:nth-last-child(2) + li {
+      margin-left: auto;
+    }
+    //3个
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3) ~ li {
+      width: 50%;
+      height: 50%;
+    }
+    &:first-child:nth-last-child(3) {
+      margin: 0 auto;
+    }
+    &:first-child:nth-last-child(3) ~ li {
+      float: left;
+    }
+    //4个
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ li {
+      width: 50%;
+      height: 50%;
+      float: left;
+    }
+    //5,6个
+    &:first-child:nth-last-child(5),
+    &:first-child:nth-last-child(6) {
+      width: 160px;
+      height: 160px;
+      float: left;
+    }
+    &:first-child:nth-last-child(5) ~ li,
+    &:first-child:nth-last-child(6) ~ li {
+      width: 80px;
+      height: 80px;
+      float: left;
+    }
+    //7,8,9个
+    &:first-child:nth-last-child(7),
+    &:first-child:nth-last-child(8),
+    &:first-child:nth-last-child(9),
+    &:first-child:nth-last-child(7) ~ li,
+    &:first-child:nth-last-child(8) ~ li,
+    &:first-child:nth-last-child(9) ~ li {
+      width: 80px;
+      height: 80px;
+      float: left;
+    }
+    &:first-child:nth-last-child(7) {
+      float: none;
+      margin: 0 auto;
+    }
+    &:first-child:nth-last-child(8) {
+      margin-left: 40px;
+    }
+  }
+}
