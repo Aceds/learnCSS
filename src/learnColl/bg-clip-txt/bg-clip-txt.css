@@ -1,0 +1,46 @@
+body {
+  background: #000;
+}
+
+.bg-clip-txt {
+  font-size: 0.16rem;
+  padding: 20px;
+  color: transparent;
+  text-align: justify;
+  background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top center/cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-clip-line {
+  font-size: 1rem;
+  padding: 20px;
+  font-weight: bold;
+  color: transparent;
+  text-align: justify;
+  background: repeating-linear-gradient(transparent 0%, transparent 50%, #fff calc(50% + 2px), #fff 100%);
+  background-size: 100% 3px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0px 0px 10px #fff);
+}
+
+.bg-filter-txt {
+  font-size: 0.2rem;
+  padding: 20px;
+  font-weight: bold;
+  color: transparent;
+  text-align: justify;
+  background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top center/cover;
+  filter: grayscale(1) invert(1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  mix-blend-mode: hard-light;
+}
+
+.b-filter {
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  filter: grayscale(1);
+}
