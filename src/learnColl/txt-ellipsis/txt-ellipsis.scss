@@ -1,3 +1,28 @@
-p {
-  color: blue;
+//multi ellipsis
+@mixin multi-ellipsis($num: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  white-space: normal;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $num;
+}
+/* 多行省略 */
+.multiple {
+  width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 当内联内容溢出块容器时，将溢出部分替换为（...）。*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 对于 Non-CJK 文本允许在任意字符内发生换行。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字符断行 */
+}
+/* 单行省略 */
+.single {
+  width: 400px;
+  white-space: nowrap; /* 会强制所有文本在同一行内显示 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }

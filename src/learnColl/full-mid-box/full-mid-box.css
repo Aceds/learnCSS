@@ -1,0 +1,30 @@
+.full-block {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.full-block::-webkit-scrollbar {
+  display: none;
+}
+
+.full-block section {
+  padding: 10px;
+  max-width: 500px;
+  min-height: 200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.full-block section:nth-of-type(odd) {
+  background: pink;
+}
+
+.full-block section:nth-child(even) {
+  background: green;
+}
+
+.full-block section:nth-child(2) {
+  max-width: inherit;
+  margin: 0 calc(-50vw + 50%);
+}

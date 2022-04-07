@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="picture.css" />
+  </head>
+  <body>
+    <div class="error-pic">
+      <img src="images/375.png" alt="" />
+      <img src=images/xx.jpg" onerror="this.src='images/break.svg';" alt="">
+      <img src="images/375.png" alt="" />
+    </div>
+    <div class="error-pic-recommend">
+      <img src="images/375.png" alt="街道" />
+      <img src="xx.jpg" alt="CSS" onerror="this.classList.add('error');" />
+      <img src="images/375.png" alt="夜景星空" />
+    </div>
+    <!--利用 srcset，我们可以给不同 dpr 的屏幕提供最适合的图片。-->
+    <img
+      src="images/375.png"
+      sizes="(max-width: 376px) 375px, (max-width: 769px) 768px, 1024px"
+      srcset="images/375.png 375w, images/768.png 768w, images/1024.png 1024w"
+      alt=""
+    />
+    <img
+      src="https://www.w3cplus.com/sites/default/files/blogs/2021/2109/srcset-x1.png"
+      srcset="
+        https://www.w3cplus.com/sites/default/files/blogs/2021/2109/srcset-x1.png 1x,
+        https://www.w3cplus.com/sites/default/files/blogs/2021/2109/srcset-x2.png 2x,
+        https://www.w3cplus.com/sites/default/files/blogs/2021/2109/srcset-x3.png 3x
+      "
+      alt=""
+    />
+  </body>
+</html>

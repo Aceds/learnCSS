@@ -1,0 +1,582 @@
+// css 选择器
+// 表示后代关系的空格
+// 父子关系的>
+// 相邻兄弟关系的 +
+// 兄弟关系 ~
+// 列关系的双管道 ||
+/*选择父元素是 <div> 的所有 <p> 元素*/
+.selector1 div > p {
+  background: blue;
+}
+
+/*选择紧跟 <div> 元素的首个 <p> 元素*/
+.selector2 div + p {
+  background: green;
+}
+
+/*选择前面有 <p> 元素的每个 <ul> 元素*/
+.selector3 p ~ ul {
+  background: #ff0000;
+}
+
+/*title 属性中包含单词 "flower" 的图片会获得黄色边框*/
+.selector4 {
+  img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    display: inline-block;
+  }
+  [title~="flower"] {
+    border: 5px solid yellow;
+  }
+}
+
+/*设置 class 属性值以 "test" 开头的所有 div 元素的背景色*/
+.selector5 div[class^="test"] {
+  background: #ffff00;
+}
+
+/*设置 class 属性值以 "test" 结尾的所有 div 元素的背景色*/
+.selector6 div[class$="test"] {
+  background: deeppink;
+}
+
+// +
+ul,
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+.s-invert,
+.s-adjoining,
+.s-fizzbuzz {
+  display: flex;
+  flex-flow: row wrap;
+  li {
+    min-width: 16px;
+    margin: 0 16px;
+  }
+}
+
+.s-adjoining {
+  .active + .active {
+    color: red;
+  }
+}
+
+.active:not(.active + .active) {
+  color: blue;
+}
+
+//
+.s-fizzbuzz {
+  li {
+    min-width: 80px;
+    counter-increment: abc;
+    &::before {
+      content: counter(abc);
+    }
+    &:nth-child(3n)::before {
+      content: "he";
+    }
+    &:nth-child(5n)::before {
+      content: "helo";
+    }
+    &:nth-child(15n)::before {
+      content: "helloword";
+    }
+  }
+}
+
+.s-important {
+  &:first-line {
+    color: blue;
+  }
+}
+
+.s-scope {
+  color: blue;
+  &:scope {
+    background-color: red;
+  }
+}
+
+.s-foo.s-foo {
+  color: blue;
+}
+
+.s-foo {
+  color: red;
+}
+
+.s-foo[class] {
+  color: green;
+}
+
+.s-button {
+  color: #fff;
+  background-color: #333;
+  &:hover {
+    background-color: pink;
+  }
+}
+
+.cs-button {
+}
+
+//AMCSS 借助html属性来进行css相关开发
+[am-button] {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  color: #fff;
+  background: #f84848;
+  border-radius: 5px;
+}
+
+[am-button~="large"] {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+}
+
+[am-button~="blue"] {
+  background: #3775ff;
+}
+
+//hover 显示相邻兄弟
+.show-pics {
+  position: relative;
+}
+
+.show-me {
+  position: absolute;
+  width: 100px;
+  visibility: hidden;
+  margin-left: 20px;
+  transition: visibility 0.2s;
+}
+
+.show-pic:hover + .show-me,
+.show-me:hover {
+  visibility: visible;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox {
+  border: 1px solid red;
+}
+
+[type="checkbox"]:focus + .checkbox {
+  border-color: blue;
+}
+
+//focus-within
+.cs-normal:focus-within {
+  color: blue;
+  text-shadow: 0 0 1px;
+  input {
+    padding: 1px;
+    border: 1px solid red;
+    outline: none;
+    border-radius: 2px;
+  }
+}
+
+//下拉list
+.cs-bar {
+  text-align: center;
+  background-color: #f0a30a;
+  color: #888;
+  display: inline-block;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.cs-details {
+  display: inline-block;
+  text-align: left;
+}
+
+.cs-summary {
+  display: inline-block;
+  padding: 5px 10px;
+  //text-indent: -15px;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-summary::after {
+  position: relative;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  color: blue;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  margin-left: 10px;
+  background: transparent;
+  border-width: 1px 0 0 1px;
+  transform: rotate(-135deg);
+  transition: transform 0.2s;
+}
+
+.cs-details:focus-within .cs-summary,
+.cs-summary:hover {
+  background-color: #fff;
+  box-shadow: inset 1px 0 #ddd, inset -1px 0 #ddd;
+}
+
+.cs-details:focus-within .cs-summary::after {
+  top: 2px;
+  transform: rotate(45deg);
+}
+
+.cs-datalist {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-top: -1px;
+}
+
+.cs-details:focus-within .cs-datalist {
+  display: block;
+}
+
+.cs-datalist-a {
+  display: block;
+  padding: 5px 10px;
+  transition: background-color 0.2s, color 0.2s;
+  color: inherit;
+}
+
+.cs-datalist-a:hover {
+  background-color: #f5f5f5;
+}
+
+.cs-datalist-a:active {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.cs-datalist-sup {
+  position: absolute;
+  color: #cd0000;
+  font-size: 12px;
+  margin-top: -0.25em;
+  margin-left: 2px;
+}
+
+/*去除chrome 下鼠标点击outline*/
+/* 实际开发这里的.focus-better选择器可以省略 */
+.focus-better :focus:not(:focus-visible) {
+  outline: 0;
+}
+
+//锚点控制更多展开收起
+[data-open="false"],
+.cs-more-p {
+  display: none;
+}
+
+:target ~ {
+  [data-open="true"] {
+    display: none;
+  }
+  [data-open="false"],
+  .cs-more-p {
+    display: block;
+  }
+}
+
+//锚点tab
+.cs-tab-li {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.cs-tab-anchor-2:not(:target) + :not(:target) ~ .cs-tab .cs-tab-li:first-child,
+.cs-tab-anchor-2:target ~ .cs-tab .cs-tab-li:nth-child(2),
+.cs-tab-anchor-3:target ~ .cs-tab .cs-tab-li:nth-child(3) {
+  color: #fff;
+  background: #01806b;
+}
+
+.cs-panel-li {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.cs-tab-anchor-2:not(:target)
+  + :not(:target)
+  ~ .cs-panel
+  .cs-panel-li:first-child,
+.cs-tab-anchor-2:target ~ .cs-panel .cs-panel-li:nth-child(2),
+.cs-tab-anchor-3:target ~ .cs-panel .cs-panel-li:nth-child(3) {
+  display: block;
+}
+.cs-form {
+  padding: 20px;
+}
+//placeholder-shown
+.input-fill {
+}
+textarea {
+  vertical-align: top;
+  margin-right: 10px;
+}
+textarea:not(:empty) + span::before {
+  content: "emp";
+  color: #01806b;
+}
+textarea:not(:placeholder-shown) + span::before {
+  content: "shown";
+  color: red;
+}
+
+//隐藏空元素
+.cs-module:empty {
+  display: none;
+}
+.cs-empty:empty::before {
+  content: "暂无数据";
+}
+//1-3  4-10
+/*tr:nth-child(-n + 3) td {
+  background: cornsilk;
+}
+tr:nth-child(n + 4):nth-child(-n + 10) td {
+  background: mintcream;
+}*/
+
+//input填充
+.input-fill-x,
+.input-outline-x,
+.textarea-outline-x {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.input-fill-x {
+  border-bottom: 1px solid #d0d0d5;
+}
+.input-fill-x::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #2486ff;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+.input-fill-x:focus-within::after {
+  transform: scaleX(1);
+}
+.input-control {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+}
+.input-fill {
+  padding: 20px 16px 6px;
+  border: 1px solid transparent;
+  background: #f5f5f5;
+}
+.input-outline,
+.textarea-outline {
+  padding: 13px 16px 13px;
+  border: 1px solid #d0d0d5;
+  border-radius: 4px;
+  transition: border-color 0.25s;
+}
+.input-outline:focus,
+.textarea-outline:focus {
+  border-color: #2486ff;
+}
+/* 默认placeholder颜色透明不可见 */
+.input-control:placeholder-shown::placeholder {
+  color: transparent;
+}
+.input-label {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.5;
+  left: 16px;
+  top: 14px;
+  color: #a2a9b6;
+  padding: 0 2px;
+  transform-origin: 0 0;
+  pointer-events: none;
+  transition: all 0.25s;
+}
+/* 线框样式label定位 */
+.input-control:not(:placeholder-shown) ~ .input-label,
+.input-control:focus ~ .input-label {
+  color: #2486ff;
+  transform: scale(0.75) translate(-2px, -32px);
+}
+/* 填充样式下label定位 */
+.input-fill:not(:placeholder-shown) ~ .input-label,
+.input-fill:focus ~ .input-label {
+  transform: scale(0.75) translateY(-14px);
+}
+/* 线框交互下有个白色背景 */
+.input-outline ~ .input-label,
+.textarea-outline ~ .input-label {
+  background-color: #fff;
+}
+/*
+  
+<!--最后需要注意的是，建议在完成所有动画后，将元素的will-change删除。下面这个示例展示如何使用脚本正确地应用 will-change 属性的示例，在大部分的场景中，你都应该这样做。
+
+var el = document.getElementById('element');
+
+// 当鼠标移动到该元素上时给该元素设置 will-change 属性
+el.addEventListener('mouseenter', hintBrowser);
+// 当 CSS 动画结束后清除 will-change 属性
+el.addEventListener('animationEnd', removeHint);
+
+function hintBrowser() {
+// 填写上那些你知道的，会在 CSS 动画中发生改变的 CSS 属性名们
+this.style.willChange = 'transform, opacity';
+}
+
+function removeHint() {
+this.style.willChange = 'auto';
+}
+在实际使用will-change可以记作以下几个规则，即 五可做，三不可做：
+
+在样式表中少用will-change
+
+给will-change足够的时间令其发挥该有的作用
+
+使用<custom-ident>来针对超特定的变化（如，left, opacity等）
+
+    如果需要的话，可以JavaScript中使用它（添加和删除）
+
+    修改完成后，删除will-change
+
+    不要同时声明太多的属性
+
+    不要应用在太多元素上
+
+    不要把资源浪费在已停止变化的元素上-->
+*/
+
+/*使用鼠标点击，不会触发 :foucs，只有当键盘操作聚焦元素，使用 Tab 切换焦点时，outline: 2px solid red 这段代码才会生效。*/
+button:active {
+  background: #eee;
+}
+button:focus {
+  outline: 2px solid red;
+}
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*
+button:focus {
+  outline: unset;
+}
+button:focus-visible {
+  outline: 2px solid red;
+}
+*/
+
+/*div id="saveChanges" tabindex="0" role="button">Save</div>*/
+
+/*placeholder*/
+.input-box {
+  position: relative;
+  width: 400px;
+  margin: 50px auto;
+  display: block;
+
+  input {
+    width: 100%;
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    &:focus {
+      border-color: #0b98da;
+      box-shadow: 0 0 0 2px rgba(5, 0, 5, 0.1);
+      outline: 0;
+    }
+    &::placeholder {
+      color: transparent;
+    }
+    &[required] {
+      + .placeholder-txt {
+        &::after {
+          content: "（必填）";
+          color: #f84948;
+          font-weight: bold;
+        }
+      }
+    }
+    &:placeholder-shown {
+      + .placeholder-txt {
+        display: block;
+      }
+    }
+  }
+  .placeholder-txt {
+    opacity: 0.5;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    padding: 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/*
+
+::placeholder {
+  color: transparent;
+}
+
+input:placeholder-shown ~ label {
+  display: block;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+input:is(:not(:placeholder-shown),:focus) ~ label {
+  display: none;
+}
+*/
