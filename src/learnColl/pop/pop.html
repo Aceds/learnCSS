@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>pop-x</title>
+    <link rel="stylesheet" href="../../../assets/styles/reset.css" />
+    <link rel="stylesheet" href="pop.css" />
+    <!-- <script src="../../../assets/js/rem.js"></script> -->
+  </head>
+  <body>
+    <div>
+      <button class="btn" dart-txt="top">top</button>
+      <button class="btn">bottom</button>
+      <button class="btn">left</button>
+      <button class="btn">right</button>
+    </div>
+    <div class="pop-x">
+      <div class="mask"></div>
+      <!--  center-->
+      <div class="pop-x__center">
+        <div class="pop-x__content">
+          <div class="pop-x__box">
+            <i class="pop-x__close"></i>
+            <h3 class="pop-x--tit">温馨提示</h3>
+            <p class="pop-x__msg pop-x--txt">
+              温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+            </p>
+          </div>
+          <footer class="pop-x__footer">
+            <button class="pop-x--btn">取消</button>
+            <button class="pop-x--btn">确定</button>
+          </footer>
+        </div>
+      </div>
+      <!--  top-->
+      <div class="pop-x__top">
+        <div class="pop-x__content">
+          <div class="pop-x__box">
+            <i class="pop-x__close"></i>
+            <h3 class="pop-x--tit">温馨提示</h3>
+            <p class="pop-x__msg pop-x--txt">
+              温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+            </p>
+          </div>
+          <footer class="pop-x__footer">
+            <button class="pop-x--btn">取消</button>
+            <button class="pop-x--btn">确定</button>
+          </footer>
+        </div>
+      </div>
+      <!--  bottom-->
+      <div class="pop-x__bottom">
+        <div class="pop-x__content">
+          <div class="pop-x__box">
+            <i class="pop-x__close"></i>
+            <h3 class="pop-x--tit">温馨提示</h3>
+            <p class="pop-x__msg pop-x--txt">
+              温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+            </p>
+          </div>
+          <footer class="pop-x__footer">
+            <button class="pop-x--btn">取消</button>
+            <button class="pop-x--btn">确定</button>
+          </footer>
+        </div>
+      </div>
+      <!--  left-->
+      <div class="pop-x__left">
+        <div class="pop-x__content">
+          <div class="pop-x__box">
+            <i class="pop-x__close"></i>
+            <h3 class="pop-x--tit">温馨提示</h3>
+            <p class="pop-x__msg pop-x--txt">
+              温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+            </p>
+          </div>
+          <footer class="pop-x__footer">
+            <button class="pop-x--btn">取消</button>
+            <button class="pop-x--btn">确定</button>
+          </footer>
+        </div>
+      </div>
+      <!--  right-->
+      <div class="pop-x__right">
+        <div class="pop-x__content">
+          <div class="pop-x__box">
+            <i class="pop-x__close"></i>
+            <h3 class="pop-x--tit">温馨提示</h3>
+            <p class="pop-x__msg pop-x--txt">
+              温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+            </p>
+          </div>
+          <footer class="pop-x__footer">
+            <button class="pop-x--btn">取消</button>
+            <button class="pop-x--btn">确定</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      let pop = document.querySelector(".pop-x");
+      let btn = document.querySelectorAll(".btn");
+      let popBox = document.querySelector(".pop-x__content");
+      let hide = document.querySelector(".pop-x__close");
+      let popClass = pop.getAttribute("class");
+      let boxClass = popBox.getAttribute("class");
+      console.log(popClass);
+      console.log(boxClass);
+      for (let i = 0; i < btn.length; i++) {
+        let index = i + 1;
+        btn[i].setAttribute("index", index);
+        btn[i].addEventListener("click", function () {
+          pop.classList.remove("hide");
+          pop.classList.add("show" + this.getAttribute("index"));
+          setTimeout(() => {
+            popBox.classList.add("box" + this.getAttribute("index"));
+          }, 300);
+        });
+        hide.addEventListener("click", function () {
+          popBox.classList.add("out");
+          setTimeout(() => {
+            pop.classList.add("hide");
+            pop.setAttribute("class", popClass);
+            popBox.setAttribute("class", boxClass);
+          }, 300);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -27,7 +27,9 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
-
+ul, ol, li {
+  list-style: none;
+}
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -43,6 +45,7 @@ html {
 /* Set core body defaults */
 html {
   font-size: 625%;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   color: #333;
@@ -70,7 +73,29 @@ textarea,
 select {
   font: inherit;
 }
-
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
 /* Remove all animations and transitions for people that prefer not to see them */
 /* https://github.com/chokcoco/iCSS/issues/118
   使用 CSS prefers-* 规范，提升网站的可访问性与健壮性
@@ -93,3 +118,14 @@ prefers-reduced-motion: reduce，开启了该规则后，相当于告诉用户�
   --accent-text-color: #edb361;
   --spacing-unit: 0.5;
 }
+article, aside, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+body, p, ul, ol, li, dd, dl, dt, h1, h2, h3, h4, h5, h6, form, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import url("../../../assets/styles/var.scss");
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3296207 */
+  src: url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.eot?t=1649237340770");
+  /* IE9 */
+  src: url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.eot?t=1649237340770#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.woff2?t=1649237340770") format("woff2"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.woff?t=1649237340770") format("woff"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.ttf?t=1649237340770") format("truetype"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.svg?t=1649237340770#iconfont") format("svg");
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: #f8f8f9;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  user-select: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.checkbox-group > * {
+  margin: 8px;
+}
+
+.checkbox-group-legend {
+  font-size: 15px;
+  color: #9c9c9c;
+  text-align: center;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.checkbox-input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox-input:checked + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+
+.checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+
+.checkbox-input:checked + .checkbox-tile .checkbox-icon,
+.checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: #2260ff;
+}
+
+.checkbox-input:focus + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+
+.checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.checkbox-tile:hover {
+  border-color: #2260ff;
+}
+
+.checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-icon {
+  transition: 0.375s ease;
+  color: #494949;
+}
+
+.checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+}
+
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+.cs-vote-x {
+  margin: 12px;
+  padding: 8px 16px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 1px #e8e8e8;
+}
+
+.cs-vote-x .cs-vote-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.cs-vote-x .cs-vote-item + .cs-vote-item {
+  position: relative;
+  border-top: 1px solid #dedede;
+}
+
+.cs-vote-x .vote-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.cs-vote-x .vote-bar {
+  display: flex;
+  align-items: center;
+  color: #ff804c;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.cs-vote-x .vote-progress {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  margin-right: 8px;
+  display: block;
+  background: #f2f3f9;
+  border-radius: 2px;
+}
+
+.cs-vote-x .vote-progress::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: calc(1% * var(--progress));
+  display: block;
+  background: #ff804c;
+  border-radius: 2px;
+}
+
+.cs-vote-x .vote-label {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.cs-vote-x .vote-label em {
+  color: #999;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.cs-vote-x .vote-opt {
+  position: relative;
+  margin-left: 24px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.cs-vote-x .vote-opt .vote-radio {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.cs-vote-x .vote-opt .vote-radio + .vote-ico {
+  position: relative;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 1px solid #dedede;
+  outline: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.cs-vote-x .vote-opt .vote-radio + .vote-ico::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: #ff804c;
+  border-radius: 50%;
+  transform: scale(0) translate(-50%, -50%);
+  transition: transform 0.3s;
+  transform-origin: 0 0;
+}
+
+.cs-vote-x .vote-opt .vote-radio:checked + .vote-ico::after {
+  transform: scale(1) translate(-50%, -50%);
+}
+
+.cs-vote-x .vote-opt .vote-checkbox {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.cs-vote-x .vote-opt .vote-checkbox + .vote-ico {
+  position: relative;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #dedede;
+  outline: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.cs-vote-x .vote-opt .vote-checkbox + .vote-ico::after {
+  position: relative;
+  top: -2px;
+  font-size: 12px;
+  color: #ff8453;
+  line-height: 12px;
+  font-family: "iconfont";
+  content: "\eaf1";
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.3s;
+  transform-origin: 0 0;
+}
+
+.cs-vote-x .vote-opt .vote-checkbox:checked + .vote-ico::after {
+  opacity: 1;
+}

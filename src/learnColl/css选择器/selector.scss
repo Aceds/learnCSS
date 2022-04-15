@@ -332,10 +332,7 @@ a:hover {
   border: 1px solid #ccc;
 }
 
-.cs-tab-anchor-2:not(:target)
-  + :not(:target)
-  ~ .cs-panel
-  .cs-panel-li:first-child,
+.cs-tab-anchor-2:not(:target) + :not(:target) ~ .cs-panel .cs-panel-li:first-child,
 .cs-tab-anchor-2:target ~ .cs-panel .cs-panel-li:nth-child(2),
 .cs-tab-anchor-3:target ~ .cs-panel .cs-panel-li:nth-child(3) {
   display: block;
@@ -453,7 +450,7 @@ tr:nth-child(n + 4):nth-child(-n + 10) td {
   background-color: #fff;
 }
 /*
-  
+
 <!--最后需要注意的是，建议在完成所有动画后，将元素的will-change删除。下面这个示例展示如何使用脚本正确地应用 will-change 属性的示例，在大部分的场景中，你都应该这样做。
 
 var el = document.getElementById('element');
@@ -490,7 +487,7 @@ this.style.willChange = 'auto';
     不要把资源浪费在已停止变化的元素上-->
 */
 
-/*使用鼠标点击，不会触发 :foucs，只有当键盘操作聚焦元素，使用 Tab 切换焦点时，outline: 2px solid red 这段代码才会生效。*/
+/*使用鼠标点击，不会触发 :focus，只有当键盘操作聚焦元素，使用 Tab 切换焦点时，outline: 2px solid red 这段代码才会生效。*/
 button:active {
   background: #eee;
 }

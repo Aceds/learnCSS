@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../assets/styles/reset.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <script src="../../../assets/js/rem.js"></script>
+  </head>
+  <body>
+    <dl class="flotage-x">
+      <dd>1234</dd>
+      <dd>1235</dd>
+      <dd>123</dd>
+      <dd>12dd3</dd>
+      <dd>12dd3</dd>
+      <dd>1eee2s3</dd>
+      <dd>12ds3</dd>
+      <dd>12ss3</dd>
+    </ul>
+    <div class="bag-x" >
+      <div class="open-btn">开</div>
+    </div>
+  <script>
+      let flag=true;
+
+      let btn=document.querySelector('.open-btn');
+      let bag=document.querySelector('.bag-x');
+      function openbg(){
+        flag=!flag;
+        flag==true?bag.classList.add('active','animate'):bag.classList.remove('active','animate');
+      }
+      btn.addEventListener('click',openbg);
+  </script>
+  </body>
+</html>
