@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="switch.css" />
+  </head>
+  <body>
+    <div class="u-switch">
+      <div class="u-switch-item"></div>
+    </div>
+    <script>
+      const container = document.querySelectorAll(".u-switch")[0];
+      const ele = document.querySelectorAll(".u-switch-item")[0];
+
+      container.addEventListener("click", (e) => {
+        const classValue = ele.getAttribute("class");
+
+        ele.setAttribute(
+          "class",
+          classValue === "u-switch-item"
+            ? "u-switch-item move"
+            : "u-switch-item"
+        );
+      });
+    </script>
+  </body>
+</html>

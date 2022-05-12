@@ -1,32 +1,30 @@
-.border-double {
-  width: 200px;
-  height: 50px;
+:root {
+  --borderColor: #03a9f3;
+  --url: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png");
+}
+
+.btn-normal {
+  position: relative;
+  width: 280px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px auto;
-  padding: 5px;
+  box-sizing: border-box;
+}
+
+.border-double {
   border: 1px solid #f84948;
   box-shadow: 0 0 0 6px #d0bfff, 0 0 0 12px #d1a066, 0 15px 20px 0 rgba(251, 211, 160, 0.9);
-  border-radius: 10px;
 }
 
 .border-animate {
-  position: relative;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  overflow: hidden;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #fff;
   z-index: 2;
-  margin: 10px auto;
+  overflow: hidden;
   background: #000;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .border-animate::before {
@@ -66,19 +64,11 @@
   }
 }
 
-.btn-15 {
-  position: relative;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
+.btn-shadow {
   background: #b621fe;
-  border: none;
-  z-index: 1;
-  margin: 0 auto;
-  border-radius: 5px;
 }
 
-.btn-15:after {
+.btn-shadow::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -86,8 +76,243 @@
   top: 0;
   right: 0;
   z-index: -1;
-  background-color: red;
+  background-color: pink;
   border-radius: 5px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(90, 5, 249, 0.5), 7px 7px 20px 0px rgba(134, 243, 104, 0.3), -4px -4px 5px 0px rgba(133, 239, 230, 0.5) inset;
   transition: all 0.3s ease;
+}
+
+.b-linear-gradient {
+  border-style: solid;
+  border-image: linear-gradient(deepskyblue, deeppink) 20/10px;
+}
+
+.b-radio-gredient {
+  border-style: solid;
+  border-image: radial-gradient(deepskyblue, deeppink) 20/10px;
+}
+
+.b-img-pic {
+  border: 10px solid;
+  border-image: var(--url) 21 round;
+}
+
+.b-stripe {
+  border: 12px solid;
+  border-image: repeating-linear-gradient(-45deg, red, red 5px, transparent 5px, transparent 10px) 12;
+}
+
+.b-dashed {
+  border: 1px dashed purple;
+  border-image: repeating-linear-gradient(135deg, deeppink, deeppink 5px, transparent 5px, transparent 10px) 3;
+}
+
+.b-pseudo {
+  border: 1px solid #03a9f3;
+}
+
+.b-pseudo::before, .b-pseudo::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.b-pseudo::before {
+  top: -5px;
+  left: -5px;
+  border-top: 1px solid var(--borderColor);
+  border-left: 1px solid var(--borderColor);
+}
+
+.b-pseudo::after {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 1px solid var(--borderColor);
+  border-right: 1px solid var(--borderColor);
+}
+
+.b-pseudo:hover::before, .b-pseudo:hover::after {
+  width: calc(100% + 9px);
+  height: calc(100% + 9px);
+}
+
+.border-dashed-animate {
+  background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x, linear-gradient(90deg, red 50%, transparent 0) repeat-x, linear-gradient(0deg, blue 50%, transparent 0) repeat-y, linear-gradient(0deg, orange 50%, transparent 0) repeat-y;
+  background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+}
+
+.border-dashed-animate:hover {
+  animation: linearGradientMove 0.3s infinite linear;
+}
+
+@keyframes linearGradientMove {
+  100% {
+    background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
+  }
+}
+
+.b-rainbow {
+  z-index: 0;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.b-rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #03a9f3;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 0 0;
+  background-image: conic-gradient(#399953, #399953);
+  animation: rotate 4s linear infinite;
+}
+
+.b-rainbow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+  animation: opacityChange 3s infinite alternate;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.b-conic {
+  z-index: 0;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.b-conic::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #1a232a;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(transparent, #a8efff, transparent 30%);
+  animation: rotate 4s linear infinite;
+}
+
+.b-conic::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #000;
+  border-radius: 5px;
+}
+
+.border-dashed {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 20px dashed blue;
+  margin: 30px auto;
+}
+
+.dashed-one {
+  background: red;
+}
+
+.dashed-one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+}
+
+.dashed-two {
+  background: #fff;
+  background-clip: padding-box;
+}
+
+.dashed-two::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  background: red;
+  z-index: -1;
+}
+
+.dashed-three {
+  background-image: linear-gradient(#fff 90px, #fff 90px);
+  background-repeat: no-repeat;
+}
+
+.dashed-three::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: red;
+  z-index: -1;
+}
+
+.dashed-four {
+  background: pink;
+  box-shadow: inset 180px 0 0 0 #fff;
+}
+
+.dashed-outline {
+  border: 20px solid pink;
+}
+
+.dashed-outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: 20px dashed blue;
 }

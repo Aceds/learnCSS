@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice</title>
+    <link rel="stylesheet" href="../../../assets/styles/reset.css" />
+    <link rel="stylesheet" href="notice.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_2732400_4i6naraehy.css"
+    />
+    <link rel="stylesheet" href="../../../assets/swiper/css/swiper.css" />
+    <script src="../../../assets/swiper/js/swiper.js"></script>
+  </head>
+  <body>
+    <!--notice 开始-->
+    <div class="cm-notice">
+      <i class="cm-notice-icon"></i>
+      <!--多条轮播 开始-->
+      <div class="swiper-notice">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播1
+            </li>
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播2
+            </li>
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播3
+            </li>
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播4
+            </li>
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播5
+            </li>
+            <li class="swiper-slide">
+              多条轮播多条轮播多条轮播多条轮播多条轮播多条轮播6
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--多条轮播 结束-->
+    </div>
+    <!--单条左右滚动-->
+    <div class="marquee-horn">
+      <i class="m-horn-warn"></i>
+      <div class="m-horn-txt">
+        <p>
+          单条左右滚动单条左右滚动单条左右滚动单条左右滚动单条左右滚动单条左右滚动单条左右滚动单条左右滚动。
+        </p>
+      </div>
+      <i class="m-horn-close"></i>
+    </div>
+    <!--多条css轮播 结束-->
+    <div class="cs-notice">
+      <ul style="--n: 6">
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2</li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播多播3</li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播4</li>
+        <li>多条css轮播多条css轮播多条css轮播多条c播多条css轮播5</li>
+        <li>多条css轮播多条css轮多条css轮播多条css轮播6</li>
+      </ul>
+    </div>
+    <!--notice 结束-->
+    <script type="text/javascript">
+      var swiper = new Swiper(".swiper-container", {
+        pagination: ".swiper-pagination",
+        paginationClickable: true,
+        direction: "vertical",
+        autoplay: 1000,
+      });
+    </script>
+  </body>
+</html>

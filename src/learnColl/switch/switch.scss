@@ -1,0 +1,67 @@
+.u-switch {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 220px;
+  height: 120px;
+  border-radius: 120px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 120px;
+    z-index: 1;
+  }
+}
+
+.u-switch-item {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  background: #fff;
+  border-radius: 120px;
+  cursor: pointer;
+  filter: contrast(10);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: #3f51b5;
+    filter: blur(5px);
+    transform: translate(0, -50%);
+  }
+
+  &::before {
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    transition: 0.5s 0.05s;
+  }
+
+  &::after {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    transition: 0.3s;
+  }
+}
+
+.move {
+  &::before {
+    left: 110px;
+  }
+  &::after {
+    left: 120px;
+  }
+}
