@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../assets//styles/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- 字数少的时候居中显示，字数多的时候左对齐 -->
+    <div class="cw-content-table">cw-content-tablecw-content-tablecw-content-tablecw-content-table</div>
+    <div class="cw-content-fit">cw-content-fitcw-content-fitcw-content-fitcw-content-fitcw-content-fit</div>
+    <!-- https://demo.cssworld.cn/new/3/1-2.php -->
+
+    <!-- https://demo.cssworld.cn/new/3/6-2.php -->
+    <dl class="break-txt">
+        <dd>
+            <h4>随意中断单词，降低阅读体验</h4>
+            <p>本节会大量出现“CJK文本”这个词。</p>
+            <p class="break-all">本节会大量出现“CJK文本”这个词。</p>
+        </dd>
+        <dd>
+            <h4>word-break:break-all对连续破折号无效</h4>
+            <p>本节会大量出现“CJK文本”这个词。———————————————</p>
+            <p class="break-all">本节会大量出现“CJK文本”这个词。———————————————</p>
+        </dd>
+        <dd>
+            <h4>同时应用word-wrap:break-word</h4>
+            <p class="break-all break-word">本节会大量出现“CJK文本”这个词。———————————————</p>
+        </dd>
+        <dd>
+            <h4>应用line-break:anywhere</h4>
+            <p class="line-break">本节会大量出现“CJK文本”这个词。———————————————</p>
+        </dd>
+    </dl>
+    <div class="underline-txt">
+        <p>默认下划线的位置</p>
+        <p class="under">text-underline-position:under</p>
+        <p class="offset">text-underline-offset</p>
+    </div>
+    <div class="btn-add"></div>
+    <div class="btn-sub"></div>
+    <div class="square"></div>
+    <div class="outline-offset">
+        <img src="../../../assets/images/border-florid.svg">
+        <img src="../../../assets/images/border-florid.svg">
+        <img src="../../../assets/images/border-florid.svg">
+    </div>
+    <div class="zoom-pic" hidden>
+        <img src="../../../assets/images/border-florid.svg">
+    </div>
+
+    <div class="pie-simple" style="--percent:10;">
+        <div class="pie-left"></div>
+        <div class="pie-right"></div>
+    </div>
+
+    <ul class="rank-tag">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="bar" style="--progress:40"></div>
+
+    <div class="cs-button">
+        <button class="button-a">炫彩按钮</button>
+        <button class="button-b">高光按钮</button>
+        <button class="button-c">点击我</button>
+    </div>
+    <div class="animation-delay">
+        <div class="loading"><i></i><i></i><i></i><i></i></div>
+        <!-- 负延时 -->
+        <div class="loading negative"><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <!-- animation -->
+    <div class="clock-pendulum"></div>
+
+    <div class="box-break-radius">
+        <span class="text">我是个圆角的小换行，看看吧</span>
+    </div>
+    <dl class="form-label">
+        <dt>姓名</dt>
+        <dd>1656668449121.png</dd>
+    </dl>
+    <dl class="form-label">
+        <dt>身份证号</dt>
+        <dd>1656668449121.png</dd>
+    </dl>
+    <dl class="form-label-space">
+        <dt>姓名</dt>
+        <dd>1656668449121.png</dd>
+    </dl>
+    <dl class="form-label-space">
+        <dt>身份证号</dt>
+        <dd>1656668449121.png</dd>
+    </dl>
+    <ul class="show-counter">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+
+
+
+</body>
+<script>
+    const eleImg = document.querySelector('.zoom-pic');
+    if (eleImg) {
+        eleImg.addEventListener('click', function () {
+            const width = this.getAttribute('width');
+        })
+    }
+</script>
+
+</html>

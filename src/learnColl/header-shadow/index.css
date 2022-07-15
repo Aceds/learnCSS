@@ -1,0 +1,27 @@
+header {
+  position: sticky;
+  top: 0;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+shadow::before {
+  content: "";
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+}
+shadow::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(#fff 10px, transparent);
+}
+
+main {
+  padding: 20px;
+}

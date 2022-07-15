@@ -53,7 +53,6 @@ body {
   background-size: 0 3px;
   transition: 1s background;
 }
-
 .txt-colorful-hover-line a:hover {
   color: #fff;
   background-size: 100% 3px;
@@ -66,7 +65,6 @@ body {
   background-clip: text;
   transition: 0.6s all linear;
 }
-
 .text-colorful-hover:hover a {
   background-size: 100% 100%;
   color: transparent;

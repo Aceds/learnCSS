@@ -1,0 +1,29 @@
+:root {
+  --theme-color-red: #f84848; //主题色
+  //文字
+  --c-text-color: #333; //主文字色
+  --c-text-color-inverse: #fff; //反色
+  --c-text-color-sub: #666; //主文字色
+  --c-text-color-grey: #999; //辅助灰色，如加载更多的提示信息
+  --c-text-color-blue: #5187ff;
+  --c-text-color-placeholder: #808080;
+  --c-text-color-disabled: #c0c0c0;
+  //背景
+  --bg-color: #f2f2f6; /* 背景颜色 */
+  --bg-color-white: #fff; /* 背景白色 */
+  --bg-color-tag: #fef4ea; //标签底色
+  --bg-color-tag-light: #f2f1f6; //灰色标签底色
+  --bg-color-clash: #0ebcff; //对阵色
+  --bg-light: #ffefef; //浅色
+  --bg-color-mask: rgba(0, 0, 0, 0.6); //遮罩颜色
+  //按钮
+  --btn-size-h: 44px;
+  --btn-width-lg: 100%;
+  --btn-width-sm: 64%;
+  --btn-bg-color-grey: #f5f5f5; //灰色按钮
+  --opacity-disabled: 0.3; // 禁用态的透明度
+  //间距
+  --gap-sm: 8px;
+  --gap-base: 12px;
+  --gap-lg: 16px;
+}

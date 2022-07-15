@@ -21,18 +21,17 @@
   object-fit: cover;
   display: inline-block;
 }
-
-.selector4 [title~="flower"] {
+.selector4 [title~=flower] {
   border: 5px solid yellow;
 }
 
 /*设置 class 属性值以 "test" 开头的所有 div 元素的背景色*/
-.selector5 div[class^="test"] {
+.selector5 div[class^=test] {
   background: #ffff00;
 }
 
 /*设置 class 属性值以 "test" 结尾的所有 div 元素的背景色*/
-.selector6 div[class$="test"] {
+.selector6 div[class$=test] {
   background: deeppink;
 }
 
@@ -60,7 +59,6 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
 }
-
 .s-invert li,
 .s-adjoining li,
 .s-fizzbuzz li {
@@ -80,19 +78,15 @@ a:hover {
   min-width: 80px;
   counter-increment: abc;
 }
-
 .s-fizzbuzz li::before {
   content: counter(abc);
 }
-
 .s-fizzbuzz li:nth-child(3n)::before {
   content: "he";
 }
-
 .s-fizzbuzz li:nth-child(5n)::before {
   content: "helo";
 }
-
 .s-fizzbuzz li:nth-child(15n)::before {
   content: "helloword";
 }
@@ -104,7 +98,6 @@ a:hover {
 .s-scope {
   color: blue;
 }
-
 .s-scope:scope {
   background-color: red;
 }
@@ -125,7 +118,6 @@ a:hover {
   color: #fff;
   background-color: #333;
 }
-
 .s-button:hover {
   background-color: pink;
 }
@@ -140,13 +132,13 @@ a:hover {
   border-radius: 5px;
 }
 
-[am-button~="large"] {
+[am-button~=large] {
   width: 150px;
   height: 40px;
   line-height: 40px;
 }
 
-[am-button~="blue"] {
+[am-button~=blue] {
   background: #3775ff;
 }
 
@@ -167,7 +159,7 @@ a:hover {
   visibility: visible;
 }
 
-[type="checkbox"] {
+[type=checkbox] {
   position: absolute;
   clip: rect(0 0 0 0);
 }
@@ -176,7 +168,7 @@ a:hover {
   border: 1px solid red;
 }
 
-[type="checkbox"]:focus + .checkbox {
+[type=checkbox]:focus + .checkbox {
   border-color: blue;
 }
 
@@ -184,7 +176,6 @@ a:hover {
   color: blue;
   text-shadow: 0 0 1px;
 }
-
 .cs-normal:focus-within input {
   padding: 1px;
   border: 1px solid red;
@@ -285,16 +276,15 @@ a:hover {
   outline: 0;
 }
 
-[data-open="false"],
+[data-open=false],
 .cs-more-p {
   display: none;
 }
 
-:target ~ [data-open="true"] {
+:target ~ [data-open=true] {
   display: none;
 }
-
-:target ~ [data-open="false"],
+:target ~ [data-open=false],
 :target ~ .cs-more-p {
   display: block;
 }
@@ -362,6 +352,8 @@ tr:nth-child(n + 4):nth-child(-n + 10) td {
 .input-fill-x,
 .input-outline-x,
 .textarea-outline-x {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
 }
@@ -514,7 +506,6 @@ button:focus-visible {
   margin: 50px auto;
   display: block;
 }
-
 .input-box input {
   width: 100%;
   line-height: 40px;
@@ -523,27 +514,22 @@ button:focus-visible {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
 .input-box input:focus {
   border-color: #0b98da;
   box-shadow: 0 0 0 2px rgba(5, 0, 5, 0.1);
   outline: 0;
 }
-
 .input-box input::placeholder {
   color: transparent;
 }
-
 .input-box input[required] + .placeholder-txt::after {
   content: "（必填）";
   color: #f84948;
   font-weight: bold;
 }
-
 .input-box input:placeholder-shown + .placeholder-txt {
   display: block;
 }
-
 .input-box .placeholder-txt {
   opacity: 0.5;
   pointer-events: none;

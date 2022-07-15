@@ -16,7 +16,7 @@
   </head>
   <body>
     <!--notice 开始-->
-    <div class="cm-notice">
+    <div class="cm-notice" style="display: none">
       <i class="cm-notice-icon"></i>
       <!--多条轮播 开始-->
       <div class="swiper-notice">
@@ -46,7 +46,7 @@
       <!--多条轮播 结束-->
     </div>
     <!--单条左右滚动-->
-    <div class="marquee-horn">
+    <div class="marquee-horn" style="display: none">
       <i class="m-horn-warn"></i>
       <div class="m-horn-txt">
         <p>
@@ -55,9 +55,9 @@
       </div>
       <i class="m-horn-close"></i>
     </div>
-    <!--多条css轮播 结束-->
-    <div class="cs-notice">
-      <ul style="--n: 6">
+    <!--多条scss轮播 结束-->
+    <div class="cs-notice" style="display: none">
+      <ul style="--m: 6">
         <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
         <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2</li>
         <li>多条css轮播多条css轮播多条css轮播多条css轮播多播3</li>
@@ -66,12 +66,28 @@
         <li>多条css轮播多条css轮多条css轮播多条css轮播6</li>
       </ul>
     </div>
+    <!--多条css滚动-->
+    <div class="cs-notice-ani">
+      <ul style="--s: 6">
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
+        <li>
+          多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2
+        </li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播多播3</li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播4</li>
+        <li>多条css轮播多条css轮播多条css轮播多条c播多条css轮播5</li>
+        <li>多条css轮播多条css轮多条css轮播多条css轮播6</li>
+        <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
+      </ul>
+    </div>
     <!--notice 结束-->
     <script type="text/javascript">
       var swiper = new Swiper(".swiper-container", {
         pagination: ".swiper-pagination",
-        paginationClickable: true,
+        // paginationClickable: true,
         direction: "vertical",
+        lazyLoading: true,
+        loop: true,
         autoplay: 1000,
       });
     </script>

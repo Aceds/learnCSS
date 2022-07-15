@@ -7,7 +7,6 @@
   border-radius: 120px;
   cursor: pointer;
 }
-
 .u-switch::before {
   content: "";
   position: absolute;
@@ -30,7 +29,6 @@
   cursor: pointer;
   filter: contrast(10);
 }
-
 .u-switch-item::before, .u-switch-item::after {
   content: "";
   position: absolute;
@@ -41,14 +39,12 @@
   filter: blur(5px);
   transform: translate(0, -50%);
 }
-
 .u-switch-item::before {
   width: 100px;
   height: 100px;
   left: 10px;
   transition: 0.5s 0.05s;
 }
-
 .u-switch-item::after {
   width: 80px;
   height: 80px;
@@ -59,7 +55,6 @@
 .move::before {
   left: 110px;
 }
-
 .move::after {
   left: 120px;
 }

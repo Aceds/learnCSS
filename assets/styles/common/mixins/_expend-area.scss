@@ -1,0 +1,20 @@
+// 扩大点击区域
+@mixin expend-area($size: 0) {
+  position: absolute;
+  left: $size;
+  top: $size;
+  right: $size;
+  bottom: $size;
+  content: '';
+}
+@mixin set-expend-area($size) {
+  position: relative;
+  &::before {
+    @include expend-area($size);
+  }
+}
+// @example
+// SCSS
+// .example {
+//   @include set-expend-area(-8px);
+// }

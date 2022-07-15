@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count-down</title>
+    <link rel="stylesheet" href="../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <count-down style="--t:5"></count-down>
+    <ul class="father">
+        <li class="son">我的爱好
+            <ul class="father">
+                <li class="son">游泳</li>
+                <li class="son">跑步</li>
+                <li class="son">篮球</li>
+            </ul>
+        </li>
+        <li class="son">我的朋友
+            <ul class="father">
+                <li class="son">游泳
+                    <ul class="father">
+                        <li class="son">游泳</li>
+                        <li class="son">跑步</li>
+                        <li class="son">篮球</li>
+                    </ul>
+                </li>
+                <li class="son">跑步</li>
+                <li class="son">篮球</li>
+            </ul>
+        </li>
+        <li class="son">我的爱好</li>
+    </ul>
+    <div class="box">
+        <p>选出下列你喜欢的</p>
+        <input type="checkbox" /><label>丁一</label><br />
+        <input type="checkbox" /><label>刘二</label><br />
+        <input type="checkbox" /><label>张三</label><br />
+        <input type="checkbox" /><label>李四</label><br />
+        <input type="checkbox" /><label>王五</label><br />
+        <input type="checkbox" /><label>赵六</label><br />
+        <input type="checkbox" /><label>冯七</label><br />
+        <p class="count">你总共选择了<span></span>位</p>
+    </div>
+    <script>
+        const list = document.getElementsByTagName('input');
+        const len = list.length;
+        for (var i = 0; i < len; i++) {
+            list[i].index = i;
+            list[i].addEventListener('click', function () {
+                if (this.checked) {
+                    this.className = 'check';
+                } else {
+                    this.className = '';
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

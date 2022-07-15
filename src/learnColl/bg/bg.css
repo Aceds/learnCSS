@@ -4,7 +4,7 @@ div {
 }
 
 .bg-line-x {
-  background: conic-gradient(from 135deg at 100px 100px, rgba(174, 246, 247, 0.7), transparent 50%, transparent), linear-gradient(135deg, orange, #ff008c);
+  background: conic-gradient(from 135deg at 100px 100px, rgba(174, 246, 247, 0.7), transparent 50%, transparent), linear-gradient(135deg, orange, hsl(327deg, 100%, 50%));
 }
 
 .bg-triangle {

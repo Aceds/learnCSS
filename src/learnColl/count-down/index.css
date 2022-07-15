@@ -1,0 +1,80 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.father {
+  padding-left: 20px;
+  counter-reset: count;
+}
+
+.son::before {
+  counter-increment: count;
+  content: counters(count, "-") ". ";
+}
+
+.box {
+  counter-reset: count;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+
+.check {
+  counter-increment: count;
+}
+
+.count span::after {
+  content: counter(count);
+}
+
+@property --t {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+@counter-style stop {
+  system: cyclic;
+  symbols: "Go~";
+  range: infinite 0;
+}
+count-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 120px;
+}
+
+count-down::after {
+  --t: 5;
+  --dur: 1;
+  counter-reset: time var(--t);
+  content: counter(time, stop);
+  animation: count calc(var(--t) * var(--dur) * 1s) steps(var(--t)) forwards, shark calc(var(--dur) * 1s) calc(var(--dur) * 0.8s) calc(var(--t));
+}
+
+@keyframes count {
+  to {
+    --t: 0;
+  }
+}
+@keyframes shark {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+count-down:active::after {
+  animation: none;
+}

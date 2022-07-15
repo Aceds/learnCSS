@@ -1,13 +1,9 @@
 @charset "UTF-8";
-@import url("../../../assets/styles/var.scss");
 @font-face {
-  font-family: "iconfont";
-  /* Project id 3296207 */
-  src: url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.eot?t=1649237340770");
-  /* IE9 */
+  font-family: "iconfont"; /* Project id 3296207 */
+  src: url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.eot?t=1649237340770"); /* IE9 */
   src: url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.eot?t=1649237340770#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.woff2?t=1649237340770") format("woff2"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.woff?t=1649237340770") format("woff"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.ttf?t=1649237340770") format("truetype"), url("//at.alicdn.com/t/font_3296207_nu085y2zc9h.svg?t=1649237340770#iconfont") format("svg");
 }
-
 *,
 *:after,
 *:before {
@@ -32,7 +28,6 @@ body {
   border: 1px solid #999;
   border-radius: 5px;
 }
-
 .checkbox-group > * {
   margin: 8px;
 }
@@ -54,30 +49,25 @@ body {
   white-space: nowrap;
   width: 1px;
 }
-
 .checkbox-input:checked + .checkbox-tile {
   border-color: #2260ff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #2260ff;
 }
-
 .checkbox-input:checked + .checkbox-tile:before {
   transform: scale(1);
   opacity: 1;
   background-color: #2260ff;
   border-color: #2260ff;
 }
-
 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
 .checkbox-input:checked + .checkbox-tile .checkbox-label {
   color: #2260ff;
 }
-
 .checkbox-input:focus + .checkbox-tile {
   border-color: #2260ff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
 }
-
 .checkbox-input:focus + .checkbox-tile:before {
   transform: scale(1);
   opacity: 1;
@@ -98,7 +88,6 @@ body {
   cursor: pointer;
   position: relative;
 }
-
 .checkbox-tile:before {
   content: "";
   position: absolute;
@@ -118,11 +107,9 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-
 .checkbox-tile:hover {
   border-color: #2260ff;
 }
-
 .checkbox-tile:hover:before {
   transform: scale(1);
   opacity: 1;
@@ -132,7 +119,6 @@ body {
   transition: 0.375s ease;
   color: #494949;
 }
-
 .checkbox-icon svg {
   width: 3rem;
   height: 3rem;
@@ -153,7 +139,6 @@ body {
     height: -webkit-fill-available;
   }
 }
-
 dd {
   margin: 0;
   padding: 0;
@@ -167,23 +152,19 @@ dd {
   background-color: #fff;
   box-shadow: 0 2px 1px #e8e8e8;
 }
-
 .cs-vote-x .cs-vote-item {
   display: flex;
   align-items: center;
   padding: 18px 0;
 }
-
 .cs-vote-x .cs-vote-item + .cs-vote-item {
   position: relative;
   border-top: 1px solid #dedede;
 }
-
 .cs-vote-x .vote-info {
   min-width: 0;
   flex: 1;
 }
-
 .cs-vote-x .vote-bar {
   display: flex;
   align-items: center;
@@ -191,7 +172,6 @@ dd {
   font-size: 12px;
   line-height: 1;
 }
-
 .cs-vote-x .vote-progress {
   position: relative;
   flex: 1;
@@ -201,7 +181,6 @@ dd {
   background: #f2f3f9;
   border-radius: 2px;
 }
-
 .cs-vote-x .vote-progress::before {
   position: absolute;
   left: 0;
@@ -213,7 +192,6 @@ dd {
   background: #ff804c;
   border-radius: 2px;
 }
-
 .cs-vote-x .vote-label {
   font-size: 14px;
   line-height: 1.2;
@@ -221,13 +199,11 @@ dd {
   word-break: break-all;
   word-wrap: break-word;
 }
-
 .cs-vote-x .vote-label em {
   color: #999;
   font-size: 12px;
   margin-left: 8px;
 }
-
 .cs-vote-x .vote-opt {
   position: relative;
   margin-left: 24px;
@@ -235,12 +211,10 @@ dd {
   display: flex;
   align-items: center;
 }
-
 .cs-vote-x .vote-opt .vote-radio {
   position: absolute;
   clip: rect(0 0 0 0);
 }
-
 .cs-vote-x .vote-opt .vote-radio + .vote-ico {
   position: relative;
   appearance: none;
@@ -252,7 +226,6 @@ dd {
   border-radius: 50%;
   box-sizing: border-box;
 }
-
 .cs-vote-x .vote-opt .vote-radio + .vote-ico::after {
   position: absolute;
   left: 50%;
@@ -266,16 +239,13 @@ dd {
   transition: transform 0.3s;
   transform-origin: 0 0;
 }
-
 .cs-vote-x .vote-opt .vote-radio:checked + .vote-ico::after {
   transform: scale(1) translate(-50%, -50%);
 }
-
 .cs-vote-x .vote-opt .vote-checkbox {
   position: absolute;
   clip: rect(0 0 0 0);
 }
-
 .cs-vote-x .vote-opt .vote-checkbox + .vote-ico {
   position: relative;
   appearance: none;
@@ -289,7 +259,6 @@ dd {
   border-radius: 2px;
   box-sizing: border-box;
 }
-
 .cs-vote-x .vote-opt .vote-checkbox + .vote-ico::after {
   position: relative;
   top: -2px;
@@ -303,7 +272,6 @@ dd {
   transition: opacity 0.3s;
   transform-origin: 0 0;
 }
-
 .cs-vote-x .vote-opt .vote-checkbox:checked + .vote-ico::after {
   opacity: 1;
 }
@@ -311,11 +279,9 @@ dd {
 .switch {
   display: none;
 }
-
 .switch:checked ~ .switch-btn {
   background-color: #e9e9e9;
 }
-
 .switch:checked ~ .switch-btn .circle {
   left: 100%;
   margin-left: -2px;
@@ -331,17 +297,14 @@ dd {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-
 .switch-btn:active .circle {
   width: 21px;
-  border-radius: 60% 100% 100% 60% / 70% 80% 80% 70%;
+  border-radius: 60% 100% 100% 60%/70% 80% 80% 70%;
 }
-
 .switch-btn:active .circle.true {
   width: 21px;
-  border-radius: 100% 60% 60% 100% / 80% 70% 70% 80%;
+  border-radius: 100% 60% 60% 100%/80% 70% 70% 80%;
 }
-
 .switch-btn .circle {
   /* 白色的球 */
   position: absolute;
@@ -356,7 +319,6 @@ dd {
   transition: all 0.1s;
   text-align: center;
 }
-
 .switch-btn .circle .circle-fix-wrap {
   display: inline-block;
   line-height: 16px;

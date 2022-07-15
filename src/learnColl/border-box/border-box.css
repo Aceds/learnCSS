@@ -26,7 +26,6 @@
   background: #000;
   border-radius: 5px;
 }
-
 .border-animate::before {
   content: "";
   position: absolute;
@@ -39,7 +38,6 @@
   background-size: 50% 100%;
   border-radius: 5px;
 }
-
 .border-animate::after {
   content: "";
   position: absolute;
@@ -63,11 +61,9 @@
     transform: translateX(-50%);
   }
 }
-
 .btn-shadow {
   background: #b621fe;
 }
-
 .btn-shadow::after {
   position: absolute;
   content: "";
@@ -110,7 +106,6 @@
 .b-pseudo {
   border: 1px solid #03a9f3;
 }
-
 .b-pseudo::before, .b-pseudo::after {
   content: "";
   position: absolute;
@@ -118,21 +113,18 @@
   height: 20px;
   transition: 0.3s ease-in-out;
 }
-
 .b-pseudo::before {
   top: -5px;
   left: -5px;
   border-top: 1px solid var(--borderColor);
   border-left: 1px solid var(--borderColor);
 }
-
 .b-pseudo::after {
   right: -5px;
   bottom: -5px;
   border-bottom: 1px solid var(--borderColor);
   border-right: 1px solid var(--borderColor);
 }
-
 .b-pseudo:hover::before, .b-pseudo:hover::after {
   width: calc(100% + 9px);
   height: calc(100% + 9px);
@@ -143,7 +135,6 @@
   background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
   background-position: 0 0, 0 100%, 0 0, 100% 0;
 }
-
 .border-dashed-animate:hover {
   animation: linearGradientMove 0.3s infinite linear;
 }
@@ -153,14 +144,12 @@
     background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
   }
 }
-
 .b-rainbow {
   z-index: 0;
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
 }
-
 .b-rainbow::before {
   content: "";
   position: absolute;
@@ -177,7 +166,6 @@
   background-image: conic-gradient(#399953, #399953);
   animation: rotate 4s linear infinite;
 }
-
 .b-rainbow::after {
   content: "";
   position: absolute;
@@ -196,7 +184,6 @@
     transform: rotate(1turn);
   }
 }
-
 @keyframes opacityChange {
   50% {
     opacity: 1;
@@ -205,7 +192,6 @@
     opacity: 0.5;
   }
 }
-
 .b-conic {
   z-index: 0;
   width: 200px;
@@ -213,7 +199,6 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
 .b-conic::before {
   content: "";
   position: absolute;
@@ -225,10 +210,9 @@
   background-color: #1a232a;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: conic-gradient(transparent, #a8efff, transparent 30%);
+  background-image: conic-gradient(transparent, rgb(168, 239, 255), transparent 30%);
   animation: rotate 4s linear infinite;
 }
-
 .b-conic::after {
   content: "";
   position: absolute;
@@ -255,7 +239,6 @@
 .dashed-one {
   background: red;
 }
-
 .dashed-one::before {
   content: "";
   position: absolute;
@@ -270,7 +253,6 @@
   background: #fff;
   background-clip: padding-box;
 }
-
 .dashed-two::before {
   content: "";
   position: absolute;
@@ -286,7 +268,6 @@
   background-image: linear-gradient(#fff 90px, #fff 90px);
   background-repeat: no-repeat;
 }
-
 .dashed-three::after {
   content: "";
   position: absolute;
@@ -306,7 +287,6 @@
 .dashed-outline {
   border: 20px solid pink;
 }
-
 .dashed-outline::before {
   content: "";
   position: absolute;
@@ -315,4 +295,13 @@
   bottom: 0;
   right: 0;
   outline: 20px dashed blue;
+}
+
+.m-triangle {
+  content: "";
+  height: 0;
+  width: 0;
+  border-right: 10px solid red;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }

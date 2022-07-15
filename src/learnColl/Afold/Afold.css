@@ -100,7 +100,6 @@
   line-height: 1.5;
   font-size: 16px;
 }
-
 .a-fold-txt .fold-btn {
   position: relative;
   float: right;
@@ -111,7 +110,6 @@
   border-radius: 2px;
   clear: both;
 }
-
 .a-fold-txt .fold-btn::before {
   content: "...";
   position: absolute;
@@ -119,7 +117,6 @@
   color: #333;
   transform: translateX(-100%);
 }
-
 .a-fold-txt::before {
   float: right;
   content: "";

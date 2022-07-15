@@ -1,81 +1,82 @@
 body {
-  background: #000;
+	background: #000;
 }
 .bg-clip-txt {
-  font-size: 0.16rem;
-  padding: 20px;
-  color: transparent;
-  text-align: justify;
-  background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top
-    center/cover;
-  -webkit-background-clip: text;
-  background-clip: text;
+	font-size: 0.16rem;
+	padding: 20px;
+	color: transparent;
+	text-align: justify;
+	background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top
+		center/cover;
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 .bg-clip-line {
-  font-size: 1rem;
-  padding: 20px;
-  font-weight: bold;
-  color: transparent;
-  text-align: justify;
-  background: repeating-linear-gradient(
-    transparent 0%,
-    transparent 50%,
-    #fff calc(50% + 2px),
-    #fff 100%
-  );
-  background-size: 100% 3px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  filter: drop-shadow(0px 0px 10px #fff);
+	font-size: 1rem;
+	padding: 20px;
+	font-weight: bold;
+	color: transparent;
+	text-align: justify;
+	background: repeating-linear-gradient(
+		transparent 0%,
+		transparent 50%,
+		#fff calc(50% + 2px),
+		#fff 100%
+	);
+	background-size: 100% 3px;
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0px 0px 10px #fff);
 }
 .bg-filter-txt {
-  font-size: 0.2rem;
-  padding: 20px;
-  font-weight: bold;
-  color: transparent;
-  text-align: justify;
-  background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top
-    center/cover;
-  filter: grayscale(1) invert(1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  mix-blend-mode: hard-light;
+	font-size: 0.2rem;
+	padding: 20px;
+	font-weight: bold;
+	color: transparent;
+	text-align: justify;
+	background: url("https://i.giphy.com/Ju7l5y9osyymQ.gif") no-repeat top
+		center/cover;
+	filter: grayscale(1) invert(1);
+	-webkit-background-clip: text;
+	background-clip: text;
+	mix-blend-mode: hard-light;
 }
 .b-filter {
-  width: 200px;
-  height: 50px;
-  background: #fff;
-  filter: grayscale(1);
+	width: 200px;
+	height: 50px;
+	background: #fff;
+	filter: grayscale(1);
 }
 
 .txt-colorful-hover-line {
-  a {
-    color: #0cc;
-    //background: linear-gradient(90deg, #0cc, #0cc) no-repeat 100% 100%;
-    //background-size: 100% 3px;
-    /*background: linear-gradient(90deg, #0cc 50%, transparent 50%, transparent 1px) repeat-x 100% 100%;
+	a {
+		color: #0cc;
+		//background: linear-gradient(90deg, #0cc, #0cc) no-repeat 100% 100%;
+		//background-size: 100% 3px;
+		/*background: linear-gradient(90deg, #0cc 50%, transparent 50%, transparent 1px) repeat-x 100% 100%;
     background-size: 10px 2px;*/
-    background: linear-gradient(90deg, #ff3c41, #fc0, #0ebeff) no-repeat 0 100%;
-    background-size: 0 3px;
-    transition: 1s background;
-    &:hover {
-      color: #fff;
-      background-size: 100% 3px;
-    }
-  }
+		background: linear-gradient(90deg, #ff3c41, #fc0, #0ebeff) no-repeat 0
+			100%;
+		background-size: 0 3px;
+		transition: 1s background;
+		&:hover {
+			color: #fff;
+			background-size: 100% 3px;
+		}
+	}
 }
 
 .text-colorful-hover {
-  a {
-    background: linear-gradient(90deg, #fc0, red) no-repeat 0 100%;
-    background-size: 0 100px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: 0.6s all linear;
-  }
-  &:hover a {
-    background-size: 100% 100%;
-    color: transparent;
-  }
+	a {
+		background: linear-gradient(90deg, #fc0, red) no-repeat 0 100%;
+		background-size: 0 100px;
+		-webkit-background-clip: text;
+		background-clip: text;
+		transition: 0.6s all linear;
+	}
+	&:hover a {
+		background-size: 100% 100%;
+		color: transparent;
+	}
 }

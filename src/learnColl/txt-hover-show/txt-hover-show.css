@@ -22,7 +22,6 @@ p {
     background-size: 0 100px, 100% 100%;
   }*/
 }
-
 .hover-show a {
   background-size: 100% 100%, 0 100px;
   background: linear-gradient(90deg, #ff5722, #ff5722), linear-gradient(90deg, #aaa, #aaa) no-repeat 100% 100%, 0 100%;
@@ -33,7 +32,6 @@ p {
   line-height: 3;
   opacity: 0;
 }
-
 .hover-show .hover-btn {
   position: relative;
   z-index: 10;
@@ -44,19 +42,16 @@ p {
   border: 1px solid #eee;
   cursor: pointer;
 }
-
 .hover-show .hover-btn:hover {
   background: #eee;
 }
-
 .hover-show .hover-btn:hover ~ p a {
-  transition: 1.2s background 0.3s ease-out, 0.8s line-height ease-out, 0.6s opacity ease-in;
+  transition: 1.2s background 0.3s ease-out, 0.8s line-height ease-out, 0.6s opacity ease-in;
   background-size: 0 100px, 100% 100%;
   color: transparent;
   line-height: 1;
   opacity: 1;
 }
-
 .hover-show a::before {
   content: "";
   position: absolute;
@@ -69,7 +64,6 @@ p {
   transition: 0.3s all linear;
   opacity: 0;
 }
-
 .hover-show .hover-btn:hover ~ p a::before {
   opacity: 1;
 }

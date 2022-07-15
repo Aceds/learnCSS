@@ -6,14 +6,12 @@
 .error-pic {
   display: flex;
 }
-
 .error-pic img {
   width: 128px;
   height: 96px;
   margin: 5px;
   object-fit: cover;
 }
-
 .error-pic img[src$="break.svg"] {
   object-fit: contain;
   outline: 1px solid #ddd;
@@ -23,21 +21,18 @@
 .error-pic-recommend {
   display: flex;
 }
-
 .error-pic-recommend img {
   width: 128px;
   height: 96px;
   margin: 5px;
   object-fit: cover;
 }
-
 .error-pic-recommend img.error {
   display: inline-block;
   transform: scale(1);
   content: "";
   color: transparent;
 }
-
 .error-pic-recommend img.error::before {
   content: "";
   position: absolute;
@@ -47,7 +42,6 @@
   height: 100%;
   background: #f5f5f5 url(images/break.svg) no-repeat center/50% 50%;
 }
-
 .error-pic-recommend img.error::after {
   content: attr(alt);
   position: absolute;

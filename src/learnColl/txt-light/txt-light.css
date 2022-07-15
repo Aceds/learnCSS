@@ -13,7 +13,6 @@
   background-clip: text;
   color: transparent;
 }
-
 .lightTxt::after {
   content: attr(data-text);
   position: absolute;
@@ -38,17 +37,14 @@
     background-position: -190% 0;
   }
 }
-
 .full-block {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
 }
-
 .full-block::-webkit-scrollbar {
   display: none;
 }
-
 .full-block section {
   padding: 10px;
   max-width: 500px;
@@ -56,15 +52,12 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 .full-block section:nth-of-type(odd) {
   background: pink;
 }
-
 .full-block section:nth-child(even) {
   background: green;
 }
-
 .full-block section:nth-child(2) {
   max-width: inherit;
   margin: 0 calc(-50vw + 50%);
@@ -77,7 +70,6 @@
   margin: 50px auto;
   display: block;
 }
-
 .input-box input {
   width: 100%;
   line-height: 40px;
@@ -86,27 +78,22 @@
   border-radius: 5px;
   box-sizing: border-box;
 }
-
 .input-box input:focus {
   border-color: #0b98da;
   box-shadow: 0 0 0 2px rgba(5, 0, 5, 0.1);
   outline: 0;
 }
-
 .input-box input::placeholder {
   color: transparent;
 }
-
 .input-box input[required] + .placeholder-txt::after {
   content: "（必填）";
   color: #f84948;
   font-weight: bold;
 }
-
 .input-box input:placeholder-shown + .placeholder-txt {
   display: block;
 }
-
 .input-box .placeholder-txt {
   opacity: 0.5;
   pointer-events: none;

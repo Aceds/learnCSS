@@ -1,0 +1,30 @@
+// triangle 三角形
+// @param  {[string]} $direction   [top][bottom][left][right]
+@mixin triangle($direction, $size, $color) {
+  content: '';
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  } @else if $direction == right {
+    border-left: $size solid $color;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+  } @else if $direction == bottom {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  } @else if $direction == left {
+    border-right: $size solid $color;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+  }
+}
+// @example
+// SCSS
+// .example {
+//   @include triangle(left, 10px, red);
+// }

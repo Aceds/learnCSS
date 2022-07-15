@@ -1,0 +1,35 @@
+// flex实现垂直水平居中
+@mixin center-flex($align: center, $justify: center) {
+  display: flex;
+  @if ($align !=false) {
+    align-items: $align;
+  }
+  @if ($justify !=false) {
+    justify-content: $justify;
+  }
+}
+// @example
+// .example {
+//   @include center-flex;
+// }
+
+// 使用translate实现水平垂直居中
+@mixin center-translate($direction: both) {
+  position: absolute;
+  @if $direction == both {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  } @else if $direction == horizontal {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  } @else if $direction == vertical {
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+// @example
+// SCSS
+// .example {
+//   @include center-translate;
+// }

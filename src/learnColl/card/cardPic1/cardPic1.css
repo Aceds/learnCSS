@@ -14,27 +14,21 @@ body {
   width: 190px;
   margin: 250px auto;
 }
-
 .panel:hover .card {
   filter: blur(1.5px);
 }
-
 .panel:hover .card1 {
   background-size: 215% 135%;
 }
-
 .panel:hover .title {
   color: rgba(255, 255, 255, 0.2);
 }
-
 .panel:hover .card-inform {
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
 }
-
 .panel:hover .slide {
   bottom: 0;
 }
-
 .panel:hover .ring:before,
 .panel:hover .ring:after {
   transform: translateX(-50%) translateY(-50%) rotate(310deg);
@@ -65,7 +59,7 @@ body {
   transition: all 1s;
   height: 270px;
   width: 190px;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .card1 {
@@ -90,12 +84,12 @@ body {
 }
 
 .ring:before {
-  border-color: #ebebeb #ebebeb rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   z-index: -1;
 }
 
 .ring:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ebebeb #ebebeb;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(235, 235, 235) rgb(235, 235, 235);
 }
 
 p {
@@ -150,7 +144,7 @@ p {
   margin: 20px auto;
   padding: 10px;
   background: linear-gradient(to top, red, red) left top no-repeat, linear-gradient(to right, red, red) left top no-repeat, linear-gradient(to left, red, red) right top no-repeat, linear-gradient(to bottom, red, red) right top no-repeat, linear-gradient(to left, red, red) left bottom no-repeat, linear-gradient(to bottom, red, red) left bottom no-repeat, linear-gradient(to top, red, red) right bottom no-repeat, linear-gradient(to left, red, red) right bottom no-repeat, linear-gradient(135deg, #85ffbd, #fffb7d);
-  background-size: 20px 4px, 4px 20px, 20px 4px, 4px 20px, 20px 4px, 4px 20px, 20px 4px, 4px 20px, 100% 100%;
+  background-size: 20px 4px, 4px 20px, 20px 4px, 4px 20px, 20px 4px, 4px 20px, 20px 4px, 4px 20px, 100% 100%;
   box-sizing: border-box;
   background-clip: padding-box;
 }

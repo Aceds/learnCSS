@@ -1,0 +1,24 @@
+//用户头像
+@mixin u-avatar($size, $outline: 0, $color: transparent) {
+  width: $size;
+  height: $size;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: $outline;
+  background-color: $color;
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+// @example
+// SCSS
+// .example {
+//   @include u-avatar(48px, 2px, #ccc);
+// }

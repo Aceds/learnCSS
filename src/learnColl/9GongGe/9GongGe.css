@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-
 .pictures-adaptive img {
   display: block;
   max-width: 100%;
@@ -59,14 +58,14 @@
 }
 
 /*  5张以上图片  */
-.wrap:nth-child(n + 5),
-.wrap:nth-child(1):nth-last-child(n + 5),
-.wrap:nth-child(1):nth-last-child(n + 5) ~ .wrap {
+.wrap:nth-child(n+5),
+.wrap:nth-child(1):nth-last-child(n+5),
+.wrap:nth-child(1):nth-last-child(n+5) ~ .wrap {
   width: 32%;
   padding-bottom: 32%;
 }
 
-.wrap:nth-child(n + 5):not(:nth-child(3n + 1)),
-.wrap:nth-child(1):nth-last-child(n + 5) ~ .wrap:not(:nth-child(3n + 1)) {
+.wrap:nth-child(n+5):not(:nth-child(3n+1)),
+.wrap:nth-child(1):nth-last-child(n+5) ~ .wrap:not(:nth-child(3n+1)) {
   margin-left: 2%;
 }

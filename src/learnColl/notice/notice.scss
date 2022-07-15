@@ -1,151 +1,162 @@
+@use "sass:math";
+
 @font-face {
-  font-family: "iconfont"; /* Project id 2732400 */
-  src: url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.woff2?t=1652342063287")
-      format("woff2"),
-    url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.woff?t=1652342063287")
-      format("woff"),
-    url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.ttf?t=1652342063287")
-      format("truetype");
+	font-family: "iconfont"; /* Project id 2732400 */
+	src: url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.woff2?t=1652342063287")
+			format("woff2"),
+		url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.woff?t=1652342063287")
+			format("woff"),
+		url("//at.alicdn.com/t/font_2732400_9nekrkjbrtv.ttf?t=1652342063287")
+			format("truetype");
 }
 
 @mixin ico-font {
-  font-family: "iconfont" !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: "iconfont" !important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 /*notice*/
 .cm-notice {
-  position: relative;
-  color: #9e3b29;
-  font-size: 12px;
-  margin: 0 auto;
-  padding: 7px 8px;
-  display: flex;
-  align-items: center;
-  background: #ffead5;
-  .swiper-notice {
-    flex: 1;
-    display: block;
-    height: 16px;
-    line-height: 16px;
-    padding: 0 8px 0 0;
-    overflow: hidden;
-    .swiper-wrapper,
-    .swiper-container {
-      width: 100%;
-    }
-  }
-  .swiper-slide {
-    display: block;
-    text-align: left;
-    word-break: keep-all;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .cm-notice-icon {
-    width: 24px;
-    height: 16px;
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    color: #ff7f4a;
-    font-size: 14px;
-    @include ico-font;
+	position: relative;
+	color: #9e3b29;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 7px 8px;
+	display: flex;
+	align-items: center;
+	background: #ffead5;
+	.swiper-notice {
+		flex: 1;
+		display: block;
+		height: 16px;
+		line-height: 16px;
+		padding: 0 8px 0 0;
+		overflow: hidden;
+		.swiper-wrapper,
+		.swiper-container {
+			width: 100%;
+		}
+	}
+	.swiper-slide {
+		display: block;
+		text-align: left;
+		word-break: keep-all;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.cm-notice-icon {
+		width: 24px;
+		height: 16px;
+		display: inline-flex;
+		align-items: center;
+		flex-shrink: 0;
+		color: #ff7f4a;
+		font-size: 14px;
+		@include ico-font;
 
-    &::before {
-      content: "\e618";
-    }
-  }
+		&::before {
+			content: "\e618";
+		}
+	}
 }
 
 /*左右滚动 开始*/
 .marquee-horn {
-  position: relative;
-  width: 100%;
-  min-height: 30px;
-  overflow: hidden;
-  padding: 0 5px 0 10px;
-  display: flex;
-  align-items: center;
-  background: #fffae7;
-  .m-horn-txt {
-    position: relative;
-    flex: 1;
-    height: 16px;
-    line-height: 16px;
-    color: #ff7f4a;
-    font-size: 12px;
-    padding: 7px 0;
-    overflow: hidden;
-    box-sizing: content-box;
-    &:before,
-    &:after {
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      width: 8px;
-      height: 100%;
-      content: "";
-    }
-    &:before {
-      left: 0;
-      background: linear-gradient(to right, #fffae7, rgba(255, 250, 231, 0));
-    }
-    &:after {
-      right: 0;
-      background: linear-gradient(to left, #fffae7, rgba(255, 250, 231, 0));
-    }
-    p {
-      position: absolute;
-      display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      word-break: keep-all;
-      animation: marquee 10s linear infinite;
-    }
-  }
-  .m-horn-warn,
-  .m-horn-close {
-    width: 16px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    color: #ff7f4a;
-    font-size: 12px;
-    @include ico-font;
-  }
-  .m-horn-warn {
-    margin-right: 2px;
-    &::before {
-      content: "\e696";
-    }
-  }
-  .m-horn-close {
-    width: 24px;
-    justify-content: flex-end;
-    &::before {
-      content: "\eb6a";
-      margin-right: 4px;
-    }
-  }
+	position: relative;
+	width: 100%;
+	min-height: 30px;
+	overflow: hidden;
+	padding: 0 5px 0 10px;
+	display: flex;
+	align-items: center;
+	background: #fffae7;
+	.m-horn-txt {
+		position: relative;
+		flex: 1;
+		height: 16px;
+		line-height: 16px;
+		color: #ff7f4a;
+		font-size: 12px;
+		padding: 7px 0;
+		overflow: hidden;
+		box-sizing: content-box;
+		&:before,
+		&:after {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			width: 8px;
+			height: 100%;
+			content: "";
+		}
+		&:before {
+			left: 0;
+			background: linear-gradient(
+				to right,
+				#fffae7,
+				rgba(255, 250, 231, 0)
+			);
+		}
+		&:after {
+			right: 0;
+			background: linear-gradient(
+				to left,
+				#fffae7,
+				rgba(255, 250, 231, 0)
+			);
+		}
+		p {
+			position: absolute;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			word-break: keep-all;
+			animation: marquee 10s linear infinite;
+		}
+	}
+	.m-horn-warn,
+	.m-horn-close {
+		width: 16px;
+		height: 30px;
+		display: inline-flex;
+		align-items: center;
+		flex-shrink: 0;
+		color: #ff7f4a;
+		font-size: 12px;
+		@include ico-font;
+	}
+
+	.m-horn-warn {
+		margin-right: 2px;
+		&::before {
+			content: "\e696";
+		}
+	}
+	.m-horn-close {
+		width: 24px;
+		justify-content: flex-end;
+		&::before {
+			content: "\eb6a";
+			margin-right: 4px;
+		}
+	}
 }
 
 /*走马灯动画 */
 
 @keyframes marquee {
-  5% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+	5% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
 
 @keyframes typing {
-  /*0%{
+	/*0%{
       transform: translate3d(0px, 0, 0px);
   }
   20%{
@@ -163,61 +174,121 @@
   100%{
       transform: translate3d(0px, -120px, 0px);
   }*/
-  0% {
-    transform: translate3d(0px, 0, 0px);
-  }
-  100% {
-    transform: translate3d(0px, calc(var(--n) * -24px), 0px);
-  }
+	0% {
+		transform: translate3d(0px, 0, 0px);
+	}
+	100% {
+		transform: translate3d(0px, calc(var(--n) * -24px), 0px);
+	}
 }
 
-/*css滚动*/
+/*sass滚动*/
 $height: 24px;
 $num: 6;
+// $num: $n;
 //$num:var(--n);
 $speed: 0.3s;
 $delay: 0.8s;
-$duration: ($speed + $delay) * $num;
+$duration: calc(($speed + $delay) * $num);
 
-$eachFrames: 1 / $num;
-$eachDelayFrames: percentage($delay / ($speed + $delay) * $eachFrames);
+$eachFrames: math.div(1, $num);
+$eachDelayFrames: percentage(math.div($delay, $speed + $delay) * $eachFrames);
+$schild: math.div($duration, $num);
+
+@keyframes dd {
+	@for $i from 1 through 3 {
+		$j: calc(1 / 2);
+		$k: percentage(math.div($delay, $speed + $delay) * $eachFrames);
+		#{$k} {
+			// transform: scaleY(1);
+			background-color: red;
+		}
+	}
+}
+
 .cs-notice {
-  color: #fff;
-  font-size: 12px;
-  margin: 0 auto;
-  height: 24px;
-  line-height: 24px;
-  overflow: hidden;
-  padding: 0 16px;
-  background: rgb(255, 162, 0);
-  ul {
-    //height: 24px;
-    //animation: typing 3s steps(var(--n)) infinite both;
-    animation: scroll $duration steps($num) infinite;
-  }
-  li {
-    width: 100%;
-    white-space: nowrap;
-    cursor: pointer;
-  }
+	color: #fff;
+	font-size: 12px;
+	margin: 0 auto;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	padding: 0 16px;
+	background: rgb(255, 162, 0);
+	ul {
+		//height: 24px;
+		//animation: typing 3s steps(var(--n)) infinite both;
+		animation: scroll $duration steps($num) infinite;
+	}
+	li {
+		width: 100%;
+		white-space: nowrap;
+		cursor: pointer;
+	}
 }
 
 @mixin createFrames() {
-  @for $i from 0 through $num {
-    $start: percentage($eachFrames * $i);
-    #{$start} {
-      transform: translate(0, -$i * $height);
-    }
-    $end: $start + $eachDelayFrames;
-    #{$end} {
-      transform: translate(0, -$i * $height);
-    }
-  }
+	@for $i from 0 through $num {
+		$start: percentage($eachFrames * $i);
+		#{$start} {
+			transform: translate(0, calc($i * $height * -1));
+		}
+		$end: $start + $eachDelayFrames;
+		#{$end} {
+			transform: translate(0, calc($i * $height * -1));
+		}
+	}
 }
 
 @keyframes scroll {
-  @include createFrames();
-  100% {
-    transform: translate(0, -$num * $height);
-  }
+	@include createFrames();
+	100% {
+		transform: translate(0, calc($num * $height * -1));
+	}
 }
+
+/*css 滚动*/
+.cs-notice-ani {
+	--h: 24;
+	--sp: 0.3;
+	--del: 0.7;
+	--dur: 1s;
+	$c: var(--s);
+	color: #fff;
+	font-size: 12px;
+	margin: 0 auto;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	padding: 0 16px;
+	background: rgb(246, 146, 129);
+	ul {
+		animation: move calc(var(--dur) * var(--s)) steps($c, end) infinite;
+	}
+	li {
+		width: 100%;
+		white-space: nowrap;
+		cursor: pointer;
+		// animation: move1 calc(var(--dur)) infinite;
+	}
+}
+
+@keyframes move {
+	// 0% {
+	//   transform: translate3d(0, 0, 0);
+	// }
+	// 100% {
+	//   transform: translate3d(0, calc(var(--s) * var(--h) * -1px), 0);
+	// }
+}
+// @keyframes move1 {
+//   0% {
+//     transform: translate3d(0, 0, 0) scale(0);
+//   }
+//   1% {
+//     transform: scale(1);
+//   }
+//   100% {
+//     transform: translate3d(0, calc(var(--h) * -1px), 0);
+//   }
+// }

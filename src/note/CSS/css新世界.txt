@@ -1,0 +1,15 @@
+下面这段代码既可以去除inline-block元素间的空白间隙，又能保持空格特性：
+.space-size-zero { font-size: .1px; font-size: -webkit-calc(1px - 1px); }
+理论上讲，直接使用font-size:0就可以实现想要的效果，但是在IE浏览器中直接设置font-size:0会失去空格特性，如无法实现
+两端对齐效果等，因此只能设置成font-size:.1px，此时字号大小按照0px渲染，空格特性也保留了。但是，这种做法又带来另外一个问
+题，由于Chrome浏览器有一个12px的最小字号限制规则，因此font- size:.1px会按照font-size:12px渲染，怎么办呢？我们使用一
+个IE浏览器无法识别的语法就可以了，这里就使用了-webkit- calc(1px - 1px)
+
+
+需求描述为：一段文字，字数少的时候居中显示，字数多的时候左对齐显示。
+/* 传统实现-display:table */ 
+.cw-content { display: table; margin: auto; }
+/* fit-content实现 */ 
+.cw-content { width: fit-content; margin: auto; }
+
+https://demo.cssworld.cn/new/3/1-2.php
