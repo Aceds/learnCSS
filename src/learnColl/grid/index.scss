@@ -1,0 +1,377 @@
+$pic1: "../../../assets/images/bg.jpeg";
+$pic2: "../../../assets/images/sky.jpg";
+
+@mixin item {
+	min-height: 40px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 20px;
+	@for $i from 1 through 20 {
+		&:nth-child(#{$i}) {
+			background: rgba(
+				random(255),
+				random(255),
+				random(255),
+				calc(1 - calc($i * 0.05))
+			);
+			animation-delay: $i * 0.4s;
+		}
+	}
+}
+.g-card {
+	position: relative;
+	display: grid;
+	width: 340px;
+	height: 200px;
+	margin: 10px auto;
+	font-size: 16px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	> * {
+		//grid-area: 1/-1;
+	}
+	&-pic,
+	&-x {
+		grid-area: 1/-1;
+		//grid-column: 1/2;
+		//grid-row: 1/2;
+		//grid-area: 1/2;
+	}
+	&-pic {
+		width: 100%;
+		height: 100%;
+		background: url($pic1), url($pic2);
+		background-repeat: no-repeat;
+		background-position: 50% 100%, 50% 100%;
+		background-size: cover;
+		background-blend-mode: lighten;
+	}
+	&-x {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 10px;
+		color: #fff;
+		background: linear-gradient(to top, #000000d9, #0000) bottom/100% 25%
+			no-repeat;
+		box-sizing: border-box;
+		counter-increment: section;
+		&::before {
+			content: counter(section);
+		}
+	}
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
+@function randomRotate() {
+	$r: random(100);
+	@if $r > 50 {
+		@return 45;
+	}
+	@if $r <= 50 {
+		@return -45;
+	}
+}
+// grid-area
+.g-area {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px 30vh 50px;
+	gap: 10px;
+	grid-template-areas:
+		"header header header header"
+		"main main . sidebar"
+		"footer footer footer footer";
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+				$opacity: calc(random(100) / 100);
+				background: rgba(
+					random(255),
+					random(255),
+					random(255),
+					$opacity
+				);
+			}
+		}
+	}
+}
+.item-a {
+	grid-area: header;
+	align-items: center;
+}
+
+.item-b {
+	grid-area: main;
+}
+
+.item-c {
+	grid-area: sidebar;
+}
+
+.item-d {
+	grid-area: footer;
+}
+.c-grid {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	/*  grid-template-columns: 60px 60px 60px;
+      grid-template-rows: 60px 60px 60px;*/
+	grid-template-columns: repeat(3, 120px);
+	grid-template-rows: repeat(3, auto);
+	/*  grid-template-columns: 60px auto 60px;
+      grid-template-rows: 60px auto 20px;*/
+	/*  grid-row-gap: 5px;
+      grid-column-gap: 9px;*/
+	//grid-gap: 5px 9px;
+	grid-gap: 6px;
+	//justify-items: center;
+	//justify-items: end;
+	//justify-items: stretch;
+	//align-items: start;
+	//justify-content: center;
+	//grid-auto-flow: column;
+
+	dd {
+		@include item();
+		counter-increment: section;
+		&::before {
+			content: counter(section);
+		}
+		animation: child-fade-in 8s infinite;
+	}
+}
+@keyframes child-fade-in {
+	0% {
+		opacity: 0.5;
+	}
+	10% {
+		opacity: 0.5;
+	}
+	20% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+.c-grid-step1 {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	// grid-template-columns: 80px auto 100px;
+	// grid-template-rows: 40px auto auto 80px;
+	// 上面两行可以简写成
+	// grid-template: 40px auto auto 80px / 80px auto 100px;
+	// 也可简写成
+	grid: 40px auto auto 80px / 80px auto 100px;
+	dd {
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+}
+
+.c-grid-step2 {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: auto 1fr 1fr 1fr;
+	dd {
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+}
+.c-fit-content {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: fit-content(150px) fit-content(150px) auto;
+	grid-gap: 10px;
+	dd {
+		word-wrap: break-word;
+		word-break: break-all;
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+}
+.c-minmax {
+	width: 500px;
+	min-height: 500px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: minmax(100px, 200px) minmax(50px, min-content) minmax(
+			100px,
+			max-content
+		);
+	gap: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+	dd {
+		@include item;
+	}
+}
+.c-repeat-auto-fill {
+	width: 500px;
+	min-height: 200px;
+	display: grid;
+	grid-gap: 10px;
+	margin: 20px auto;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	dd {
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+}
+
+.c-repeat-auto-fit {
+	width: 500px;
+	min-height: 200px;
+	display: grid;
+	grid-gap: 10px;
+	margin: 20px auto;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	dd {
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+}
+.c-areas {
+	width: 500px;
+	min-height: 500px;
+	display: grid;
+	grid-gap: 1px;
+	margin: 20px auto;
+	// grid-template-columns: repeat(3, 1fr);
+	// grid-template-rows: repeat(4, 1fr);
+	// grid-template-areas:
+	//   "a a a"
+	//   "b c c"
+	//   "b d d"
+	//   "e e e";
+	// 简写如下
+	// grid-template:
+	//   "a a a" 1fr
+	//   "b c c" 1fr
+	//   "b d d" 1fr
+	//   "e e e" 1fr / 1fr 1fr 1fr;
+	// 组合minmax
+	grid-template:
+		"a a a" 1fr
+		"b c c" 1fr
+		"b d d" 1fr
+		"e e e" 1fr / minmax(100px, auto) minmax(100px, 1fr) fit-content(200px);
+	dd {
+		@include item();
+	}
+	.a {
+		grid-area: a;
+	}
+	.b {
+		grid-area: b;
+	}
+	.c {
+		grid-area: c;
+	}
+	.d {
+		grid-area: d;
+	}
+	.e {
+		grid-area: e;
+	}
+}
+.c-areas-column {
+	width: 500px;
+	min-height: 200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template: "a . ." 1fr "a . ." 1fr / 1fr 1fr 1fr;
+	grid-auto-flow: column;
+	grid-gap: 1px;
+	dd {
+		@include item;
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+		&:first-child {
+			grid-area: a;
+		}
+	}
+}
+.c-area-logogram {
+	width: 500px;
+	min-height: 200px;
+	display: grid;
+	margin: 0 auto;
+	grid: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+	gap: 1px;
+	dd {
+		@include item();
+		counter-increment: num;
+		&::before {
+			content: counter(num);
+		}
+	}
+	.item {
+		grid-area: 1/2/3/4;
+	}
+}
+.c-area-classic {
+	width: 300px;
+	min-height: 200px;
+	display: grid;
+	margin: 20px auto;
+	img,
+	figcaption {
+		grid-area: 1 / 2;
+	}
+	figcaption {
+		align-self: end;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		line-height: 2;
+	}
+	img {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,1162 @@
+.g-card {
+  position: relative;
+  display: grid;
+  width: 340px;
+  height: 200px;
+  margin: 10px auto;
+  font-size: 16px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.g-card-pic, .g-card-x {
+  grid-area: 1/-1;
+}
+.g-card-pic {
+  width: 100%;
+  height: 100%;
+  background: url("../../../assets/images/bg.jpeg"), url("../../../assets/images/sky.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%, 50% 100%;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+.g-card-x {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8509803922), rgba(0, 0, 0, 0)) bottom/100% 25% no-repeat;
+  box-sizing: border-box;
+  counter-increment: section;
+}
+.g-card-x::before {
+  content: counter(section);
+}
+.g-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.g-area {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 30vh 50px;
+  gap: 10px;
+  grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+}
+.g-area div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.g-area div:nth-child(1) {
+  background: rgba(62, 105, 116, 0.61);
+}
+.g-area div:nth-child(2) {
+  background: rgba(76, 39, 220, 0.65);
+}
+.g-area div:nth-child(3) {
+  background: rgba(171, 107, 78, 0.96);
+}
+.g-area div:nth-child(4) {
+  background: rgba(48, 190, 120, 0.53);
+}
+
+.item-a {
+  grid-area: header;
+  align-items: center;
+}
+
+.item-b {
+  grid-area: main;
+}
+
+.item-c {
+  grid-area: sidebar;
+}
+
+.item-d {
+  grid-area: footer;
+}
+
+.c-grid {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  /*  grid-template-columns: 60px 60px 60px;
+       grid-template-rows: 60px 60px 60px;*/
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, auto);
+  /*  grid-template-columns: 60px auto 60px;
+       grid-template-rows: 60px auto 20px;*/
+  /*  grid-row-gap: 5px;
+       grid-column-gap: 9px;*/
+  grid-gap: 6px;
+}
+.c-grid dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: section;
+  animation: child-fade-in 8s infinite;
+}
+.c-grid dd:nth-child(1) {
+  background: rgba(78, 181, 129, 0.95);
+  animation-delay: 0.4s;
+}
+.c-grid dd:nth-child(2) {
+  background: rgba(225, 121, 212, 0.9);
+  animation-delay: 0.8s;
+}
+.c-grid dd:nth-child(3) {
+  background: rgba(64, 23, 183, 0.85);
+  animation-delay: 1.2s;
+}
+.c-grid dd:nth-child(4) {
+  background: rgba(18, 222, 241, 0.8);
+  animation-delay: 1.6s;
+}
+.c-grid dd:nth-child(5) {
+  background: rgba(221, 49, 41, 0.75);
+  animation-delay: 2s;
+}
+.c-grid dd:nth-child(6) {
+  background: rgba(6, 202, 60, 0.7);
+  animation-delay: 2.4s;
+}
+.c-grid dd:nth-child(7) {
+  background: rgba(93, 137, 135, 0.65);
+  animation-delay: 2.8s;
+}
+.c-grid dd:nth-child(8) {
+  background: rgba(151, 205, 203, 0.6);
+  animation-delay: 3.2s;
+}
+.c-grid dd:nth-child(9) {
+  background: rgba(88, 41, 117, 0.55);
+  animation-delay: 3.6s;
+}
+.c-grid dd:nth-child(10) {
+  background: rgba(101, 160, 219, 0.5);
+  animation-delay: 4s;
+}
+.c-grid dd:nth-child(11) {
+  background: rgba(20, 213, 171, 0.45);
+  animation-delay: 4.4s;
+}
+.c-grid dd:nth-child(12) {
+  background: rgba(123, 209, 4, 0.4);
+  animation-delay: 4.8s;
+}
+.c-grid dd:nth-child(13) {
+  background: rgba(26, 49, 250, 0.35);
+  animation-delay: 5.2s;
+}
+.c-grid dd:nth-child(14) {
+  background: rgba(222, 87, 239, 0.3);
+  animation-delay: 5.6s;
+}
+.c-grid dd:nth-child(15) {
+  background: rgba(15, 44, 55, 0.25);
+  animation-delay: 6s;
+}
+.c-grid dd:nth-child(16) {
+  background: rgba(145, 17, 25, 0.2);
+  animation-delay: 6.4s;
+}
+.c-grid dd:nth-child(17) {
+  background: rgba(209, 24, 30, 0.15);
+  animation-delay: 6.8s;
+}
+.c-grid dd:nth-child(18) {
+  background: rgba(221, 225, 194, 0.1);
+  animation-delay: 7.2s;
+}
+.c-grid dd:nth-child(19) {
+  background: rgba(79, 157, 218, 0.05);
+  animation-delay: 7.6s;
+}
+.c-grid dd:nth-child(20) {
+  background: rgba(30, 203, 129, 0);
+  animation-delay: 8s;
+}
+.c-grid dd::before {
+  content: counter(section);
+}
+
+@keyframes child-fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.c-grid-step1 {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  grid: 40px auto auto 80px/80px auto 100px;
+}
+.c-grid-step1 dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-grid-step1 dd:nth-child(1) {
+  background: rgba(208, 102, 163, 0.95);
+  animation-delay: 0.4s;
+}
+.c-grid-step1 dd:nth-child(2) {
+  background: rgba(119, 16, 131, 0.9);
+  animation-delay: 0.8s;
+}
+.c-grid-step1 dd:nth-child(3) {
+  background: rgba(46, 224, 132, 0.85);
+  animation-delay: 1.2s;
+}
+.c-grid-step1 dd:nth-child(4) {
+  background: rgba(40, 140, 132, 0.8);
+  animation-delay: 1.6s;
+}
+.c-grid-step1 dd:nth-child(5) {
+  background: rgba(233, 185, 139, 0.75);
+  animation-delay: 2s;
+}
+.c-grid-step1 dd:nth-child(6) {
+  background: rgba(79, 151, 110, 0.7);
+  animation-delay: 2.4s;
+}
+.c-grid-step1 dd:nth-child(7) {
+  background: rgba(129, 186, 142, 0.65);
+  animation-delay: 2.8s;
+}
+.c-grid-step1 dd:nth-child(8) {
+  background: rgba(240, 49, 251, 0.6);
+  animation-delay: 3.2s;
+}
+.c-grid-step1 dd:nth-child(9) {
+  background: rgba(193, 104, 174, 0.55);
+  animation-delay: 3.6s;
+}
+.c-grid-step1 dd:nth-child(10) {
+  background: rgba(233, 172, 34, 0.5);
+  animation-delay: 4s;
+}
+.c-grid-step1 dd:nth-child(11) {
+  background: rgba(54, 80, 131, 0.45);
+  animation-delay: 4.4s;
+}
+.c-grid-step1 dd:nth-child(12) {
+  background: rgba(80, 108, 94, 0.4);
+  animation-delay: 4.8s;
+}
+.c-grid-step1 dd:nth-child(13) {
+  background: rgba(94, 163, 207, 0.35);
+  animation-delay: 5.2s;
+}
+.c-grid-step1 dd:nth-child(14) {
+  background: rgba(240, 245, 34, 0.3);
+  animation-delay: 5.6s;
+}
+.c-grid-step1 dd:nth-child(15) {
+  background: rgba(148, 98, 73, 0.25);
+  animation-delay: 6s;
+}
+.c-grid-step1 dd:nth-child(16) {
+  background: rgba(235, 75, 9, 0.2);
+  animation-delay: 6.4s;
+}
+.c-grid-step1 dd:nth-child(17) {
+  background: rgba(205, 231, 203, 0.15);
+  animation-delay: 6.8s;
+}
+.c-grid-step1 dd:nth-child(18) {
+  background: rgba(133, 19, 67, 0.1);
+  animation-delay: 7.2s;
+}
+.c-grid-step1 dd:nth-child(19) {
+  background: rgba(7, 16, 59, 0.05);
+  animation-delay: 7.6s;
+}
+.c-grid-step1 dd:nth-child(20) {
+  background: rgba(110, 78, 72, 0);
+  animation-delay: 8s;
+}
+.c-grid-step1 dd::before {
+  content: counter(num);
+}
+
+.c-grid-step2 {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+}
+.c-grid-step2 dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-grid-step2 dd:nth-child(1) {
+  background: rgba(236, 97, 203, 0.95);
+  animation-delay: 0.4s;
+}
+.c-grid-step2 dd:nth-child(2) {
+  background: rgba(169, 230, 211, 0.9);
+  animation-delay: 0.8s;
+}
+.c-grid-step2 dd:nth-child(3) {
+  background: rgba(243, 18, 136, 0.85);
+  animation-delay: 1.2s;
+}
+.c-grid-step2 dd:nth-child(4) {
+  background: rgba(104, 170, 250, 0.8);
+  animation-delay: 1.6s;
+}
+.c-grid-step2 dd:nth-child(5) {
+  background: rgba(80, 99, 121, 0.75);
+  animation-delay: 2s;
+}
+.c-grid-step2 dd:nth-child(6) {
+  background: rgba(90, 73, 114, 0.7);
+  animation-delay: 2.4s;
+}
+.c-grid-step2 dd:nth-child(7) {
+  background: rgba(117, 216, 61, 0.65);
+  animation-delay: 2.8s;
+}
+.c-grid-step2 dd:nth-child(8) {
+  background: rgba(175, 167, 88, 0.6);
+  animation-delay: 3.2s;
+}
+.c-grid-step2 dd:nth-child(9) {
+  background: rgba(195, 124, 241, 0.55);
+  animation-delay: 3.6s;
+}
+.c-grid-step2 dd:nth-child(10) {
+  background: rgba(92, 249, 223, 0.5);
+  animation-delay: 4s;
+}
+.c-grid-step2 dd:nth-child(11) {
+  background: rgba(103, 47, 3, 0.45);
+  animation-delay: 4.4s;
+}
+.c-grid-step2 dd:nth-child(12) {
+  background: rgba(156, 94, 250, 0.4);
+  animation-delay: 4.8s;
+}
+.c-grid-step2 dd:nth-child(13) {
+  background: rgba(127, 240, 31, 0.35);
+  animation-delay: 5.2s;
+}
+.c-grid-step2 dd:nth-child(14) {
+  background: rgba(7, 85, 208, 0.3);
+  animation-delay: 5.6s;
+}
+.c-grid-step2 dd:nth-child(15) {
+  background: rgba(140, 48, 121, 0.25);
+  animation-delay: 6s;
+}
+.c-grid-step2 dd:nth-child(16) {
+  background: rgba(221, 197, 10, 0.2);
+  animation-delay: 6.4s;
+}
+.c-grid-step2 dd:nth-child(17) {
+  background: rgba(107, 79, 145, 0.15);
+  animation-delay: 6.8s;
+}
+.c-grid-step2 dd:nth-child(18) {
+  background: rgba(13, 75, 227, 0.1);
+  animation-delay: 7.2s;
+}
+.c-grid-step2 dd:nth-child(19) {
+  background: rgba(111, 223, 181, 0.05);
+  animation-delay: 7.6s;
+}
+.c-grid-step2 dd:nth-child(20) {
+  background: rgba(47, 6, 247, 0);
+  animation-delay: 8s;
+}
+.c-grid-step2 dd::before {
+  content: counter(num);
+}
+
+.c-fit-content {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: fit-content(150px) fit-content(150px) auto;
+  grid-gap: 10px;
+}
+.c-fit-content dd {
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-fit-content dd:nth-child(1) {
+  background: rgba(148, 153, 145, 0.95);
+  animation-delay: 0.4s;
+}
+.c-fit-content dd:nth-child(2) {
+  background: rgba(76, 87, 107, 0.9);
+  animation-delay: 0.8s;
+}
+.c-fit-content dd:nth-child(3) {
+  background: rgba(18, 15, 242, 0.85);
+  animation-delay: 1.2s;
+}
+.c-fit-content dd:nth-child(4) {
+  background: rgba(87, 26, 173, 0.8);
+  animation-delay: 1.6s;
+}
+.c-fit-content dd:nth-child(5) {
+  background: rgba(22, 183, 203, 0.75);
+  animation-delay: 2s;
+}
+.c-fit-content dd:nth-child(6) {
+  background: rgba(183, 190, 43, 0.7);
+  animation-delay: 2.4s;
+}
+.c-fit-content dd:nth-child(7) {
+  background: rgba(253, 14, 1, 0.65);
+  animation-delay: 2.8s;
+}
+.c-fit-content dd:nth-child(8) {
+  background: rgba(144, 92, 139, 0.6);
+  animation-delay: 3.2s;
+}
+.c-fit-content dd:nth-child(9) {
+  background: rgba(17, 166, 73, 0.55);
+  animation-delay: 3.6s;
+}
+.c-fit-content dd:nth-child(10) {
+  background: rgba(32, 218, 223, 0.5);
+  animation-delay: 4s;
+}
+.c-fit-content dd:nth-child(11) {
+  background: rgba(157, 236, 123, 0.45);
+  animation-delay: 4.4s;
+}
+.c-fit-content dd:nth-child(12) {
+  background: rgba(221, 136, 10, 0.4);
+  animation-delay: 4.8s;
+}
+.c-fit-content dd:nth-child(13) {
+  background: rgba(239, 133, 103, 0.35);
+  animation-delay: 5.2s;
+}
+.c-fit-content dd:nth-child(14) {
+  background: rgba(96, 176, 188, 0.3);
+  animation-delay: 5.6s;
+}
+.c-fit-content dd:nth-child(15) {
+  background: rgba(57, 225, 56, 0.25);
+  animation-delay: 6s;
+}
+.c-fit-content dd:nth-child(16) {
+  background: rgba(62, 99, 167, 0.2);
+  animation-delay: 6.4s;
+}
+.c-fit-content dd:nth-child(17) {
+  background: rgba(132, 27, 123, 0.15);
+  animation-delay: 6.8s;
+}
+.c-fit-content dd:nth-child(18) {
+  background: rgba(26, 193, 7, 0.1);
+  animation-delay: 7.2s;
+}
+.c-fit-content dd:nth-child(19) {
+  background: rgba(129, 17, 21, 0.05);
+  animation-delay: 7.6s;
+}
+.c-fit-content dd:nth-child(20) {
+  background: rgba(111, 78, 42, 0);
+  animation-delay: 8s;
+}
+.c-fit-content dd::before {
+  content: counter(num);
+}
+
+.c-minmax {
+  width: 500px;
+  min-height: 500px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) minmax(50px, min-content) minmax(100px, max-content);
+  gap: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.c-minmax dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+.c-minmax dd:nth-child(1) {
+  background: rgba(235, 131, 168, 0.95);
+  animation-delay: 0.4s;
+}
+.c-minmax dd:nth-child(2) {
+  background: rgba(83, 72, 42, 0.9);
+  animation-delay: 0.8s;
+}
+.c-minmax dd:nth-child(3) {
+  background: rgba(31, 194, 101, 0.85);
+  animation-delay: 1.2s;
+}
+.c-minmax dd:nth-child(4) {
+  background: rgba(187, 123, 69, 0.8);
+  animation-delay: 1.6s;
+}
+.c-minmax dd:nth-child(5) {
+  background: rgba(93, 32, 44, 0.75);
+  animation-delay: 2s;
+}
+.c-minmax dd:nth-child(6) {
+  background: rgba(48, 35, 37, 0.7);
+  animation-delay: 2.4s;
+}
+.c-minmax dd:nth-child(7) {
+  background: rgba(217, 80, 242, 0.65);
+  animation-delay: 2.8s;
+}
+.c-minmax dd:nth-child(8) {
+  background: rgba(97, 167, 14, 0.6);
+  animation-delay: 3.2s;
+}
+.c-minmax dd:nth-child(9) {
+  background: rgba(152, 149, 199, 0.55);
+  animation-delay: 3.6s;
+}
+.c-minmax dd:nth-child(10) {
+  background: rgba(105, 104, 106, 0.5);
+  animation-delay: 4s;
+}
+.c-minmax dd:nth-child(11) {
+  background: rgba(230, 15, 88, 0.45);
+  animation-delay: 4.4s;
+}
+.c-minmax dd:nth-child(12) {
+  background: rgba(107, 17, 46, 0.4);
+  animation-delay: 4.8s;
+}
+.c-minmax dd:nth-child(13) {
+  background: rgba(112, 163, 21, 0.35);
+  animation-delay: 5.2s;
+}
+.c-minmax dd:nth-child(14) {
+  background: rgba(155, 82, 4, 0.3);
+  animation-delay: 5.6s;
+}
+.c-minmax dd:nth-child(15) {
+  background: rgba(241, 194, 23, 0.25);
+  animation-delay: 6s;
+}
+.c-minmax dd:nth-child(16) {
+  background: rgba(189, 247, 72, 0.2);
+  animation-delay: 6.4s;
+}
+.c-minmax dd:nth-child(17) {
+  background: rgba(104, 82, 69, 0.15);
+  animation-delay: 6.8s;
+}
+.c-minmax dd:nth-child(18) {
+  background: rgba(129, 176, 178, 0.1);
+  animation-delay: 7.2s;
+}
+.c-minmax dd:nth-child(19) {
+  background: rgba(30, 182, 144, 0.05);
+  animation-delay: 7.6s;
+}
+.c-minmax dd:nth-child(20) {
+  background: rgba(21, 166, 171, 0);
+  animation-delay: 8s;
+}
+
+.c-repeat-auto-fill {
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-gap: 10px;
+  margin: 20px auto;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.c-repeat-auto-fill dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-repeat-auto-fill dd:nth-child(1) {
+  background: rgba(66, 207, 106, 0.95);
+  animation-delay: 0.4s;
+}
+.c-repeat-auto-fill dd:nth-child(2) {
+  background: rgba(192, 51, 108, 0.9);
+  animation-delay: 0.8s;
+}
+.c-repeat-auto-fill dd:nth-child(3) {
+  background: rgba(165, 64, 32, 0.85);
+  animation-delay: 1.2s;
+}
+.c-repeat-auto-fill dd:nth-child(4) {
+  background: rgba(62, 21, 106, 0.8);
+  animation-delay: 1.6s;
+}
+.c-repeat-auto-fill dd:nth-child(5) {
+  background: rgba(241, 219, 173, 0.75);
+  animation-delay: 2s;
+}
+.c-repeat-auto-fill dd:nth-child(6) {
+  background: rgba(176, 167, 225, 0.7);
+  animation-delay: 2.4s;
+}
+.c-repeat-auto-fill dd:nth-child(7) {
+  background: rgba(49, 43, 161, 0.65);
+  animation-delay: 2.8s;
+}
+.c-repeat-auto-fill dd:nth-child(8) {
+  background: rgba(47, 148, 137, 0.6);
+  animation-delay: 3.2s;
+}
+.c-repeat-auto-fill dd:nth-child(9) {
+  background: rgba(217, 109, 253, 0.55);
+  animation-delay: 3.6s;
+}
+.c-repeat-auto-fill dd:nth-child(10) {
+  background: rgba(42, 144, 216, 0.5);
+  animation-delay: 4s;
+}
+.c-repeat-auto-fill dd:nth-child(11) {
+  background: rgba(85, 194, 36, 0.45);
+  animation-delay: 4.4s;
+}
+.c-repeat-auto-fill dd:nth-child(12) {
+  background: rgba(35, 249, 216, 0.4);
+  animation-delay: 4.8s;
+}
+.c-repeat-auto-fill dd:nth-child(13) {
+  background: rgba(148, 187, 7, 0.35);
+  animation-delay: 5.2s;
+}
+.c-repeat-auto-fill dd:nth-child(14) {
+  background: rgba(251, 247, 65, 0.3);
+  animation-delay: 5.6s;
+}
+.c-repeat-auto-fill dd:nth-child(15) {
+  background: rgba(137, 97, 217, 0.25);
+  animation-delay: 6s;
+}
+.c-repeat-auto-fill dd:nth-child(16) {
+  background: rgba(254, 119, 87, 0.2);
+  animation-delay: 6.4s;
+}
+.c-repeat-auto-fill dd:nth-child(17) {
+  background: rgba(248, 47, 60, 0.15);
+  animation-delay: 6.8s;
+}
+.c-repeat-auto-fill dd:nth-child(18) {
+  background: rgba(17, 210, 186, 0.1);
+  animation-delay: 7.2s;
+}
+.c-repeat-auto-fill dd:nth-child(19) {
+  background: rgba(37, 181, 4, 0.05);
+  animation-delay: 7.6s;
+}
+.c-repeat-auto-fill dd:nth-child(20) {
+  background: rgba(59, 182, 162, 0);
+  animation-delay: 8s;
+}
+.c-repeat-auto-fill dd::before {
+  content: counter(num);
+}
+
+.c-repeat-auto-fit {
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-gap: 10px;
+  margin: 20px auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.c-repeat-auto-fit dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-repeat-auto-fit dd:nth-child(1) {
+  background: rgba(83, 186, 44, 0.95);
+  animation-delay: 0.4s;
+}
+.c-repeat-auto-fit dd:nth-child(2) {
+  background: rgba(2, 222, 223, 0.9);
+  animation-delay: 0.8s;
+}
+.c-repeat-auto-fit dd:nth-child(3) {
+  background: rgba(32, 214, 135, 0.85);
+  animation-delay: 1.2s;
+}
+.c-repeat-auto-fit dd:nth-child(4) {
+  background: rgba(49, 76, 212, 0.8);
+  animation-delay: 1.6s;
+}
+.c-repeat-auto-fit dd:nth-child(5) {
+  background: rgba(87, 19, 169, 0.75);
+  animation-delay: 2s;
+}
+.c-repeat-auto-fit dd:nth-child(6) {
+  background: rgba(130, 52, 211, 0.7);
+  animation-delay: 2.4s;
+}
+.c-repeat-auto-fit dd:nth-child(7) {
+  background: rgba(16, 184, 5, 0.65);
+  animation-delay: 2.8s;
+}
+.c-repeat-auto-fit dd:nth-child(8) {
+  background: rgba(15, 217, 170, 0.6);
+  animation-delay: 3.2s;
+}
+.c-repeat-auto-fit dd:nth-child(9) {
+  background: rgba(157, 248, 206, 0.55);
+  animation-delay: 3.6s;
+}
+.c-repeat-auto-fit dd:nth-child(10) {
+  background: rgba(176, 109, 132, 0.5);
+  animation-delay: 4s;
+}
+.c-repeat-auto-fit dd:nth-child(11) {
+  background: rgba(101, 229, 15, 0.45);
+  animation-delay: 4.4s;
+}
+.c-repeat-auto-fit dd:nth-child(12) {
+  background: rgba(38, 18, 130, 0.4);
+  animation-delay: 4.8s;
+}
+.c-repeat-auto-fit dd:nth-child(13) {
+  background: rgba(131, 249, 203, 0.35);
+  animation-delay: 5.2s;
+}
+.c-repeat-auto-fit dd:nth-child(14) {
+  background: rgba(96, 252, 64, 0.3);
+  animation-delay: 5.6s;
+}
+.c-repeat-auto-fit dd:nth-child(15) {
+  background: rgba(243, 243, 163, 0.25);
+  animation-delay: 6s;
+}
+.c-repeat-auto-fit dd:nth-child(16) {
+  background: rgba(19, 248, 57, 0.2);
+  animation-delay: 6.4s;
+}
+.c-repeat-auto-fit dd:nth-child(17) {
+  background: rgba(18, 228, 243, 0.15);
+  animation-delay: 6.8s;
+}
+.c-repeat-auto-fit dd:nth-child(18) {
+  background: rgba(172, 172, 80, 0.1);
+  animation-delay: 7.2s;
+}
+.c-repeat-auto-fit dd:nth-child(19) {
+  background: rgba(10, 190, 54, 0.05);
+  animation-delay: 7.6s;
+}
+.c-repeat-auto-fit dd:nth-child(20) {
+  background: rgba(75, 237, 191, 0);
+  animation-delay: 8s;
+}
+.c-repeat-auto-fit dd::before {
+  content: counter(num);
+}
+
+.c-areas {
+  width: 500px;
+  min-height: 500px;
+  display: grid;
+  grid-gap: 1px;
+  margin: 20px auto;
+  grid-template: "a a a" 1fr "b c c" 1fr "b d d" 1fr "e e e" 1fr/minmax(100px, auto) minmax(100px, 1fr) fit-content(200px);
+}
+.c-areas dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+.c-areas dd:nth-child(1) {
+  background: rgba(237, 73, 70, 0.95);
+  animation-delay: 0.4s;
+}
+.c-areas dd:nth-child(2) {
+  background: rgba(60, 198, 202, 0.9);
+  animation-delay: 0.8s;
+}
+.c-areas dd:nth-child(3) {
+  background: rgba(152, 62, 92, 0.85);
+  animation-delay: 1.2s;
+}
+.c-areas dd:nth-child(4) {
+  background: rgba(236, 21, 151, 0.8);
+  animation-delay: 1.6s;
+}
+.c-areas dd:nth-child(5) {
+  background: rgba(7, 3, 14, 0.75);
+  animation-delay: 2s;
+}
+.c-areas dd:nth-child(6) {
+  background: rgba(162, 16, 119, 0.7);
+  animation-delay: 2.4s;
+}
+.c-areas dd:nth-child(7) {
+  background: rgba(59, 92, 216, 0.65);
+  animation-delay: 2.8s;
+}
+.c-areas dd:nth-child(8) {
+  background: rgba(119, 202, 181, 0.6);
+  animation-delay: 3.2s;
+}
+.c-areas dd:nth-child(9) {
+  background: rgba(124, 231, 100, 0.55);
+  animation-delay: 3.6s;
+}
+.c-areas dd:nth-child(10) {
+  background: rgba(143, 54, 26, 0.5);
+  animation-delay: 4s;
+}
+.c-areas dd:nth-child(11) {
+  background: rgba(195, 69, 172, 0.45);
+  animation-delay: 4.4s;
+}
+.c-areas dd:nth-child(12) {
+  background: rgba(46, 187, 45, 0.4);
+  animation-delay: 4.8s;
+}
+.c-areas dd:nth-child(13) {
+  background: rgba(115, 205, 255, 0.35);
+  animation-delay: 5.2s;
+}
+.c-areas dd:nth-child(14) {
+  background: rgba(225, 53, 10, 0.3);
+  animation-delay: 5.6s;
+}
+.c-areas dd:nth-child(15) {
+  background: rgba(188, 187, 222, 0.25);
+  animation-delay: 6s;
+}
+.c-areas dd:nth-child(16) {
+  background: rgba(166, 127, 26, 0.2);
+  animation-delay: 6.4s;
+}
+.c-areas dd:nth-child(17) {
+  background: rgba(80, 236, 28, 0.15);
+  animation-delay: 6.8s;
+}
+.c-areas dd:nth-child(18) {
+  background: rgba(157, 52, 91, 0.1);
+  animation-delay: 7.2s;
+}
+.c-areas dd:nth-child(19) {
+  background: rgba(42, 65, 160, 0.05);
+  animation-delay: 7.6s;
+}
+.c-areas dd:nth-child(20) {
+  background: rgba(135, 10, 169, 0);
+  animation-delay: 8s;
+}
+.c-areas .a {
+  grid-area: a;
+}
+.c-areas .b {
+  grid-area: b;
+}
+.c-areas .c {
+  grid-area: c;
+}
+.c-areas .d {
+  grid-area: d;
+}
+.c-areas .e {
+  grid-area: e;
+}
+
+.c-areas-column {
+  width: 500px;
+  min-height: 200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: "a . ." 1fr "a . ." 1fr/1fr 1fr 1fr;
+  grid-auto-flow: column;
+  grid-gap: 1px;
+}
+.c-areas-column dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-areas-column dd:nth-child(1) {
+  background: rgba(112, 175, 201, 0.95);
+  animation-delay: 0.4s;
+}
+.c-areas-column dd:nth-child(2) {
+  background: rgba(45, 165, 140, 0.9);
+  animation-delay: 0.8s;
+}
+.c-areas-column dd:nth-child(3) {
+  background: rgba(167, 23, 170, 0.85);
+  animation-delay: 1.2s;
+}
+.c-areas-column dd:nth-child(4) {
+  background: rgba(36, 2, 48, 0.8);
+  animation-delay: 1.6s;
+}
+.c-areas-column dd:nth-child(5) {
+  background: rgba(31, 249, 34, 0.75);
+  animation-delay: 2s;
+}
+.c-areas-column dd:nth-child(6) {
+  background: rgba(35, 153, 141, 0.7);
+  animation-delay: 2.4s;
+}
+.c-areas-column dd:nth-child(7) {
+  background: rgba(244, 37, 189, 0.65);
+  animation-delay: 2.8s;
+}
+.c-areas-column dd:nth-child(8) {
+  background: rgba(222, 232, 119, 0.6);
+  animation-delay: 3.2s;
+}
+.c-areas-column dd:nth-child(9) {
+  background: rgba(97, 239, 23, 0.55);
+  animation-delay: 3.6s;
+}
+.c-areas-column dd:nth-child(10) {
+  background: rgba(41, 116, 65, 0.5);
+  animation-delay: 4s;
+}
+.c-areas-column dd:nth-child(11) {
+  background: rgba(46, 201, 244, 0.45);
+  animation-delay: 4.4s;
+}
+.c-areas-column dd:nth-child(12) {
+  background: rgba(17, 10, 8, 0.4);
+  animation-delay: 4.8s;
+}
+.c-areas-column dd:nth-child(13) {
+  background: rgba(15, 147, 211, 0.35);
+  animation-delay: 5.2s;
+}
+.c-areas-column dd:nth-child(14) {
+  background: rgba(175, 79, 1, 0.3);
+  animation-delay: 5.6s;
+}
+.c-areas-column dd:nth-child(15) {
+  background: rgba(66, 128, 74, 0.25);
+  animation-delay: 6s;
+}
+.c-areas-column dd:nth-child(16) {
+  background: rgba(137, 3, 61, 0.2);
+  animation-delay: 6.4s;
+}
+.c-areas-column dd:nth-child(17) {
+  background: rgba(24, 75, 247, 0.15);
+  animation-delay: 6.8s;
+}
+.c-areas-column dd:nth-child(18) {
+  background: rgba(185, 184, 174, 0.1);
+  animation-delay: 7.2s;
+}
+.c-areas-column dd:nth-child(19) {
+  background: rgba(205, 176, 43, 0.05);
+  animation-delay: 7.6s;
+}
+.c-areas-column dd:nth-child(20) {
+  background: rgba(99, 136, 241, 0);
+  animation-delay: 8s;
+}
+.c-areas-column dd::before {
+  content: counter(num);
+}
+.c-areas-column dd:first-child {
+  grid-area: a;
+}
+
+.c-area-logogram {
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  margin: 0 auto;
+  grid: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  gap: 1px;
+}
+.c-area-logogram dd {
+  min-height: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  counter-increment: num;
+}
+.c-area-logogram dd:nth-child(1) {
+  background: rgba(213, 169, 243, 0.95);
+  animation-delay: 0.4s;
+}
+.c-area-logogram dd:nth-child(2) {
+  background: rgba(86, 3, 241, 0.9);
+  animation-delay: 0.8s;
+}
+.c-area-logogram dd:nth-child(3) {
+  background: rgba(120, 120, 8, 0.85);
+  animation-delay: 1.2s;
+}
+.c-area-logogram dd:nth-child(4) {
+  background: rgba(213, 101, 100, 0.8);
+  animation-delay: 1.6s;
+}
+.c-area-logogram dd:nth-child(5) {
+  background: rgba(158, 172, 148, 0.75);
+  animation-delay: 2s;
+}
+.c-area-logogram dd:nth-child(6) {
+  background: rgba(94, 104, 225, 0.7);
+  animation-delay: 2.4s;
+}
+.c-area-logogram dd:nth-child(7) {
+  background: rgba(254, 143, 102, 0.65);
+  animation-delay: 2.8s;
+}
+.c-area-logogram dd:nth-child(8) {
+  background: rgba(114, 45, 163, 0.6);
+  animation-delay: 3.2s;
+}
+.c-area-logogram dd:nth-child(9) {
+  background: rgba(112, 5, 8, 0.55);
+  animation-delay: 3.6s;
+}
+.c-area-logogram dd:nth-child(10) {
+  background: rgba(162, 195, 100, 0.5);
+  animation-delay: 4s;
+}
+.c-area-logogram dd:nth-child(11) {
+  background: rgba(26, 33, 36, 0.45);
+  animation-delay: 4.4s;
+}
+.c-area-logogram dd:nth-child(12) {
+  background: rgba(11, 230, 134, 0.4);
+  animation-delay: 4.8s;
+}
+.c-area-logogram dd:nth-child(13) {
+  background: rgba(53, 32, 179, 0.35);
+  animation-delay: 5.2s;
+}
+.c-area-logogram dd:nth-child(14) {
+  background: rgba(205, 199, 197, 0.3);
+  animation-delay: 5.6s;
+}
+.c-area-logogram dd:nth-child(15) {
+  background: rgba(198, 15, 48, 0.25);
+  animation-delay: 6s;
+}
+.c-area-logogram dd:nth-child(16) {
+  background: rgba(141, 252, 213, 0.2);
+  animation-delay: 6.4s;
+}
+.c-area-logogram dd:nth-child(17) {
+  background: rgba(54, 170, 110, 0.15);
+  animation-delay: 6.8s;
+}
+.c-area-logogram dd:nth-child(18) {
+  background: rgba(21, 128, 24, 0.1);
+  animation-delay: 7.2s;
+}
+.c-area-logogram dd:nth-child(19) {
+  background: rgba(14, 102, 65, 0.05);
+  animation-delay: 7.6s;
+}
+.c-area-logogram dd:nth-child(20) {
+  background: rgba(93, 150, 155, 0);
+  animation-delay: 8s;
+}
+.c-area-logogram dd::before {
+  content: counter(num);
+}
+.c-area-logogram .item {
+  grid-area: 1/2/3/4;
+}
+
+.c-area-classic {
+  width: 300px;
+  min-height: 200px;
+  display: grid;
+  margin: 20px auto;
+}
+.c-area-classic img,
+.c-area-classic figcaption {
+  grid-area: 1/2;
+}
+.c-area-classic figcaption {
+  align-self: end;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 2;
+}
+.c-area-classic img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
