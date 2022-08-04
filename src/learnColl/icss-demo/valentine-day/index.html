@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="../../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="vd-main">
+        <div class="vd-bridge">
+            <i class="vd-bridge-go"></i>
+            <div class="vd-togather">
+                <em onclick="like()"></em>
+                <i class="vd-bubble">点我</i>
+            </div>
+        </div>
+        <div class="vd-wave">
+            <i></i>
+        </div>
+        <div class="v-cloud">
+            <i class="vd-cloud-left"></i>
+            <i class="vd-cloud-right"></i>
+        </div>
+    </main>
+</body>
+<script>
+    let count = 0;
+    function like() {
+        const likeDom = document.createElement("div");
+        count++;
+        likeDom.className = count % 2 === 0 ? "like" : "like like--is-second";
+        likeDom.style.willChange = "margin-top";
+        document.body.appendChild(likeDom);
+        setTimeout(() => {
+            document.body.removeChild(likeDom);
+        }, 3900);
+    }
+</script>
+
+</html>

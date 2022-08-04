@@ -1,0 +1,46 @@
+.normal-fade {
+  display: flex;
+}
+.normal-fade p {
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+  line-height: 36px;
+  font-size: 20px;
+  -webkit-mask: linear-gradient(270deg, transparent, transparent 30%, #000), linear-gradient(270deg, #000, #000);
+  -webkit-mask-size: 100% 46px, 100% calc(100% - 46px);
+  -webkit-mask-position: bottom, top;
+  -webkit-mask-repeat: no-repeat;
+  mask: linear-gradient(270deg, transparent, transparent 30%, #000), linear-gradient(270deg, #000, #000);
+  mask-size: 100% 46px, 100% calc(100% - 46px);
+  mask-position: bottom, top;
+  mask-repeat: no-repeat;
+}
+
+.animation-fade {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  font-size: 24px;
+  line-height: 2;
+  color: #666;
+  cursor: pointer;
+}
+.animation-fade .pesudo {
+  position: relative;
+  background: linear-gradient(90deg, transparent, #fff 20%, #fff);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-size 3s linear;
+  color: transparent;
+}
+.animation-fade .word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #333;
+}
+.animation-fade:hover .pesudo {
+  background-size: 500% 100%;
+}

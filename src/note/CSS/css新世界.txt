@@ -13,3 +13,36 @@
 .cw-content { width: fit-content; margin: auto; }
 
 https://demo.cssworld.cn/new/3/1-2.php
+
+默认换行行为：
+1、中文
+所有的中文文字内容都是换行点
+如果有标点：逗号，句号，问号，逗号，感叹号就属于避头标点，是不能在开头显示的，称为避头标点;
+            上引号，上括号不能出现一行的尾部，称为避尾标点。
+    如果希望中文内容不是换行点，使用word-break:keep-all;
+    比如表格中 人员姓名（100）
+    如果希望中文标点没避头避尾特性，使用line-break:anywhere;
+    连续波折号换行，使用word-wrap:break-word;
+
+
+2、英文和数字
+英文的单词和连续的数字默认是不会换行的
+    英文连续的数字换行，使用word-break:break-all;
+
+    默认情况下，英文句子都是在空格位置处换行，如果希望这些空格不再是换行点,使用white-space:nowrap;
+    英文标点强制换行:overflow-wrap:anywhere;
+    我们可以对比下 word-break:break-all 这个声明，就可以知道 overflow-wrap:anywhere 的作用了。
+
+    <p class="p1">i'm a developer</p>
+    <p class="p2">i'm a developer</p>
+
+    p {
+    width: min-content;
+    border: 2px solid deepskyblue;
+    }
+    .p1 {
+    overflow-wrap: anywhere;
+    }
+    .p2 {
+    word-break: break-all;
+    } 

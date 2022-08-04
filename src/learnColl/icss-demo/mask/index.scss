@@ -1,0 +1,76 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fffcf3;
+	display: flex;
+}
+
+.demo {
+	position: relative;
+	margin: auto;
+	width: 660px;
+	height: 148px;
+	overflow: hidden;
+	background: url(../../../../assets/images/bridge.png) no-repeat 0 0 / 100%
+		100%;
+	color: #fff;
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		width: 148px;
+		height: 148px;
+		content: "";
+		z-index: 5;
+		// opacity: 0.5;
+	}
+	&::before {
+		left: 0;
+		background: url(../../../../assets/images/left.png) no-repeat center
+			center/contain;
+	}
+	&::after {
+		right: 0;
+		background: url(../../../../assets/images/right.png) no-repeat center
+			center/contain;
+	}
+
+	i {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		// opacity: 0;
+		-webkit-mask: center no-repeat;
+		-webkit-mask-image: url(../../../../assets/images/mask.png);
+		-webkit-mask-size: 100% 100%;
+
+		&::before,
+		&::after {
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			content: "";
+			// opacity: 0;
+			animation: go 3s linear 1;
+		}
+		&::after {
+			right: 0;
+			background: linear-gradient(180deg, #f84948 0%, #ef04c0 100%);
+			transform-origin: 100% 100%;
+		}
+		&::before {
+			left: 0;
+			background: linear-gradient(-180deg, #f84948 0%, #ef04c0 100%);
+			transform-origin: 0 0;
+		}
+	}
+}
+@keyframes go {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}

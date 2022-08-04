@@ -1,0 +1,278 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background: #ed898d url(images/bg.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.vd-main {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background: url(images/moon.png) no-repeat center top;
+  background-size: 781px 700px;
+}
+
+.vd-wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 200%;
+  height: 150px;
+  display: grid;
+  flex-direction: column;
+}
+.vd-wave::before, .vd-wave::after,
+.vd-wave i {
+  width: 200%;
+  height: 100%;
+  content: "";
+  display: block;
+  grid-area: 1/-1;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.vd-wave::before {
+  background-image: url(images/wave2.png);
+  background-size: 50% 150px;
+  animation: wave 40s linear infinite both;
+  animation-delay: 1s;
+}
+.vd-wave::after {
+  background-image: url(images/wave3.png);
+  background-size: 50% 100px;
+  animation: wave 20s linear infinite both;
+  opacity: 0.75;
+}
+.vd-wave i {
+  background-image: url(images/wave1.png);
+  background-size: 50% 100px;
+  animation: wave 30s linear infinite both;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.vd-bridge {
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  width: 941px;
+  height: 237px;
+  left: 50%;
+  background: url(images/bridge.png) no-repeat center bottom;
+  transform: translateX(-50%);
+}
+.vd-bridge-go {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-mask: center no-repeat;
+  -webkit-mask-image: url(images/bridge.png);
+  -webkit-mask-size: 100% 100%;
+}
+.vd-bridge-go::before, .vd-bridge-go::after {
+  position: absolute;
+  width: calc(50% + 1px);
+  height: 100%;
+  content: "";
+  animation: go 6s linear 1;
+}
+.vd-bridge-go::before {
+  right: 0;
+  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 165, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 127, 255), rgb(0, 0, 255), rgb(139, 0, 255));
+  transform-origin: 100% 100%;
+}
+.vd-bridge-go::after {
+  left: 0;
+  background: linear-gradient(to left, rgb(255, 0, 0), rgb(255, 165, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 127, 255), rgb(0, 0, 255), rgb(139, 0, 255));
+  transform-origin: 0 0;
+}
+.vd-bridge .vd-togather {
+  position: absolute;
+  left: 0;
+  bottom: 105px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 3;
+}
+.vd-bridge .vd-togather em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.vd-bridge .vd-togather::before, .vd-bridge .vd-togather::after {
+  position: absolute;
+  width: calc(50% + 1px);
+  height: 100%;
+  content: "";
+  display: inline-block;
+}
+.vd-bridge .vd-togather::before {
+  right: 0;
+  min-width: 102px;
+  background: url(images/zhinv.png) no-repeat left bottom;
+  background-size: 102px 100%;
+  animation: move 6s linear 1;
+}
+.vd-bridge .vd-togather::after {
+  left: 0;
+  min-width: 75px;
+  background: url(images/niulang.png) no-repeat right bottom;
+  background-size: 75px 100%;
+  animation: move1 6s linear 1;
+}
+
+.v-cloud {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 700px;
+  background: url(images/cloud2.png) no-repeat center bottom;
+}
+.v-cloud::after {
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  bottom: 0;
+  height: inherit;
+  content: "";
+  background: url(images/cloud1.png) no-repeat center bottom;
+  animation: bounce-left 10s infinite;
+}
+
+@keyframes bounce-left {
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(-26px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes go {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(calc(50% + 204px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes move1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animation-y {
+  0% {
+    transform: translate(-50%, 100px) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -100px) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -300px) scale(1.5);
+  }
+}
+@keyframes animation-x {
+  0% {
+    margin-left: 0px;
+  }
+  25% {
+    margin-left: 25px;
+  }
+  75% {
+    margin-left: -25px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+.like {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(images/heart.png);
+  animation: animation-x 3s 0s linear infinite, animation-y 4s 0s linear 1;
+}
+
+.like--is-second {
+  background-image: url(images/heart1.png);
+  animation: animation-x 3s -2s linear infinite, animation-y 4s 0s linear 1;
+}
+
+.vd-bubble {
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  background: url(images/heart1.png) no-repeat center center/100%;
+  animation: animation-x 3s -2s linear infinite, animation-y 4s 0s linear 1, bubble 3s 0s linear 1;
+}
+
+@keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
