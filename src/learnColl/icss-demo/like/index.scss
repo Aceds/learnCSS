@@ -1,0 +1,52 @@
+$expression: "😀", "🤣", "❤️", "😻", "👏", "🤘", "🤡", "🤩", "👍🏼", "🐮", "🎈",
+	"💕", "💓", "💚";
+body {
+	display: flex;
+	min-height: 100vh;
+}
+.cs-like {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background: none;
+	line-height: 1;
+	margin: auto;
+	li {
+		// opacity: 0.1;
+		opacity: 0;
+		transition: 1.5s opacity 0.8s;
+		@for $i from 1 through 50 {
+			&:nth-child(#{$i}) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50px;
+				height: 50px;
+				transform: rotate(#{random() * 80 - 40}deg);
+				animation: move
+					#{random() *
+					2500 +
+					1500}ms
+					infinite
+					#{random() *
+					4000 /
+					-1000}s
+					cubic-bezier(0.46, 0.53, 0.51, 0.62);
+				&::before {
+					position: absolute;
+					font-size: 50px;
+					content: nth($expression, random(length($expression)));
+				}
+			}
+		}
+		&:active {
+			opacity: 1;
+			transition: 0.1s opacity;
+		}
+	}
+}
+@keyframes move {
+	100% {
+		transform: rotate(0) translate(0, -250px);
+	}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 形状</title>
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- 平行四边形 -->
+    <div class="btn parallelogram">Parallelogram</div>
+    <div class="btn parallelogram-bg"></div>
+    <!-- 梯形 -->
+    <div class="btn trapezoid">Trapezoid</div>
+    <!-- 切角 -->
+    <div class="btn notching">notching</div>
+    <div class="btn notching-all">notching</div>
+    <div class="btn notching-clip">notching-clip</div>
+    <div class="btn notching-arrow">notching-arrow</div>
+    <div class="btn notching-arrow-double"></div>
+    <div class="btn notching-circle"></div>
+    <div class="btn notching-circle-all"></div>
+    <div class="btn notching-circle-mask"></div>
+    <!-- 圆角不规则 -->
+    <div class="btn skew"></div>
+    <!--  tab 圆角 -->
+    <div class="btn outside-circle">outside-circle</div>
+    <!-- 三角形 -->
+    <div class="u-triangle-all"></div>
+    <div class="u-triangle-2"></div>
+    <ul class="u-trangle">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- close -->
+    <div class="close-icon"></div>
+    <!-- menu----close -->
+    <div class="menu-switch"><i class="switch-line"></i></div>
+    <!-- 开关 -->
+    <div class="switch-icon"></div>
+    <!-- 选中 -->
+    <div class="choose-icon"></div>
+    <!-- dot -->
+    <div class="dot-icon"></div>
+    <dl class="coupon-item">
+        <dt>XXXXXX</dt>
+        <dd>YYYYYY</dd>
+    </dl>
+    <div class="coupon-tickets">
+        <div class="l-tickets"></div>
+        <div class="r-tickets"></div>
+    </div>
+    <script type="text/javascript">
+        // 
+        document.querySelector('.menu-switch').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+        document.querySelector('.switch-icon').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

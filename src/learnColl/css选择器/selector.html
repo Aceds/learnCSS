@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,221 +10,229 @@
     <script>
       // document.createElement('x-select');
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
+    <dl class="cs-nth">
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+    <figure class="cs-has">
+        <figcaption></figcaption>
+        <img src="../../../assets/images/bg.jpeg" alt="">
+    </figure>
+    <figure class="cs-has">
+        <img src="../../../assets/images/bg.jpeg" alt="">
+    </figure>
     <div class="input-box">
-      <input required type="text" placeholder="请输入手机号" />
-      <label class="placeholder-txt">请输入手机号</label>
+        <input required type="text" placeholder="请输入手机号" />
+        <label class="placeholder-txt">请输入手机号</label>
     </div>
     <!--模拟按钮 最基本的一些可访问性改造-->
     <button tabindex="0" role="button">Test 1</button>
     <button>Test 2</button>
     <button>Test 3</button>
     <form class="cs-form" action="">
-      <!---->
-      <input type="checkbox" id="checkbox" />
-      <label class="checkbox" for="checkbox">提交</label>
-      <!--focus-within-->
-      <div class="cs-normal">
-        <label class="cs-label">用户名：</label>
-        <input class="cs-input" type="text" />
-      </div>
-      <div class="cs-bar">
-        <div class="cs-details">
-          <a href="javascript:" class="cs-summary">我的消息</a>
-          <div class="cs-datalist">
-            <a href class="cs-datalist-a"
-              >我的回答<sup class="cs-datalist-sup">12</sup></a
-            >
-            <a href class="cs-datalist-a">我的私信</a>
-            <a href class="cs-datalist-a"
-              >未评价订单<sup class="cs-datalist-sup">2</sup></a
-            >
-            <a href class="cs-datalist-a">我的关注</a>
-          </div>
+        <!---->
+        <input type="checkbox" id="checkbox" />
+        <label class="checkbox" for="checkbox">提交</label>
+        <!--focus-within-->
+        <div class="cs-normal">
+            <label class="cs-label">用户名：</label>
+            <input class="cs-input" type="text" />
         </div>
-      </div>
-      <!--placeholder-shown-->
-      <h4>填充风格</h4>
-      <div class="input-fill-x">
-        <input class="input-control input-fill" placeholder="邮箱" />
-        <label class="input-label">邮箱</label>
-      </div>
-      <h4>轮廓风格</h4>
-      <div class="input-outline-x">
-        <input class="input-control input-outline" placeholder="邮箱" />
-        <label class="input-label">邮箱</label>
-      </div>
-      <h4>文本域</h4>
-      <div class="textarea-outline-x">
-        <textarea
-          class="input-control textarea-outline"
-          cols="25"
-          rows="3"
-          placeholder="评论"
-        ></textarea>
-        <label class="input-label">评论</label>
-      </div>
-      <!--去除chrome 下鼠标点击outline-->
-      <!--:focus:not(:focus-visible){-->
-      <!--    outline:0;-->
-      <!--}-->
-      <textarea placeholder="请输入..."></textarea><span></span>
+        <div class="cs-bar">
+            <div class="cs-details">
+                <a href="javascript:" class="cs-summary">我的消息</a>
+                <div class="cs-datalist">
+                    <a href class="cs-datalist-a">我的回答<sup class="cs-datalist-sup">12</sup></a>
+                    <a href class="cs-datalist-a">我的私信</a>
+                    <a href class="cs-datalist-a">未评价订单<sup class="cs-datalist-sup">2</sup></a>
+                    <a href class="cs-datalist-a">我的关注</a>
+                </div>
+            </div>
+        </div>
+        <!--placeholder-shown-->
+        <h4>填充风格</h4>
+        <div class="input-fill-x">
+            <input class="input-control input-fill" placeholder="邮箱" />
+            <label class="input-label">邮箱</label>
+        </div>
+        <h4>轮廓风格</h4>
+        <div class="input-outline-x">
+            <input class="input-control input-outline" placeholder="邮箱" />
+            <label class="input-label">邮箱</label>
+        </div>
+        <h4>文本域</h4>
+        <div class="textarea-outline-x">
+            <textarea class="input-control textarea-outline" cols="25" rows="3" placeholder="评论"></textarea>
+            <label class="input-label">评论</label>
+        </div>
+        <!--去除chrome 下鼠标点击outline-->
+        <!--:focus:not(:focus-visible){-->
+        <!--    outline:0;-->
+        <!--}-->
+        <textarea placeholder="请输入..."></textarea><span></span>
     </form>
     <main class="selector1">
-      <div>
-        abc
-        <p>123</p>
-        <main>
-          <p>456</p>
-          <div><p>789</p></div>
-        </main>
-      </div>
+        <div>
+            abc
+            <p>123</p>
+            <main>
+                <p>456</p>
+                <div>
+                    <p>789</p>
+                </div>
+            </main>
+        </div>
     </main>
     <main class="selector2">
-      <div>
-        <div>111</div>
-        <p>123</p>
-        <p>1234</p>
-        <p>12345</p>
         <div>
-          <p>456</p>
-          <p>123456</p>
-          <div>
-            <p>789</p>
-          </div>
-          <p>123456789</p>
+            <div>111</div>
+            <p>123</p>
+            <p>1234</p>
+            <p>12345</p>
+            <div>
+                <p>456</p>
+                <p>123456</p>
+                <div>
+                    <p>789</p>
+                </div>
+                <p>123456789</p>
+            </div>
         </div>
-      </div>
     </main>
     <main class="selector3">
-      <div>一个 div 元素</div>
-      <ul>
-        <li>咖啡</li>
-        <li>牛奶</li>
-        <li>茶</li>
-      </ul>
+        <div>一个 div 元素</div>
+        <ul>
+            <li>咖啡</li>
+            <li>牛奶</li>
+            <li>茶</li>
+        </ul>
 
-      <p>第一段。</p>
-      <ul>
-        <li>咖啡</li>
-        <li>牛奶</li>
-        <li>茶</li>
-      </ul>
+        <p>第一段。</p>
+        <ul>
+            <li>咖啡</li>
+            <li>牛奶</li>
+            <li>茶</li>
+        </ul>
 
-      <h2>另一个列表</h2>
-      <ul>
-        <li>咖啡</li>
-        <li>牛奶</li>
-        <li>茶</li>
-      </ul>
+        <h2>另一个列表</h2>
+        <ul>
+            <li>咖啡</li>
+            <li>牛奶</li>
+            <li>茶</li>
+        </ul>
     </main>
     <main class="selector4">
-      <p>title 属性中包含单词 "flower" 的图片会获得黄色边框。</p>
-      <img src="../card/cardHover/images/1.jpg" title="tulip flower" alt="" />
-      <img src="../card/cardHover/images/2.jpg" title="haha bridge" alt="" />
+        <p>title 属性中包含单词 "flower" 的图片会获得黄色边框。</p>
+        <img src="../card/cardHover/images/1.jpg" title="tulip flower" alt="" />
+        <img src="../card/cardHover/images/2.jpg" title="haha bridge" alt="" />
     </main>
     <main class="selector5">
-      <div class="first_test">第一个 div 元素。</div>
-      <div class="second">第二个 div 元素。</div>
-      <div class="test">第三个 div 元素。</div>
-      <p class="test">这是段落中的文本。</p>
+        <div class="first_test">第一个 div 元素。</div>
+        <div class="second">第二个 div 元素。</div>
+        <div class="test">第三个 div 元素。</div>
+        <p class="test">这是段落中的文本。</p>
     </main>
     <main class="selector6">
-      <div class="first_test">第一个 div 元素。</div>
-      <div class="second">第二个 div 元素。</div>
-      <div class="test">第三个 div 元素。</div>
-      <p class="test">这是段落中的文本。</p>
+        <div class="first_test">第一个 div 元素。</div>
+        <div class="second">第二个 div 元素。</div>
+        <div class="test">第三个 div 元素。</div>
+        <p class="test">这是段落中的文本。</p>
     </main>
     <button class="cs-button cs-button-large cs-button-blue">按钮1</button>
     <button am-button="large blue">按钮2</button>
     <div class="show-pics">
-      <a href="" class="show-pic">点我显示兄弟图</a>
-      <img
-        class="show-me"
-        src="../card/cardHover/images/2.jpg"
-        alt="我是一张图"
-      />
+        <a href="" class="show-pic">点我显示兄弟图</a>
+        <img class="show-me" src="../card/cardHover/images/2.jpg" alt="我是一张图" />
     </div>
 
     <div>
-      文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容……
-      <div id="articleMore" hidden></div>
-      <a href="#articleMore" class="cs-button" data-open="true">阅读更多</a>
-      <p class="cs-more-p">
-        更多文章内容，更多文章内容，更多文章内容，更多文章内容。
-      </p>
-      <a href="##" class="cs-button" data-open="false">收起</a>
+        文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容……
+        <div id="articleMore" hidden></div>
+        <a href="#articleMore" class="cs-button" data-open="true">阅读更多</a>
+        <p class="cs-more-p">
+            更多文章内容，更多文章内容，更多文章内容，更多文章内容。
+        </p>
+        <a href="##" class="cs-button" data-open="false">收起</a>
     </div>
     <!-- 选中所有除第一个以外所有连续的包含active的class的元素 -->
     <ul class="s-adjoining">
-      <li>A</li>
-      <li class="active">B</li>
-      <li class="active">C</li>
-      <li class="active">D</li>
-      <li>E</li>
-      <li>F</li>
-      <li class="active">G</li>
-      <li class="active">H</li>
-      <li>I</li>
-      <li class="active">J</li>
-      <li>K</li>
-      <li class="active">L</li>
-      <li class="active">M</li>
-      <li class="active">N</li>
+        <li>A</li>
+        <li class="active">B</li>
+        <li class="active">C</li>
+        <li class="active">D</li>
+        <li>E</li>
+        <li>F</li>
+        <li class="active">G</li>
+        <li class="active">H</li>
+        <li>I</li>
+        <li class="active">J</li>
+        <li>K</li>
+        <li class="active">L</li>
+        <li class="active">M</li>
+        <li class="active">N</li>
     </ul>
     <!-- 反选，只选择连续的.active中的第一个 -->
     <ul class="s-invert">
-      <li>A</li>
-      <li class="active">B</li>
-      <li class="active">C</li>
-      <li class="active">D</li>
-      <li>E</li>
-      <li>F</li>
-      <li class="active">G</li>
-      <li class="active">H</li>
-      <li>I</li>
-      <li class="active">J</li>
-      <li>K</li>
-      <li class="active">L</li>
-      <li class="active">M</li>
-      <li class="active">N</li>
+        <li>A</li>
+        <li class="active">B</li>
+        <li class="active">C</li>
+        <li class="active">D</li>
+        <li>E</li>
+        <li>F</li>
+        <li class="active">G</li>
+        <li class="active">H</li>
+        <li>I</li>
+        <li class="active">J</li>
+        <li>K</li>
+        <li class="active">L</li>
+        <li class="active">M</li>
+        <li class="active">N</li>
     </ul>
     <!-- 使用纯css实现fizzbuzz -->
     <ul class="s-fizzbuzz">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
     </ul>
     <!-- 如何使用外联css覆盖行内!important样式 -->
     <span class="s-important" style="color: red !important">hello</span>
@@ -231,5 +240,6 @@
     <p class="s-scope">s-scope</p>
     <p class="s-foo">fooooo</p>
     <a href="javascript:;" class="s-button">btn</a>
-  </body>
+</body>
+
 </html>

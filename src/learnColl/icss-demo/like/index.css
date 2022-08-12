@@ -1,0 +1,728 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.cs-like {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: none;
+  line-height: 1;
+  margin: auto;
+}
+.cs-like li {
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
+}
+.cs-like li:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-5.8366655264deg);
+  animation: move 2374.6554539389ms infinite -0.1237855911s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(1)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💕";
+}
+.cs-like li:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-4.7652484459deg);
+  animation: move 3246.700424907ms infinite -1.3189590396s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(2)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💚";
+}
+.cs-like li:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(27.7095766958deg);
+  animation: move 3781.4117041652ms infinite -3.6666325845s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(3)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-35.1321888866deg);
+  animation: move 2472.7335075069ms infinite -2.933705255s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(4)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-35.1304585421deg);
+  animation: move 2855.5319798656ms infinite -1.1411808959s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(5)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💚";
+}
+.cs-like li:nth-child(6) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-9.634546062deg);
+  animation: move 3175.7507629307ms infinite -3.9284997915s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(6)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍🏼";
+}
+.cs-like li:nth-child(7) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(33.6707772555deg);
+  animation: move 2736.6498406088ms infinite -3.34592641s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(7)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤘";
+}
+.cs-like li:nth-child(8) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(6.548559038deg);
+  animation: move 2462.3366968103ms infinite -1.7220752692s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(8)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😻";
+}
+.cs-like li:nth-child(9) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-7.4130324244deg);
+  animation: move 2145.8230252501ms infinite -1.6102596771s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(9)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💓";
+}
+.cs-like li:nth-child(10) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(16.1763926283deg);
+  animation: move 2666.5812726915ms infinite -1.8395350893s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(10)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "❤️";
+}
+.cs-like li:nth-child(11) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-17.3885204569deg);
+  animation: move 1652.555164283ms infinite -2.1768406864s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(11)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤘";
+}
+.cs-like li:nth-child(12) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(1.7085047653deg);
+  animation: move 3230.898838421ms infinite -1.4351646594s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(12)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(13) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(17.0895971188deg);
+  animation: move 1749.0464957266ms infinite -3.2455584418s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(13)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(14) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-38.8129721281deg);
+  animation: move 2546.077855428ms infinite -2.0559234233s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(14)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤡";
+}
+.cs-like li:nth-child(15) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-35.9428949786deg);
+  animation: move 3501.1042781628ms infinite -1.8258012324s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(15)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(16) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-18.9626167926deg);
+  animation: move 2403.8968352399ms infinite -0.5534735857s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(16)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(17) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-14.4953831343deg);
+  animation: move 2251.2802383247ms infinite -3.1883348552s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(17)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💓";
+}
+.cs-like li:nth-child(18) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-31.189381027deg);
+  animation: move 1843.4957926943ms infinite -3.7255868044s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(18)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😀";
+}
+.cs-like li:nth-child(19) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-8.6086130952deg);
+  animation: move 3931.5779585574ms infinite -2.8084774897s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(19)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😻";
+}
+.cs-like li:nth-child(20) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-35.7231691307deg);
+  animation: move 3720.8190990931ms infinite -3.0778647256s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(20)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👏";
+}
+.cs-like li:nth-child(21) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(38.0238282235deg);
+  animation: move 3564.2522088925ms infinite -3.1279987748s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(21)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💚";
+}
+.cs-like li:nth-child(22) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-0.4331135037deg);
+  animation: move 1889.8797080369ms infinite -2.5607285399s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(22)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(23) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-28.9211170894deg);
+  animation: move 3447.6392997263ms infinite -0.45098065s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(23)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤩";
+}
+.cs-like li:nth-child(24) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-15.9715992716deg);
+  animation: move 3893.3727422945ms infinite -0.1065410359s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(24)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(25) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(27.7710096185deg);
+  animation: move 1976.9522240129ms infinite -0.0544638251s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(25)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍🏼";
+}
+.cs-like li:nth-child(26) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(34.0239048104deg);
+  animation: move 1708.6028307419ms infinite -0.064744468s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(26)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(27) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(30.6823733546deg);
+  animation: move 3194.6686728049ms infinite -3.1434505108s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(27)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😻";
+}
+.cs-like li:nth-child(28) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(27.0509174607deg);
+  animation: move 2699.3287864409ms infinite -1.0736393498s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(28)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "❤️";
+}
+.cs-like li:nth-child(29) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-4.5288469669deg);
+  animation: move 1713.7635322792ms infinite -1.6528463618s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(29)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😻";
+}
+.cs-like li:nth-child(30) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-21.8546182989deg);
+  animation: move 2419.0278282055ms infinite -3.1438463577s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(30)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍🏼";
+}
+.cs-like li:nth-child(31) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-20.0173799432deg);
+  animation: move 1617.0773064608ms infinite -3.8807629576s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(31)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😀";
+}
+.cs-like li:nth-child(32) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(19.8695721577deg);
+  animation: move 2482.5869148982ms infinite -2.1716305352s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(32)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👏";
+}
+.cs-like li:nth-child(33) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(33.3153582385deg);
+  animation: move 3327.6754818377ms infinite -3.8488500862s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(33)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤣";
+}
+.cs-like li:nth-child(34) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-11.2007408132deg);
+  animation: move 3697.3532862159ms infinite -2.2789512518s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(34)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤩";
+}
+.cs-like li:nth-child(35) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-12.582511192deg);
+  animation: move 3936.7996912334ms infinite -1.1557588127s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(35)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😻";
+}
+.cs-like li:nth-child(36) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-28.6587994275deg);
+  animation: move 2460.399986506ms infinite -1.3153086048s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(36)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💕";
+}
+.cs-like li:nth-child(37) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-8.5831492251deg);
+  animation: move 3212.1853794567ms infinite -3.6431446726s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(37)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤘";
+}
+.cs-like li:nth-child(38) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(14.1653103372deg);
+  animation: move 3740.6069214931ms infinite -3.0486500472s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(38)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤣";
+}
+.cs-like li:nth-child(39) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(22.8002613683deg);
+  animation: move 3044.0517222556ms infinite -1.9425512156s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(39)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😀";
+}
+.cs-like li:nth-child(40) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(38.9991260005deg);
+  animation: move 1640.5332904217ms infinite -0.0535998079s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(40)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎈";
+}
+.cs-like li:nth-child(41) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-6.7559771354deg);
+  animation: move 2608.7269691158ms infinite -3.4616869807s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(41)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍🏼";
+}
+.cs-like li:nth-child(42) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(31.7342622756deg);
+  animation: move 2561.5254179495ms infinite -2.2765002708s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(42)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤡";
+}
+.cs-like li:nth-child(43) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(9.7604201898deg);
+  animation: move 1801.0740858884ms infinite -3.0352732012s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(43)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤣";
+}
+.cs-like li:nth-child(44) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-39.6061235578deg);
+  animation: move 1796.4093499122ms infinite -2.4490640231s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(44)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤡";
+}
+.cs-like li:nth-child(45) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(7.628659737deg);
+  animation: move 2419.544874704ms infinite -2.7662842112s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(45)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤘";
+}
+.cs-like li:nth-child(46) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(1.6887510362deg);
+  animation: move 3065.9561629908ms infinite -1.9921151889s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(46)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(47) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(3.2879441495deg);
+  animation: move 3401.2552074238ms infinite -0.4117619143s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(47)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😀";
+}
+.cs-like li:nth-child(48) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-30.1462833759deg);
+  animation: move 2616.4547325956ms infinite -2.7982372619s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(48)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍🏼";
+}
+.cs-like li:nth-child(49) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-25.101559828deg);
+  animation: move 2633.9626403552ms infinite -1.6078253935s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(49)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🐮";
+}
+.cs-like li:nth-child(50) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-29.5409211787deg);
+  animation: move 1777.8253122415ms infinite -1.4738909665s cubic-bezier(0.46, 0.53, 0.51, 0.62);
+}
+.cs-like li:nth-child(50)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤣";
+}
+.cs-like li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
+}
+
+@keyframes move {
+  100% {
+    transform: rotate(0) translate(0, -250px);
+  }
+}

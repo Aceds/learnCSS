@@ -18,8 +18,8 @@
   text-align: justify;
   /* display: flex; */
   /*   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical; */
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical; */
   position: relative;
   line-height: 1.5;
   max-height: 4.5em;

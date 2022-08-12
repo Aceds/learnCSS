@@ -556,3 +556,69 @@ input:is(:not(:placeholder-shown),:focus) ~ label {
   display: none;
 }
 */
+.cs-has {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.cs-has img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.cs-has:has(figcaption) img {
+  aspect-ratio: 21/9;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.cs-nth {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.cs-nth dd {
+  width: 33.3333333333%;
+  height: 33.3333333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: num;
+}
+.cs-nth dd::before {
+  content: counter(num);
+}
+.cs-nth dd:nth-child(1) {
+  background: rgba(71, 118, 179, 0.95);
+}
+.cs-nth dd:nth-child(2) {
+  background: rgba(231, 86, 178, 0.9);
+}
+.cs-nth dd:nth-child(3) {
+  background: rgba(167, 110, 94, 0.85);
+}
+.cs-nth dd:nth-child(4) {
+  background: rgba(238, 193, 161, 0.8);
+}
+.cs-nth dd:nth-child(5) {
+  background: rgba(226, 181, 122, 0.75);
+}
+.cs-nth dd:nth-child(6) {
+  background: rgba(23, 110, 99, 0.7);
+}
+.cs-nth dd:nth-child(7) {
+  background: rgba(255, 229, 77, 0.65);
+}
+.cs-nth dd:nth-child(8) {
+  background: rgba(163, 111, 9, 0.6);
+}
+.cs-nth dd:nth-child(9) {
+  background: rgba(22, 230, 150, 0.55);
+}
+.cs-nth dd:nth-child(1):nth-last-child(4), .cs-nth dd:nth-child(1):nth-last-child(4) ~ dd {
+  width: 50%;
+  height: 50%;
+}

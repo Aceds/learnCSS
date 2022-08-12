@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+}
+.puzzle-x {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	.x-flag {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 0;
+		height: 0;
+		&:hover ~ .x-box {
+			transform: translate(0, 0);
+			transition: 0s;
+		}
+	}
+	.x-box {
+		width: 100%;
+		height: 100%;
+		background-color: aqua;
+		transform: translate(100%, 100%);
+		transition: 9999s 9999s;
+	}
+	&:active .x-flag {
+		width: 100%;
+		height: 100%;
+		border: 1px dashed #000;
+		box-sizing: border-box;
+	}
+}
