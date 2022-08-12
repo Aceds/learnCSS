@@ -539,3 +539,18 @@ body {
   border-radius: 50%;
   box-shadow: 16px 0 0 #2148f5, -16px 0 0 #f5bd21;
 }
+
+.add-icon,
+.subtract-icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
+  border: 1px solid #000;
+  background: linear-gradient(currentColor, currentColor) no-repeat center/0.875em 2px, linear-gradient(currentColor, currentColor) no-repeat center/2px 0.875em, #fff;
+  color: #000;
+  border-radius: 50%;
+}
+
+.subtract-icon {
+  background-size: 0.875em 2px, 0;
+}
