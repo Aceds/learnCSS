@@ -1,0 +1,80 @@
+// 霓虹
+// @mixin animation() {
+// 	animation: flicker 6s ease-in-out ((random(400) / 100) * 1s) infinite
+// 		alternate both;
+// }
+$base-size: 80px;
+$pulse-duration: 1.5s;
+.neon-pulse {
+	position: relative;
+	display: flex;
+	margin: 20px auto;
+	i {
+		width: 25px;
+		height: $base-size;
+		background: rgb(random(255), random(255), random(255));
+		display: inline-block;
+		margin: 0 3px;
+		opacity: 0.5;
+		border-radius: 2px;
+	}
+	&.pluse {
+		i {
+			animation: pulse $pulse-duration infinite;
+			@for $i from 2 through 6 {
+				&:nth-child(#{$i}) {
+					animation-delay: calc($pulse-duration / calc(6 / #{$i}));
+				}
+			}
+		}
+	}
+}
+@keyframes pulse {
+	50% {
+		opacity: 1;
+	}
+}
+.neon-filker {
+	display: flex;
+	font-size: 48px;
+
+	i {
+		padding: 5px;
+		min-width: 50px;
+		text-align: center;
+		display: inline-block;
+		font-style: normal;
+		color: #fff;
+		margin: 2px;
+		opacity: 0.5;
+		animation: filker 2s linear infinite;
+		background-color: rgb(random(255), random(255), random(255));
+		border-radius: 2px;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				background-color: rgb(random(255), random(255), random(255));
+				// color: rgb(random(255), random(255), random(255));
+				animation-delay: calc(calc(#{$i} - 1) * 0.25s);
+			}
+		}
+	}
+}
+
+@keyframes filker {
+	0%,
+	100% {
+		// color: rgb(random(255), random(255), random(255));
+
+		// filter: blur(2px);
+		// text-shadow: 0 0 10px #00e3ff, 0 0 20px #00e3ff, 0 0 40px #00e3ff,
+		// 	0 0 80px #00e3ff, 0 0 120px #00e3ff;
+	}
+	5%,
+	95% {
+		opacity: 1;
+		// color: rgb(random(255), random(255), random(255));
+		// filter: blur(0px);
+		// background-color: rgb(random(255), random(255), random(255));
+		// text-shadow: none;
+	}
+}

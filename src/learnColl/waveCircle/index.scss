@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	overflow: hidden;
+}
+.wave-circle {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	animation: rotate 6s infinite linear;
+	&::before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: calc(100% + 20px);
+		height: calc(100% + 20px);
+		display: block;
+		background-color: #f39f18;
+		border-radius: 50%;
+		content: "";
+		box-shadow: 0px 0px 52px 2px rgb(255 170 0);
+		z-index: 2;
+		transform: translate(-50%, -50%);
+	}
+	i {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		border: 1px solid;
+		opacity: 1;
+		border-radius: 50%;
+		border-color: rgb(random(255), random(255), random(255));
+		animation: circle-move 6s ease-out forwards infinite;
+		// @for $i from 2 to 7 {
+		@for $i from 1 to 7 {
+			&:nth-child(#{$i}) {
+				border-color: rgb(random(255), random(255), random(255));
+				// animation-delay: calc(#{$i} * 1.5s);
+				animation-delay: calc(calc(#{$i} - 1) * 1.5s);
+				&::before {
+					background-color: rgb(
+						random(255),
+						random(255),
+						random(255)
+					);
+				}
+			}
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 16px;
+			height: 16px;
+			content: "";
+			z-index: 2;
+			opacity: 0;
+			display: inline-block;
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+			animation: circle-opacity 9.1s ease-out forwards 1;
+		}
+		&:first-child::before {
+			top: 0;
+			margin-left: 0;
+		}
+		&:nth-child(2)::before {
+			left: 100%;
+			top: 25%;
+			margin-left: -13px;
+		}
+		&:nth-child(3)::before {
+			left: 100%;
+			top: 75%;
+			margin-left: -13px;
+		}
+		&:nth-child(4)::before {
+			left: 100%;
+			top: 100%;
+			margin-left: -83px;
+		}
+		&:nth-child(5)::before {
+			left: 75%;
+			top: 100%;
+			margin-left: -100px;
+			margin-top: -13px;
+		}
+		&:nth-child(6)::before {
+			left: 0;
+			top: 100%;
+			margin-top: -83px;
+		}
+	}
+}
+
+@keyframes circle-move {
+	0% {
+		transform: scale(0.5);
+		// opacity: 0;
+		opacity: 0.2;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		transform: scale(3);
+		opacity: 0;
+	}
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes circle-opacity {
+	// 90% {
+	// 	opacity: 0;
+	// }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

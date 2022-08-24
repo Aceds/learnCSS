@@ -1,0 +1,85 @@
+.neon-pulse {
+  position: relative;
+  display: flex;
+  margin: 20px auto;
+}
+.neon-pulse i {
+  width: 25px;
+  height: 80px;
+  background: rgb(73, 26, 4);
+  display: inline-block;
+  margin: 0 3px;
+  opacity: 0.5;
+  border-radius: 2px;
+}
+.neon-pulse.pluse i {
+  animation: pulse 1.5s infinite;
+}
+.neon-pulse.pluse i:nth-child(2) {
+  animation-delay: calc(1.5s / (6 / 2));
+}
+.neon-pulse.pluse i:nth-child(3) {
+  animation-delay: calc(1.5s / (6 / 3));
+}
+.neon-pulse.pluse i:nth-child(4) {
+  animation-delay: calc(1.5s / (6 / 4));
+}
+.neon-pulse.pluse i:nth-child(5) {
+  animation-delay: calc(1.5s / (6 / 5));
+}
+.neon-pulse.pluse i:nth-child(6) {
+  animation-delay: calc(1.5s / (6 / 6));
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 1;
+  }
+}
+.neon-filker {
+  display: flex;
+  font-size: 48px;
+}
+.neon-filker i {
+  padding: 5px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+  font-style: normal;
+  color: #fff;
+  margin: 2px;
+  opacity: 0.5;
+  animation: filker 2s linear infinite;
+  background-color: rgb(34, 229, 194);
+  border-radius: 2px;
+}
+.neon-filker i:nth-child(1) {
+  background-color: rgb(83, 115, 137);
+  animation-delay: calc((1 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(2) {
+  background-color: rgb(83, 45, 167);
+  animation-delay: calc((2 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(3) {
+  background-color: rgb(134, 223, 136);
+  animation-delay: calc((3 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(4) {
+  background-color: rgb(87, 47, 148);
+  animation-delay: calc((4 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(5) {
+  background-color: rgb(86, 226, 33);
+  animation-delay: calc((5 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(6) {
+  background-color: rgb(79, 46, 49);
+  animation-delay: calc((6 - 1) * 0.25s);
+}
+
+@keyframes filker {
+  5%, 95% {
+    opacity: 1;
+  }
+}

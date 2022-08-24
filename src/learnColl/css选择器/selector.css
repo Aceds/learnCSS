@@ -592,31 +592,31 @@ input:is(:not(:placeholder-shown),:focus) ~ label {
   content: counter(num);
 }
 .cs-nth dd:nth-child(1) {
-  background: rgba(71, 118, 179, 0.95);
+  background: rgba(71, 231, 228, 0.95);
 }
 .cs-nth dd:nth-child(2) {
-  background: rgba(231, 86, 178, 0.9);
+  background: rgba(224, 147, 46, 0.9);
 }
 .cs-nth dd:nth-child(3) {
-  background: rgba(167, 110, 94, 0.85);
+  background: rgba(139, 39, 114, 0.85);
 }
 .cs-nth dd:nth-child(4) {
-  background: rgba(238, 193, 161, 0.8);
+  background: rgba(24, 37, 153, 0.8);
 }
 .cs-nth dd:nth-child(5) {
-  background: rgba(226, 181, 122, 0.75);
+  background: rgba(29, 247, 82, 0.75);
 }
 .cs-nth dd:nth-child(6) {
-  background: rgba(23, 110, 99, 0.7);
+  background: rgba(230, 34, 77, 0.7);
 }
 .cs-nth dd:nth-child(7) {
-  background: rgba(255, 229, 77, 0.65);
+  background: rgba(182, 255, 227, 0.65);
 }
 .cs-nth dd:nth-child(8) {
-  background: rgba(163, 111, 9, 0.6);
+  background: rgba(52, 100, 112, 0.6);
 }
 .cs-nth dd:nth-child(9) {
-  background: rgba(22, 230, 150, 0.55);
+  background: rgba(105, 76, 187, 0.55);
 }
 .cs-nth dd:nth-child(1):nth-last-child(4), .cs-nth dd:nth-child(1):nth-last-child(4) ~ dd {
   width: 50%;

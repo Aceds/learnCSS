@@ -1,75 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>notice</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .cs-notice-ani {
-        --h: 24;
-        --sp: 0.3;
-        --del: 0.7;
-        --dur: 1s;
-        color: #fff;
-        font-size: 12px;
-        margin: 0 auto;
-        height: 24px;
-        line-height: 24px;
-        overflow: hidden;
-        padding: 0 16px;
-        background: #f69281;
-      }
-
-      .cs-notice-ani ul {
-        animation: move calc(var(--dur) * var(--s)) steps(var(--s), end)
-          infinite;
-      }
-
-      .cs-notice-ani li {
-        width: 100%;
-        white-space: nowrap;
-        cursor: pointer;
-        animation: move1 calc(var(--dur)) infinite;
-      }
-
-      @keyframes move {
-        0% {
-          transform: translate(0, 0px);
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-        100% {
-          transform: translate(0, calc(var(--s) * var(--h) * -1px));
-        }
-      }
 
-      @keyframes move1 {
-        0% {
-          transform: translate(0, 0px);
+        .cs-notice-ani {
+            --h: 24;
+            --sp: 0.3;
+            --del: 0.7;
+            --dur: 1s;
+            color: #fff;
+            font-size: 12px;
+            margin: 0 auto;
+            height: 24px;
+            line-height: 24px;
+            overflow: hidden;
+            padding: 0 16px;
+            background: #f69281;
         }
-        100% {
-          transform: translate(0, calc(var(--h) * -1px));
+
+        .cs-notice-ani ul {
+            animation: move calc(var(--dur) * var(--s)) steps(var(--s), end) infinite;
         }
-      }
+
+        .cs-notice-ani li {
+            width: 100%;
+            white-space: nowrap;
+            cursor: pointer;
+            animation: move1 calc(var(--dur)) infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            100% {
+                transform: translate(0, calc(var(--s) * var(--h) * -1px));
+            }
+        }
+
+        @keyframes move1 {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            100% {
+                transform: translate(0, calc(var(--h) * -1px));
+            }
+        }
+
+        .ddd {
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .ddd ul {
+            animation: abc .5s infinite forwards;
+        }
+
+        .ddd li {
+            width: 16px;
+            height: 16px;
+            display: block;
+            text-align: center;
+            background-color: pink;
+            border-radius: 50%;
+
+        }
+
+        @keyframes abc {
+            100% {
+                transform: translate(0, -16px);
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="cs-notice-ani">
-      <ul style="--s: 6">
-        <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
-        <li>
-          多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2
-        </li>
-        <li>多条css轮播多条css轮播多条css轮播多条css轮播多播3</li>
-        <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播4</li>
-        <li>多条css轮播多条css轮播多条css轮播多条c播多条css轮播5</li>
-        <li>多条css轮播多条css轮多条css轮播多条css轮播6</li>
-        <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
-      </ul>
+</head>
+
+<body>
+    <div class="ddd">
+        <ul>
+            <li>1</li>
+            <li>1</li>
+        </ul>
     </div>
-  </body>
+    <div class="cs-notice-ani">
+        <ul style="--s: 6">
+            <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
+            <li>
+                多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播2
+            </li>
+            <li>多条css轮播多条css轮播多条css轮播多条css轮播多播3</li>
+            <li>多条css轮播多条css轮播多条css轮播多条css轮播多条css轮播4</li>
+            <li>多条css轮播多条css轮播多条css轮播多条c播多条css轮播5</li>
+            <li>多条css轮播多条css轮多条css轮播多条css轮播6</li>
+            <li>多条css轮播多条css轮播多条css轮播多条css轮播1</li>
+        </ul>
+    </div>
+</body>
+
 </html>
