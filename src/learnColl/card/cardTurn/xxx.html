@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            perspective: 600px;
+        }
+
+        .c-item {
+            position: relative;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            transition: transform .3s;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+        }
+
+        .c-item:hover,
+        .c-item.move {
+            transform: rotateX(180deg);
+        }
+
+        .c-item:hover .c-back,
+        .c-item.move .c-back {
+            z-index: 2;
+        }
+
+        .c-item .c-front,
+        .c-item .c-back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .c-item .c-back {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="c-item">
+            <div class="c-front">1</div>
+            <div class="c-back">2</div>
+        </div>
+    </main>
+    <script>
+        const item = document.querySelector(".c-item");
+        for (let i = 0; i < 10; i++) {
+            setInterval(function () {
+                item.classList.add('move');
+            }, 1000);
+            setTimeout(() => {
+                item.classList.remove('move');
+            }, 1100);
+        }
+
+
+    </script>
+</body>
+
+</html>

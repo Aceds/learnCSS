@@ -132,3 +132,15 @@ body {
 		}
 	}
 }
+.btn-filter {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background: red;
+	margin: 40px;
+	&:hover {
+		filter: blur(2);
+		box-shadow: 0 0 20px 0 #228dff;
+		transition: all 0.3s;
+	}
+}

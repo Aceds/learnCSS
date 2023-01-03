@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+:root {
+  --primary-color: royalblue;
+}
+
+.button {
+  padding: 8px 16px;
+  color: rgba(0, 0, 0, 0.8509803922);
+  border: 1px solid #d9d9d9;
+  background-color: transparent;
+  border-radius: 2px;
+  line-height: 1.4;
+  font-size: 18px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.0156862745);
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.button:focus-visible {
+  outline: 0;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 10px var(--primary-color);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.button[type=primary] {
+  border-color: transparent;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.0431372549);
+}
+
+.button[type=dashed] {
+  border-style: dashed;
+}
+
+.button[type=text] {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.button:not([type]):hover,
+.button[type=dashed]:hover,
+.button[type=dashed]:focus {
+  color: var(--primary-color);
+  border-color: currentColor;
+}
+
+.button[type=primary]:hover {
+  filter: brightness(1.1);
+}
+
+.button[type=text]:hover,
+.button[type=text]:focus {
+  background: rgba(0, 0, 0, 0.018);
+}
+
+.button.button:active {
+  filter: brightness(0.9);
+}
+
+.button.button:active:not([type=text])::after {
+  transition: 0s;
+  box-shadow: none;
+  opacity: 0.4;
+}
+
+.icon {
+  width: 1em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  fill: currentColor;
+  transform: rotate(360deg);
+  transition: 0.5s;
+}
+
+.button:active .icon {
+  transform: rotate(0);
+  transition: 0s;
+}

@@ -1,0 +1,161 @@
+@use "sass:math";
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+}
+.gashapon-x {
+	background: url(https://i.postimg.cc/DfDC92yR/box-1.png) no-repeat center
+		center;
+	background-size: 100% 100%;
+	width: 55vw;
+	height: 77vw;
+}
+
+.ball-btn {
+	position: relative;
+	z-index: 3;
+	width: 16vw;
+	height: 16vw;
+	font-size: 5vw;
+	color: #fff;
+	line-height: 16vw;
+	font-weight: bold;
+	text-align: center;
+	margin: -6vw auto 0;
+	background-color: #ff571a;
+	border-radius: 50%;
+}
+
+.ball-x {
+	position: relative;
+	width: 48vw;
+	height: 44vw;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 50% 50% 0px 0px;
+	$total: 16;
+	i {
+		position: absolute;
+		width: 10vw;
+		height: 10vw;
+		display: inline-block;
+		border-radius: 50%;
+		animation: roll 1s linear forwards, fall 1s linear backwards;
+		@for $i from 1 through $total {
+			$random-x: random(400) * 0.1vw;
+			$random-y: random(400) * 0.1vw;
+			&:nth-child(#{$i}) {
+				opacity: random(10000) * 0.0001;
+				top: $random-y;
+				left: $random-x;
+				background: linear-gradient(
+					135deg,
+					rgba(random(255), random(255), random(255), random(1)),
+					rgba(random(255), random(255), random(255), random(1))
+				);
+				animation-delay: $i * 0.1s;
+			}
+		}
+	}
+	&.move {
+		i {
+			@for $i from 1 through $total {
+				&:nth-child(#{$i}) {
+					animation: move-#{$i} 1.5s linear infinite;
+				}
+				@keyframes move-#{$i} {
+					0% {
+						transform: translate(0px, 0px);
+					}
+					20% {
+						transform: translate(
+							(math.floor(math.random() * 800) - 400) * 0.1vw,
+							(math.floor(math.random() * 800) - 400) * 0.1vw
+						);
+					}
+					40% {
+						transform: translate(
+							(math.floor(math.random() * 400) - 100) * 0.1vw,
+							(math.floor(math.random() * 400) - 100) * 0.1vw
+						);
+					}
+					60% {
+						transform: translate(
+							(math.floor(math.random() * 300) - 100) * 0.1vw,
+							(math.floor(math.random() * 300) - 100) * 0.1vw
+						);
+					}
+					80% {
+						transform: translate(
+							(math.floor(math.random() * 300) - 100) * 0.1vw,
+							(math.floor(math.random() * 300) - 100) * 0.1vw
+						);
+					}
+					100% {
+						transform: translate(
+							(math.floor(math.random() * 200) - 100) * 0.1vw,
+							(math.floor(math.random() * 200) - 100) * 0.1vw
+						);
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-200%);
+		opacity: 0;
+	}
+	5% {
+		transform: translateY(-200%);
+	}
+	15% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(-100%);
+	}
+	40% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(-60%);
+	}
+	70% {
+		transform: translateY(0%);
+	}
+	80% {
+		transform: translateY(-30%);
+	}
+	90% {
+		transform: translateY(0%);
+	}
+	95% {
+		transform: translateY(-14%);
+	}
+	97% {
+		transform: translateY(0%);
+	}
+	99% {
+		transform: translateY(-6%);
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes roll {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

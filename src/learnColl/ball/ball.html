@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="ball.css">
+</head>
+
+<body>
+    <!--机器-->
+    <div class="gashapon-x">
+        <!--球-->
+        <div class="ball-x">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="ball-btn">GO</div>
+    </div>
+    <script>
+        document.querySelector('.ball-btn').addEventListener('click', function () {
+            document.querySelector('.ball-x').classList.toggle('move');
+        });
+
+
+    </script>
+</body>
+
+</html>

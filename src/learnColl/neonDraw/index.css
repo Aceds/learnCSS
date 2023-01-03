@@ -1,0 +1,297 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.draw-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.draw-sign {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0;
+  flex-shrink: 0;
+}
+.draw-sign.sign-neon .sign-tit::before {
+  animation: filker 1.2s linear infinite both;
+}
+.draw-sign .sign-tit {
+  position: relative;
+  width: 50px;
+  height: 176px;
+  margin: 0 5px;
+  display: flex;
+  color: #88662b;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 150px;
+  background: url(images/sign.png) no-repeat center center/contain;
+  counter-increment: num;
+}
+.draw-sign .sign-tit::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  content: counter(num);
+}
+.draw-sign .sign-tit::before {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 107px;
+  height: 218px;
+  content: "";
+  display: block;
+  opacity: 0;
+  background: url(images/sign-active.png) no-repeat center center/contain;
+  transform: translate(-50%, -50%);
+}
+.draw-sign .sign-tit:nth-child(1)::before {
+  animation-delay: calc((1 - 1) * 0.1s);
+}
+.draw-sign .sign-tit:nth-child(2)::before {
+  animation-delay: calc((2 - 1) * 0.1s);
+}
+.draw-sign .sign-tit:nth-child(3)::before {
+  animation-delay: calc((3 - 1) * 0.1s);
+}
+.draw-sign .sign-tit:nth-child(4)::before {
+  animation-delay: calc((4 - 1) * 0.1s);
+}
+.draw-sign .sign-tit:nth-child(5)::before {
+  animation-delay: calc((5 - 1) * 0.1s);
+}
+.draw-sign .sign-tit:nth-child(6)::before {
+  animation-delay: calc((6 - 1) * 0.1s);
+}
+
+@keyframes filker {
+  0%, 100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+}
+.draw-sign-icon {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 0;
+  width: 50px;
+  height: 176px;
+  margin-left: -25px;
+  opacity: 0;
+  background: purple;
+}
+.draw-sign-icon.transit-show {
+  animation: transitShow 0.75s 1.45s forwards 1;
+}
+
+.sign-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+}
+.sign-mask.show {
+  display: block;
+}
+
+.draw-box {
+  width: 100%;
+  height: 350px;
+  margin-top: -45px;
+  flex-shrink: 0;
+}
+
+.draw-box-inner {
+  position: relative;
+  z-index: 6;
+  width: 375px;
+  height: 350px;
+  margin: 0 auto;
+  padding-top: 201px;
+  background-image: url("images/draw.png");
+  background-repeat: no-repeat;
+  background-size: 750px 350px;
+  box-sizing: border-box;
+}
+.draw-box-inner.ballot {
+  animation: ballot 0.3s steps(1) 4;
+}
+
+@keyframes ballot {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -375px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.fortune-btn {
+  width: 160px;
+  height: 40px;
+  display: block;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  margin: 30px auto;
+  overflow: hidden;
+  background: hsl(28deg, 95%, 41%);
+  border-radius: 4px;
+}
+.fortune-btn:focus {
+  border: 0;
+  outline: 0;
+}
+.fortune-btn.btn-tada::before {
+  width: 0.5rem;
+  height: 0.2rem;
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+  animation: splash 2s infinite;
+  transform: scale(0);
+}
+
+@keyframes splash {
+  50%, 100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+@keyframes transitShow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  5% {
+    transform: translateY(-150px) scale(1);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(-350px) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-350px) scale(1.5);
+  }
+}
+.is-has-header .draw-popup,
+.is-has-header .sign-mask {
+  top: 44px;
+}
+
+.draw-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 7;
+  overflow-y: auto;
+  display: none;
+}
+.draw-popup.show {
+  display: block;
+  background: pink;
+}
+
+.draw-popup-main {
+  width: 375px;
+  height: 664px;
+  margin: 0 auto;
+  background: yellowgreen;
+}
+
+.draw-popup-txt {
+  width: 100%;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.unlock-btn {
+  width: 160px;
+  height: 40px;
+  display: block;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  margin: 30px auto;
+  overflow: hidden;
+  background: hsl(28deg, 95%, 41%);
+  border-radius: 4px;
+}
+.unlock-btn:focus {
+  border: 0;
+  outline: 0;
+}
+.unlock-btn.btn-abel {
+  animation: pulseBtn 0.8s ease-in-out forwards infinite;
+}
+
+.draw-popup .draw-happiness .draw-popup-txt {
+  background: url("images/result/happiness-txt.png") no-repeat center center/contain;
+}
+.draw-popup .draw-health .draw-popup-txt {
+  background: url("images/result/health-txt.png") no-repeat center center/contain;
+}
+.draw-popup .draw-wealth .draw-popup-txt {
+  background: url("images/result/wealth-txt.png") no-repeat center center/contain;
+}
+.draw-popup .draw-career .draw-popup-txt {
+  background: url("images/result/career-txt.png") no-repeat center center/contain;
+}
+.draw-popup .draw-jubilant .draw-popup-txt {
+  background: url("images/result/jubilant-txt.png") no-repeat center center/contain;
+}
+.draw-popup.show {
+  animation: turnShow 0.3s ease forwards 1;
+  transform-origin: 50% 50%;
+}
+
+@keyframes turnShow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulseBtn {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

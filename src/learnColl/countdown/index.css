@@ -1,0 +1,91 @@
+.countdown {
+  position: relative;
+  margin: auto;
+  width: 5em;
+  height: 5em;
+}
+.countdown::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: num 10s steps(1) infinite;
+  content: counter(s, decimal-leading-zero);
+}
+
+@keyframes num {
+  0% {
+    counter-reset: s 10;
+  }
+  10% {
+    counter-reset: s 9;
+  }
+  20% {
+    counter-reset: s 8;
+  }
+  30% {
+    counter-reset: s 7;
+  }
+  40% {
+    counter-reset: s 6;
+  }
+  50% {
+    counter-reset: s 5;
+  }
+  60% {
+    counter-reset: s 4;
+  }
+  70% {
+    counter-reset: s 3;
+  }
+  80% {
+    counter-reset: s 2;
+  }
+  90% {
+    counter-reset: s 1;
+  }
+  100% {
+    counter-reset: s 0;
+  }
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+[r] {
+  fill: none;
+  stroke: #999;
+}
+[r] + [r] {
+  transform: rotate(-90deg);
+  stroke-linecap: round;
+  stroke: #05aa05;
+  animation: arc 10s linear infinite;
+  animation-name: arc, col;
+}
+
+@keyframes arc {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes col {
+  0% {
+    stroke: #05aa05;
+  }
+  33.3333333333% {
+    stroke: #e97f02;
+  }
+  66.6666666667% {
+    stroke: #bd1550;
+  }
+  100% {
+    stroke: #490a3d;
+  }
+}

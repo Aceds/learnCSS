@@ -6,7 +6,7 @@
 .neon-pulse i {
   width: 25px;
   height: 80px;
-  background: rgb(73, 26, 4);
+  background: rgb(253, 234, 58);
   display: inline-block;
   margin: 0 3px;
   opacity: 0.5;
@@ -50,31 +50,31 @@
   margin: 2px;
   opacity: 0.5;
   animation: filker 2s linear infinite;
-  background-color: rgb(34, 229, 194);
+  background-color: rgb(26, 14, 254);
   border-radius: 2px;
 }
 .neon-filker i:nth-child(1) {
-  background-color: rgb(83, 115, 137);
+  background-color: rgb(2, 255, 89);
   animation-delay: calc((1 - 1) * 0.25s);
 }
 .neon-filker i:nth-child(2) {
-  background-color: rgb(83, 45, 167);
+  background-color: rgb(203, 60, 153);
   animation-delay: calc((2 - 1) * 0.25s);
 }
 .neon-filker i:nth-child(3) {
-  background-color: rgb(134, 223, 136);
+  background-color: rgb(122, 56, 173);
   animation-delay: calc((3 - 1) * 0.25s);
 }
 .neon-filker i:nth-child(4) {
-  background-color: rgb(87, 47, 148);
+  background-color: rgb(143, 106, 148);
   animation-delay: calc((4 - 1) * 0.25s);
 }
 .neon-filker i:nth-child(5) {
-  background-color: rgb(86, 226, 33);
+  background-color: rgb(73, 254, 175);
   animation-delay: calc((5 - 1) * 0.25s);
 }
 .neon-filker i:nth-child(6) {
-  background-color: rgb(79, 46, 49);
+  background-color: rgb(151, 142, 41);
   animation-delay: calc((6 - 1) * 0.25s);
 }
 

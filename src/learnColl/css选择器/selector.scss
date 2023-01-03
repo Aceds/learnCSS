@@ -19,6 +19,27 @@
 	background: #ff0000;
 }
 
+// :is()  函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素
+// :where和:is的语法参数完全一致。唯一不同的就是:where的权重永远为0  在开发组件库的时候，可以使用，因为where的权重很低
+.select-is {
+	display: flex;
+	:is(.is-1, .is-2, .is-3) > p {
+		color: red;
+		font-size: 24px;
+		margin: 0 10px;
+	}
+}
+.select-txt-is {
+	display: flex;
+	div:is(.txt-is) {
+		color: green;
+		font-size: 24px;
+		margin: 0 10px;
+	}
+}
+:is(.select-is-h) :is(h1, h4) {
+	color: blue;
+}
 /*title 属性中包含单词 "flower" 的图片会获得黄色边框*/
 .selector4 {
 	img {
@@ -82,7 +103,7 @@ a:hover {
 	color: blue;
 }
 
-//
+//如果 n 是3的倍数，输出“Fizz”；如果 n 是5的倍数，输出“Buzz”;如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
 .s-fizzbuzz {
 	li {
 		min-width: 80px;
@@ -91,13 +112,13 @@ a:hover {
 			content: counter(abc);
 		}
 		&:nth-child(3n)::before {
-			content: "he";
+			content: "fizz";
 		}
 		&:nth-child(5n)::before {
-			content: "helo";
+			content: "buzz";
 		}
 		&:nth-child(15n)::before {
-			content: "helloword";
+			content: "fizzbuzz";
 		}
 	}
 }
@@ -626,5 +647,40 @@ input:is(:not(:placeholder-shown),:focus) ~ label {
 			width: 50%;
 			height: 50%;
 		}
+	}
+}
+
+// 多层级hover
+.d-hover {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	div {
+		margin: 40px;
+	}
+	div:hover {
+		outline: 4px dashed green;
+	}
+	div:not(:has(:hover)):hover {
+		outline: 4px dashed rebeccapurple;
+	}
+	.box-3 {
+		width: 150px;
+		height: 150px;
+		background: pink;
+	}
+	.box-2 {
+		background: red;
+	}
+	.box-1 {
+		background: lavender;
+	}
+}
+@supports not selector(:has(a)) {
+	.d-hover * {
+		display: none !important;
+	}
+	.d-hover::after {
+		content: "你的浏览器不支持:has，请确保 Chrome 101+(开启实验特性)、Safari 15.4+";
 	}
 }

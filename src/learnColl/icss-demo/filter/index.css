@@ -412,3 +412,15 @@ body {
     mask: linear-gradient(45deg, #000 100%, transparent 105%, transparent 1%);
   }
 }
+.btn-filter {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background: red;
+  margin: 40px;
+}
+.btn-filter:hover {
+  filter: blur(2);
+  box-shadow: 0 0 20px 0 #228dff;
+  transition: all 0.3s;
+}

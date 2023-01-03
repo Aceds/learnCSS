@@ -13,6 +13,38 @@
 </head>
 
 <body>
+    <!-- :is -->
+    <div class="select-is">
+        <div class="is-1">
+            <p>is1</p>
+        </div>
+        <div class="is-2">
+            <p>is2</p>
+        </div>
+        <div class="is-3">
+            <p>is3</p>
+        </div>
+    </div>
+    <div class="select-txt-is">
+        <div class="txt-is">p1</div>
+        <div class="txt-is">p2</div>
+        <div class="txt-is">p3</div>
+        <p class="txt-is">p4</p>
+    </div>
+    <div>
+        <div class="select-is-h">
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+        </div>
+        <div class="select-is-h1">
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+        </div>
+    </div>
     <dl class="cs-nth">
         <dd></dd>
         <dd></dd>
@@ -48,17 +80,7 @@
             <label class="cs-label">用户名：</label>
             <input class="cs-input" type="text" />
         </div>
-        <div class="cs-bar">
-            <div class="cs-details">
-                <a href="javascript:" class="cs-summary">我的消息</a>
-                <div class="cs-datalist">
-                    <a href class="cs-datalist-a">我的回答<sup class="cs-datalist-sup">12</sup></a>
-                    <a href class="cs-datalist-a">我的私信</a>
-                    <a href class="cs-datalist-a">未评价订单<sup class="cs-datalist-sup">2</sup></a>
-                    <a href class="cs-datalist-a">我的关注</a>
-                </div>
-            </div>
-        </div>
+
         <!--placeholder-shown-->
         <h4>填充风格</h4>
         <div class="input-fill-x">
@@ -81,6 +103,17 @@
         <!--}-->
         <textarea placeholder="请输入..."></textarea><span></span>
     </form>
+    <div class="cs-bar">
+        <div class="cs-details">
+            <a href="javascript:" class="cs-summary">我的消息</a>
+            <div class="cs-datalist">
+                <a href class="cs-datalist-a">我的回答<sup class="cs-datalist-sup">12</sup></a>
+                <a href class="cs-datalist-a">我的私信</a>
+                <a href class="cs-datalist-a">未评价订单<sup class="cs-datalist-sup">2</sup></a>
+                <a href class="cs-datalist-a">我的关注</a>
+            </div>
+        </div>
+    </div>
     <main class="selector1">
         <div>
             abc
@@ -190,7 +223,7 @@
         <li>E</li>
         <li>F</li>
         <li class="active">G</li>
-        <li class="active">H</li>
+        <li class="active">H</li>36.
         <li>I</li>
         <li class="active">J</li>
         <li>K</li>
@@ -240,6 +273,17 @@
     <p class="s-scope">s-scope</p>
     <p class="s-foo">fooooo</p>
     <a href="javascript:;" class="s-button">btn</a>
+    <!-- :has :hover  -->
+    <!-- 多层级hover -->
+    <div class="d-hover">
+        <div class="box-1">
+            <div class="box-2">
+                <div class="box-3"></div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

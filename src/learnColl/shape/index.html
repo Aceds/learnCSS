@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="check-x">
+        <div class="inner"></div>
+    </div>
     <!-- 平行四边形 -->
     <div class="btn parallelogram">Parallelogram</div>
     <div class="btn parallelogram-bg"></div>
@@ -38,6 +41,7 @@
         <li></li>
         <li></li>
     </ul>
+    <i class="c-arrow"></i>
     <!-- close -->
     <div class="close-icon"></div>
     <!-- menu----close -->
@@ -59,7 +63,16 @@
         <div class="l-tickets"></div>
         <div class="r-tickets"></div>
     </div>
+    <div class="line"></div>
+    <div class="bg-circle"></div>
+    <div class="circle-line">
+        <div class="tips rotate"></div>
+    </div>
     <script type="text/javascript">
+        const check = document.querySelector('.check-x');
+        check.addEventListener('click', function () {
+            this.classList.toggle('active');
+        })
         // 
         document.querySelector('.menu-switch').addEventListener('click', function () {
             this.classList.toggle('active');

@@ -5,6 +5,11 @@
   min-height: 200px;
 }
 
+.d-min {
+  width: min(50vh, 300px);
+  background-color: red;
+}
+
 .d-media {
   width: 50vw;
   background-color: red;

@@ -1,40 +1,40 @@
 .d-max-w {
-  width: 50vw;
-  max-width: 300px;
-  background-color: pink;
-  min-height: 200px;
+	width: 50vw;
+	max-width: 300px;
+	background-color: pink;
+	min-height: 200px;
 }
 // sass 编译不通过
-// .d-min {
-//   width: min(50vh, 300px);
-//   background-color: red;
-// }
+.d-min {
+	width: min(50vh, 300px);
+	background-color: red;
+}
 .d-media {
-  width: 50vw;
-  background-color: red;
+	width: 50vw;
+	background-color: red;
 }
 @media (min-width: 600px) {
-  .d-media {
-    width: 300px;
-  }
+	.d-media {
+		width: 300px;
+	}
 }
 .d-clamp {
-  width: clamp(200px, 50vw, 300px);
-  background-color: burlywood;
+	width: clamp(200px, 50vw, 300px);
+	background-color: burlywood;
 }
 
 .d-clamp-x {
-  width: 50vw;
-  background-color: gold;
+	width: 50vw;
+	background-color: gold;
 }
 
 @media (min-width: 600px) {
-  .d-clamp-x {
-    width: 300px;
-  }
+	.d-clamp-x {
+		width: 300px;
+	}
 }
 @media (max-width: 400px) {
-  .d-clamp-x {
-    width: 200px;
-  }
+	.d-clamp-x {
+		width: 200px;
+	}
 }

@@ -1,0 +1,26 @@
+body {
+	width: 100vh;
+	height: 100vh;
+	display: flex;
+}
+.draw-box {
+	width: 320px;
+	height: 137px;
+	padding-top: 134px;
+	margin: auto;
+	background-image: url("images/draw.png");
+	background-repeat: no-repeat;
+	background-size: 650px 271px;
+	animation: ballot 0.3s steps(1) 5;
+}
+@keyframes ballot {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: -330px 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}

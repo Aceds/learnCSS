@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.draw-main {
+  position: relative;
+  width: 320px;
+  height: 271px;
+  margin: 0 auto;
+}
+
+.draw-box {
+  position: relative;
+  z-index: 2;
+  width: 320px;
+  height: 271px;
+  padding-top: 134px;
+  background-image: url("images/draw.png");
+  background-repeat: no-repeat;
+  background-size: 650px 271px;
+  box-sizing: border-box;
+}
+.draw-box.animate {
+  animation: ballot 0.3s steps(1) 5;
+}
+
+.draw-i {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 30px;
+  height: 100px;
+  background-color: rgb(64, 137, 122);
+  animation: open2 0.5s ease 1.45s forwards 1;
+}
+
+.show-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgb(87, 174, 141);
+  animation: open3 0.3s ease 1.7s forwards 1;
+  transform-origin: 50% 50%;
+}
+
+@keyframes ballot {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.neon-filker {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  margin: 50px auto;
+}
+.neon-filker i {
+  padding: 5px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+  font-style: normal;
+  color: #fff;
+  margin: 2px;
+  opacity: 0.5;
+  animation: filker 2s linear infinite;
+  background-color: rgb(115, 8, 78);
+  border-radius: 2px;
+}
+.neon-filker i:nth-child(1) {
+  background-color: rgb(155, 222, 88);
+  animation-delay: calc((1 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(2) {
+  background-color: rgb(70, 90, 50);
+  animation-delay: calc((2 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(3) {
+  background-color: rgb(118, 237, 139);
+  animation-delay: calc((3 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(4) {
+  background-color: rgb(171, 203, 35);
+  animation-delay: calc((4 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(5) {
+  background-color: rgb(206, 22, 170);
+  animation-delay: calc((5 - 1) * 0.25s);
+}
+.neon-filker i:nth-child(6) {
+  background-color: rgb(74, 253, 127);
+  animation-delay: calc((6 - 1) * 0.25s);
+}
+
+@keyframes filker {
+  5%, 95% {
+    opacity: 1;
+  }
+}
+@keyframes open1 {
+  0% {
+    transform: scale(1.05);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+}
+@keyframes open2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translateY(-350px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(-350px) scale(5);
+  }
+}
+@keyframes open3 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

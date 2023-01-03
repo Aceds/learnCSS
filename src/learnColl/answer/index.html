@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答题卡</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="cards-wrap">
+        <div>
+            <div class="card-x">
+                <h5>1</h5>
+                <button class="option">A</button>
+                <button class="option">B</button>
+                <button class="option">C</button>
+                <button class="option">D</button>
+            </div>
+            <div class="card-x">
+                <h5>2</h5>
+                <button class="option">A</button>
+                <button class="option">B</button>
+                <button class="option">C</button>
+                <button class="option">D</button>
+            </div>
+            <div class="card-x">
+                <h5>3</h5>
+                <button class="option">A</button>
+                <button class="option">B</button>
+                <button class="option">C</button>
+                <button class="option">D</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const topCard = document.querySelector(".card-x:first-child");
+        topCard.classList.add('show');
+        function pickOption() {
+            const card = document.querySelectorAll('.card-x');
+            const topCard = document.querySelector(".card-x:first-child");
+            topCard.classList.add("move");
+            const nextCard = topCard.nextElementSibling;
+            nextCard.classList.add('show');
+            if (card.length > 2) {
+                setTimeout(function () {
+                    topCard.remove();
+                }, 300);
+
+            } else {
+                return false;
+            }
+        }
+        const optionBtns = document.querySelectorAll(".option");
+        optionBtns.forEach(optionBtn =>
+            optionBtn.addEventListener("click", pickOption)
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+:root {
+  --color-year: hsl(332, 100%, 16%);
+  --color-year--dark: hsl(332, 100%, 8%);
+  --color-year--dark-alpha: hsla(332, 100%, 8%, 0.8);
+  --color-day: hsl(262, 80%, 60%);
+  --color-day--light: hsl(262, 60%, 98%);
+  --color-day--dark: hsl(262, 100%, 24%);
+  --color-day--dark-alpha: hsla(262, 100%, 24%, 0.33);
+}
+
+@keyframes corner-forward {
+  from {
+    z-index: map(layers, default);
+    background-position: -0.5em;
+  }
+  to {
+    z-index: calc(map(layers, default) + 1);
+    background-position: -50.5em;
+  }
+}
+@keyframes corner-reverse {
+  from {
+    z-index: calc(map(layers, default) + 1);
+    background-position: -50.5em;
+  }
+  to {
+    z-index: map(layers, default);
+    background-position: -0.5em;
+  }
+}
+.c-summary {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid #000;
+}
+
+.c-summary__header {
+  width: 300px;
+  height: 250px;
+}
+
+.c-summary__title {
+  padding-right: calc(50px - map(spaces, medium));
+}
+.c-summary__title a::before {
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map(layers, default);
+  white-space: nowrap;
+  text-indent: 200%;
+}
+.c-summary__title a:focus {
+  outline: none;
+}
+.c-summary__title a:focus::before {
+  outline: 2px solid red;
+}
+
+.c-summary__main {
+  max-width: 75ch;
+  font-size: 0.875rem;
+}
+.c-summary__main a,
+.c-summary__main em {
+  font-family: map(fonts, family-sans);
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+}
+
+@media screen {
+  .c-summary__footer {
+    margin-top: auto;
+    padding-top: map(spaces, medium);
+  }
+}
+
+.c-summary__meta {
+  color: map(colors, neutral, dark);
+}
+.c-summary__meta .dt-published {
+  margin-right: map(spaces, medium);
+}
+
+.c-summary__author {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  pointer-events: none;
+}
+@media print {
+  .c-summary__author {
+    display: none;
+  }
+}
+.c-summary__author img {
+  display: block;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease-out;
+}
+@media (prefers-reduced-motion) {
+  .c-summary__author img {
+    transition: none;
+  }
+}
+
+.c-summary__author-url {
+  display: block;
+  overflow: hidden;
+}
+.c-summary__author-url::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: map(layers, default);
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(to top right, white, white 50%, transparent 50%, transparent);
+}
+.c-summary__author-url::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: inline("corner.svg") -0.5em 0 no-repeat;
+  background-size: size("corner.svg");
+}
+.c-summary:hover .c-summary__author-url img, .c-summary__author-url:focus img {
+  transform: scale(1.2);
+  transform-origin: bottom left;
+}
+.c-summary:hover .c-summary__author-url::after, .c-summary__author-url:focus::after {
+  z-index: calc(map(layers, default) + 1);
+  animation: corner-forward 0.15s steps(10);
+  animation-fill-mode: forwards;
+}
+.c-summary__author-url:focus {
+  box-shadow: 0 0 2px 0 red;
+}
+
+.c-summary--countdown .c-summary__header {
+  padding-left: calc(map(spaces, large) + map(spaces, xsmall));
+}
+.c-summary--countdown .c-summary__footer {
+  padding-top: 0;
+}
+.c-summary--countdown .dt-published {
+  @apply --typeset-summary-title;
+  font-weight: 400;
+  position: absolute;
+  top: map(spaces, medium);
+  left: calc(map(spaces, medium) + map(spaces, xsmall));
+  z-index: 0;
+}
+.c-summary--countdown .dt-published span {
+  @apply --hidden;
+}
+@media print {
+  .c-summary--countdown .dt-published {
+    top: 2rem;
+  }
+}
+
+.c-summary--taken {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 4px, color(map(colors, neutral, lightest) a(75%)) 4px, color(map(colors, neutral, lightest) a(75%)) 8px);
+}
+.c-summary--taken .c-summary__title {
+  opacity: 0.66;
+  text-decoration: line-through;
+}

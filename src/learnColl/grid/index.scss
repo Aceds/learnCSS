@@ -20,6 +20,21 @@ $pic2: "../../../assets/images/sky.jpg";
 		}
 	}
 }
+
+.header-bar {
+	display: grid;
+	grid-template-columns: 1fr max-content 1fr;
+	background-color: salmon;
+	padding: 10px;
+	white-space: nowrap;
+	ul {
+		display: flex;
+
+		li + li {
+			margin-left: 10px;
+		}
+	}
+}
 .g-card {
 	position: relative;
 	display: grid;
@@ -29,9 +44,9 @@ $pic2: "../../../assets/images/sky.jpg";
 	font-size: 16px;
 	border: 1px solid #000;
 	box-sizing: border-box;
-	> * {
-		//grid-area: 1/-1;
-	}
+	// > * {
+	// 	grid-area: 1/-1;
+	// }
 	&-pic,
 	&-x {
 		grid-area: 1/-1;

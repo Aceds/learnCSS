@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽签</title>
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="draw-wrap">
+        <!-- 竹签跑马灯动画 +  sign-neon-->
+        <dl class="draw-sign sign-neon">
+            <!-- <dd class="sign-tit"></dd> -->
+            <!-- <dd class="sign-tit"></dd>
+            <dd class="sign-tit"></dd>
+            <dd class="sign-tit"></dd>
+            <dd class="sign-tit"></dd> -->
+        </dl>
+        <div class="draw-box">
+            <!-- 摇签动画 +  ballot-->
+            <!-- 摇签动画开始后 隐藏点击求签按钮 1.2s后显示 -->
+            <div class="draw-box-inner">
+                <button class="fortune-btn btn-tada">点击</button>
+            </div>
+            <!--摇签动画开始后  飞出的签子 + transit-show 运行时间 0.75s 延迟1.45s 2.2s后显示抽签弹框 -->
+            <i class="draw-sign-icon "></i>
+            <!-- 签子飞出后加一层遮罩 -->
+            <div class="sign-mask"></div>
+        </div>
+        <!-- 抽签弹框 -->
+        <!-- 摇签开始2.2s后显示 +show -->
+        <div class="draw-popup ">
+            <!-- 幸福签 + draw-happiness-->
+            <!-- 健康签 + draw-health -->
+            <!-- 吉祥签 + draw-jubilant -->
+            <!-- 事业签 + draw-career -->
+            <!-- 财富签 + draw-wealth -->
+            <div class="draw-popup-main draw-career">
+                <p class="draw-popup-txt"></p>
+                <!--呼吸动画 + btn-abel -->
+                <button class="unlock-btn btn-abel">解锁</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const arr = ['happiness-txt', 'career-txt', 'health-txt', 'wealth-txt', 'jubilant-txt'];
+        let list = document.querySelector(".draw-sign");
+        list.innerHTML = '';
+        for (let i = 0; i < arr.length; i++) {
+            const cName = arr[i];
+            const itemList = document.createElement("dd");
+            // itemList.classList.add(cName);
+            itemList.className = 'sign-tit' + ' ' + cName;
+            // itemList.textContent = itemText;
+            list.appendChild(itemList);
+        }
+
+        const btn = document.querySelector('.fortune-btn');
+        const draw = document.querySelector('.draw-box-inner');
+        const sign = document.querySelector('.draw-sign-icon');
+        const pop = document.querySelector('.draw-popup');
+        const unlock = document.querySelector('.unlock-btn');
+        const neon = document.querySelector('.draw-sign');
+        const mask = document.querySelector('.sign-mask');
+        const splash = document.querySelector('.fortune-btn');
+        function func() {
+            draw.classList.add('ballot');
+            sign.classList.add('transit-show');
+            neon.classList.remove('sign-neon');
+            mask.classList.add('show');
+            splash.classList.remove('btn-tada');
+            let timer = setTimeout(function () {
+                draw.classList.remove('ballot');
+                sign.classList.remove('transit-show');
+                pop.classList.add('show');
+            }, 2200);
+        }
+        btn.addEventListener('click', func);
+        unlock.addEventListener('click', function () {
+            pop.classList.remove('show');
+            neon.classList.add('sign-neon');
+            mask.classList.remove('show');
+            splash.classList.add('btn-tada');
+            clearTimeout(timer);
+        });
+    </script>
+</body>
+
+</html>

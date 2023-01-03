@@ -1,3 +1,17 @@
+.header-bar {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  background-color: salmon;
+  padding: 10px;
+  white-space: nowrap;
+}
+.header-bar ul {
+  display: flex;
+}
+.header-bar ul li + li {
+  margin-left: 10px;
+}
+
 .g-card {
   position: relative;
   display: grid;
@@ -55,16 +69,16 @@
   font-size: 16px;
 }
 .g-area div:nth-child(1) {
-  background: rgba(118, 86, 91, 0.18);
+  background: rgba(207, 84, 146, 0.05);
 }
 .g-area div:nth-child(2) {
-  background: rgba(139, 230, 31, 0.73);
+  background: rgba(180, 124, 166, 0.49);
 }
 .g-area div:nth-child(3) {
-  background: rgba(92, 56, 232, 0.58);
+  background: rgba(22, 5, 51, 0.63);
 }
 .g-area div:nth-child(4) {
-  background: rgba(12, 87, 203, 0.69);
+  background: rgba(252, 93, 86, 0.87);
 }
 
 .item-a {
@@ -110,83 +124,83 @@
   animation: child-fade-in 8s infinite;
 }
 .c-grid dd:nth-child(1) {
-  background: rgba(27, 123, 207, 0.95);
+  background: rgba(16, 255, 87, 0.95);
   animation-delay: 0.4s;
 }
 .c-grid dd:nth-child(2) {
-  background: rgba(144, 220, 166, 0.9);
+  background: rgba(104, 225, 91, 0.9);
   animation-delay: 0.8s;
 }
 .c-grid dd:nth-child(3) {
-  background: rgba(239, 59, 163, 0.85);
+  background: rgba(241, 125, 172, 0.85);
   animation-delay: 1.2s;
 }
 .c-grid dd:nth-child(4) {
-  background: rgba(51, 67, 146, 0.8);
+  background: rgba(215, 177, 169, 0.8);
   animation-delay: 1.6s;
 }
 .c-grid dd:nth-child(5) {
-  background: rgba(76, 179, 198, 0.75);
+  background: rgba(217, 71, 48, 0.75);
   animation-delay: 2s;
 }
 .c-grid dd:nth-child(6) {
-  background: rgba(6, 19, 5, 0.7);
+  background: rgba(165, 94, 150, 0.7);
   animation-delay: 2.4s;
 }
 .c-grid dd:nth-child(7) {
-  background: rgba(254, 128, 254, 0.65);
+  background: rgba(20, 73, 69, 0.65);
   animation-delay: 2.8s;
 }
 .c-grid dd:nth-child(8) {
-  background: rgba(60, 51, 101, 0.6);
+  background: rgba(82, 137, 66, 0.6);
   animation-delay: 3.2s;
 }
 .c-grid dd:nth-child(9) {
-  background: rgba(246, 199, 193, 0.55);
+  background: rgba(116, 237, 215, 0.55);
   animation-delay: 3.6s;
 }
 .c-grid dd:nth-child(10) {
-  background: rgba(186, 8, 253, 0.5);
+  background: rgba(174, 17, 149, 0.5);
   animation-delay: 4s;
 }
 .c-grid dd:nth-child(11) {
-  background: rgba(47, 82, 139, 0.45);
+  background: rgba(91, 43, 33, 0.45);
   animation-delay: 4.4s;
 }
 .c-grid dd:nth-child(12) {
-  background: rgba(193, 201, 223, 0.4);
+  background: rgba(80, 68, 233, 0.4);
   animation-delay: 4.8s;
 }
 .c-grid dd:nth-child(13) {
-  background: rgba(235, 53, 200, 0.35);
+  background: rgba(96, 82, 220, 0.35);
   animation-delay: 5.2s;
 }
 .c-grid dd:nth-child(14) {
-  background: rgba(113, 72, 94, 0.3);
+  background: rgba(131, 175, 16, 0.3);
   animation-delay: 5.6s;
 }
 .c-grid dd:nth-child(15) {
-  background: rgba(220, 171, 91, 0.25);
+  background: rgba(7, 103, 204, 0.25);
   animation-delay: 6s;
 }
 .c-grid dd:nth-child(16) {
-  background: rgba(58, 160, 41, 0.2);
+  background: rgba(227, 138, 70, 0.2);
   animation-delay: 6.4s;
 }
 .c-grid dd:nth-child(17) {
-  background: rgba(208, 198, 2, 0.15);
+  background: rgba(48, 253, 230, 0.15);
   animation-delay: 6.8s;
 }
 .c-grid dd:nth-child(18) {
-  background: rgba(26, 181, 55, 0.1);
+  background: rgba(223, 143, 204, 0.1);
   animation-delay: 7.2s;
 }
 .c-grid dd:nth-child(19) {
-  background: rgba(19, 95, 83, 0.05);
+  background: rgba(40, 140, 65, 0.05);
   animation-delay: 7.6s;
 }
 .c-grid dd:nth-child(20) {
-  background: rgba(25, 41, 101, 0);
+  background: rgba(206, 1, 165, 0);
   animation-delay: 8s;
 }
 .c-grid dd::before {
@@ -230,83 +244,83 @@
   counter-increment: num;
 }
 .c-grid-step1 dd:nth-child(1) {
-  background: rgba(99, 6, 246, 0.95);
+  background: rgba(35, 110, 192, 0.95);
   animation-delay: 0.4s;
 }
 .c-grid-step1 dd:nth-child(2) {
-  background: rgba(25, 226, 245, 0.9);
+  background: rgba(127, 90, 115, 0.9);
   animation-delay: 0.8s;
 }
 .c-grid-step1 dd:nth-child(3) {
-  background: rgba(245, 51, 144, 0.85);
+  background: rgba(214, 252, 186, 0.85);
   animation-delay: 1.2s;
 }
 .c-grid-step1 dd:nth-child(4) {
-  background: rgba(233, 110, 160, 0.8);
+  background: rgba(18, 250, 123, 0.8);
   animation-delay: 1.6s;
 }
 .c-grid-step1 dd:nth-child(5) {
-  background: rgba(179, 207, 191, 0.75);
+  background: rgba(108, 60, 120, 0.75);
   animation-delay: 2s;
 }
 .c-grid-step1 dd:nth-child(6) {
-  background: rgba(201, 221, 51, 0.7);
+  background: rgba(197, 95, 134, 0.7);
   animation-delay: 2.4s;
 }
 .c-grid-step1 dd:nth-child(7) {
-  background: rgba(71, 15, 207, 0.65);
+  background: rgba(61, 97, 112, 0.65);
   animation-delay: 2.8s;
 }
 .c-grid-step1 dd:nth-child(8) {
-  background: rgba(124, 213, 247, 0.6);
+  background: rgba(209, 133, 98, 0.6);
   animation-delay: 3.2s;
 }
 .c-grid-step1 dd:nth-child(9) {
-  background: rgba(227, 180, 141, 0.55);
+  background: rgba(2, 254, 26, 0.55);
   animation-delay: 3.6s;
 }
 .c-grid-step1 dd:nth-child(10) {
-  background: rgba(161, 149, 213, 0.5);
+  background: rgba(105, 19, 16, 0.5);
   animation-delay: 4s;
 }
 .c-grid-step1 dd:nth-child(11) {
-  background: rgba(242, 114, 72, 0.45);
+  background: rgba(223, 108, 151, 0.45);
   animation-delay: 4.4s;
 }
 .c-grid-step1 dd:nth-child(12) {
-  background: rgba(171, 223, 254, 0.4);
+  background: rgba(251, 169, 226, 0.4);
   animation-delay: 4.8s;
 }
 .c-grid-step1 dd:nth-child(13) {
-  background: rgba(64, 160, 147, 0.35);
+  background: rgba(142, 234, 116, 0.35);
   animation-delay: 5.2s;
 }
 .c-grid-step1 dd:nth-child(14) {
-  background: rgba(167, 133, 104, 0.3);
+  background: rgba(198, 144, 8, 0.3);
   animation-delay: 5.6s;
 }
 .c-grid-step1 dd:nth-child(15) {
-  background: rgba(45, 61, 124, 0.25);
+  background: rgba(96, 39, 12, 0.25);
   animation-delay: 6s;
 }
 .c-grid-step1 dd:nth-child(16) {
-  background: rgba(182, 165, 46, 0.2);
+  background: rgba(208, 223, 158, 0.2);
   animation-delay: 6.4s;
 }
 .c-grid-step1 dd:nth-child(17) {
-  background: rgba(222, 212, 216, 0.15);
+  background: rgba(39, 48, 114, 0.15);
   animation-delay: 6.8s;
 }
 .c-grid-step1 dd:nth-child(18) {
-  background: rgba(34, 7, 39, 0.1);
+  background: rgba(124, 118, 173, 0.1);
   animation-delay: 7.2s;
 }
 .c-grid-step1 dd:nth-child(19) {
-  background: rgba(93, 32, 52, 0.05);
+  background: rgba(196, 41, 214, 0.05);
   animation-delay: 7.6s;
 }
 .c-grid-step1 dd:nth-child(20) {
-  background: rgba(240, 252, 126, 0);
+  background: rgba(29, 15, 194, 0);
   animation-delay: 8s;
 }
 .c-grid-step1 dd::before {
@@ -330,83 +344,83 @@
   counter-increment: num;
 }
 .c-grid-step2 dd:nth-child(1) {
-  background: rgba(91, 121, 93, 0.95);
+  background: rgba(229, 18, 145, 0.95);
   animation-delay: 0.4s;
 }
 .c-grid-step2 dd:nth-child(2) {
-  background: rgba(103, 146, 221, 0.9);
+  background: rgba(2, 254, 4, 0.9);
   animation-delay: 0.8s;
 }
 .c-grid-step2 dd:nth-child(3) {
-  background: rgba(217, 83, 1, 0.85);
+  background: rgba(120, 134, 109, 0.85);
   animation-delay: 1.2s;
 }
 .c-grid-step2 dd:nth-child(4) {
-  background: rgba(195, 160, 234, 0.8);
+  background: rgba(120, 18, 86, 0.8);
   animation-delay: 1.6s;
 }
 .c-grid-step2 dd:nth-child(5) {
-  background: rgba(109, 100, 23, 0.75);
+  background: rgba(5, 91, 7, 0.75);
   animation-delay: 2s;
 }
 .c-grid-step2 dd:nth-child(6) {
-  background: rgba(114, 169, 218, 0.7);
+  background: rgba(87, 7, 133, 0.7);
   animation-delay: 2.4s;
 }
 .c-grid-step2 dd:nth-child(7) {
-  background: rgba(181, 57, 145, 0.65);
+  background: rgba(21, 142, 93, 0.65);
   animation-delay: 2.8s;
 }
 .c-grid-step2 dd:nth-child(8) {
-  background: rgba(155, 237, 181, 0.6);
+  background: rgba(81, 11, 185, 0.6);
   animation-delay: 3.2s;
 }
 .c-grid-step2 dd:nth-child(9) {
-  background: rgba(224, 56, 119, 0.55);
+  background: rgba(101, 183, 22, 0.55);
   animation-delay: 3.6s;
 }
 .c-grid-step2 dd:nth-child(10) {
-  background: rgba(201, 51, 38, 0.5);
+  background: rgba(201, 178, 116, 0.5);
   animation-delay: 4s;
 }
 .c-grid-step2 dd:nth-child(11) {
-  background: rgba(28, 161, 29, 0.45);
+  background: rgba(89, 179, 247, 0.45);
   animation-delay: 4.4s;
 }
 .c-grid-step2 dd:nth-child(12) {
-  background: rgba(28, 162, 102, 0.4);
+  background: rgba(235, 231, 169, 0.4);
   animation-delay: 4.8s;
 }
 .c-grid-step2 dd:nth-child(13) {
-  background: rgba(93, 250, 209, 0.35);
+  background: rgba(88, 5, 162, 0.35);
   animation-delay: 5.2s;
 }
 .c-grid-step2 dd:nth-child(14) {
-  background: rgba(193, 9, 224, 0.3);
+  background: rgba(204, 153, 98, 0.3);
   animation-delay: 5.6s;
 }
 .c-grid-step2 dd:nth-child(15) {
-  background: rgba(76, 70, 81, 0.25);
+  background: rgba(198, 113, 190, 0.25);
   animation-delay: 6s;
 }
 .c-grid-step2 dd:nth-child(16) {
-  background: rgba(14, 168, 215, 0.2);
+  background: rgba(67, 215, 6, 0.2);
   animation-delay: 6.4s;
 }
 .c-grid-step2 dd:nth-child(17) {
-  background: rgba(255, 235, 160, 0.15);
+  background: rgba(239, 141, 216, 0.15);
   animation-delay: 6.8s;
 }
 .c-grid-step2 dd:nth-child(18) {
-  background: rgba(165, 110, 3, 0.1);
+  background: rgba(185, 153, 186, 0.1);
   animation-delay: 7.2s;
 }
 .c-grid-step2 dd:nth-child(19) {
-  background: rgba(120, 51, 186, 0.05);
+  background: rgba(61, 90, 143, 0.05);
   animation-delay: 7.6s;
 }
 .c-grid-step2 dd:nth-child(20) {
-  background: rgba(113, 88, 61, 0);
+  background: rgba(185, 194, 106, 0);
   animation-delay: 8s;
 }
 .c-grid-step2 dd::before {
@@ -433,83 +447,83 @@
   counter-increment: num;
 }
 .c-fit-content dd:nth-child(1) {
-  background: rgba(193, 89, 11, 0.95);
+  background: rgba(54, 36, 185, 0.95);
   animation-delay: 0.4s;
 }
 .c-fit-content dd:nth-child(2) {
-  background: rgba(250, 102, 149, 0.9);
+  background: rgba(238, 205, 152, 0.9);
   animation-delay: 0.8s;
 }
 .c-fit-content dd:nth-child(3) {
-  background: rgba(158, 253, 22, 0.85);
+  background: rgba(188, 55, 179, 0.85);
   animation-delay: 1.2s;
 }
 .c-fit-content dd:nth-child(4) {
-  background: rgba(233, 76, 162, 0.8);
+  background: rgba(209, 180, 141, 0.8);
   animation-delay: 1.6s;
 }
 .c-fit-content dd:nth-child(5) {
-  background: rgba(136, 66, 80, 0.75);
+  background: rgba(82, 169, 144, 0.75);
   animation-delay: 2s;
 }
 .c-fit-content dd:nth-child(6) {
-  background: rgba(176, 22, 42, 0.7);
+  background: rgba(102, 204, 25, 0.7);
   animation-delay: 2.4s;
 }
 .c-fit-content dd:nth-child(7) {
-  background: rgba(175, 177, 235, 0.65);
+  background: rgba(153, 127, 125, 0.65);
   animation-delay: 2.8s;
 }
 .c-fit-content dd:nth-child(8) {
-  background: rgba(34, 78, 102, 0.6);
+  background: rgba(10, 126, 194, 0.6);
   animation-delay: 3.2s;
 }
 .c-fit-content dd:nth-child(9) {
-  background: rgba(28, 218, 63, 0.55);
+  background: rgba(9, 166, 146, 0.55);
   animation-delay: 3.6s;
 }
 .c-fit-content dd:nth-child(10) {
-  background: rgba(9, 181, 130, 0.5);
+  background: rgba(99, 9, 147, 0.5);
   animation-delay: 4s;
 }
 .c-fit-content dd:nth-child(11) {
-  background: rgba(125, 191, 68, 0.45);
+  background: rgba(12, 159, 61, 0.45);
   animation-delay: 4.4s;
 }
 .c-fit-content dd:nth-child(12) {
-  background: rgba(61, 117, 99, 0.4);
+  background: rgba(40, 242, 238, 0.4);
   animation-delay: 4.8s;
 }
 .c-fit-content dd:nth-child(13) {
-  background: rgba(205, 66, 13, 0.35);
+  background: rgba(7, 150, 69, 0.35);
   animation-delay: 5.2s;
 }
 .c-fit-content dd:nth-child(14) {
-  background: rgba(137, 205, 56, 0.3);
+  background: rgba(160, 55, 159, 0.3);
   animation-delay: 5.6s;
 }
 .c-fit-content dd:nth-child(15) {
-  background: rgba(167, 108, 16, 0.25);
+  background: rgba(87, 214, 102, 0.25);
   animation-delay: 6s;
 }
 .c-fit-content dd:nth-child(16) {
-  background: rgba(106, 183, 232, 0.2);
+  background: rgba(114, 119, 185, 0.2);
   animation-delay: 6.4s;
 }
 .c-fit-content dd:nth-child(17) {
-  background: rgba(255, 19, 52, 0.15);
+  background: rgba(2, 7, 104, 0.15);
   animation-delay: 6.8s;
 }
 .c-fit-content dd:nth-child(18) {
-  background: rgba(47, 38, 77, 0.1);
+  background: rgba(11, 28, 185, 0.1);
   animation-delay: 7.2s;
 }
 .c-fit-content dd:nth-child(19) {
-  background: rgba(225, 247, 143, 0.05);
+  background: rgba(152, 151, 139, 0.05);
   animation-delay: 7.6s;
 }
 .c-fit-content dd:nth-child(20) {
-  background: rgba(225, 157, 141, 0);
+  background: rgba(6, 24, 244, 0);
   animation-delay: 8s;
 }
 .c-fit-content dd::before {
@@ -535,83 +549,83 @@
   font-size: 20px;
 }
 .c-minmax dd:nth-child(1) {
-  background: rgba(194, 228, 245, 0.95);
+  background: rgba(213, 129, 62, 0.95);
   animation-delay: 0.4s;
 }
 .c-minmax dd:nth-child(2) {
-  background: rgba(188, 224, 111, 0.9);
+  background: rgba(80, 198, 232, 0.9);
   animation-delay: 0.8s;
 }
 .c-minmax dd:nth-child(3) {
-  background: rgba(8, 94, 167, 0.85);
+  background: rgba(45, 63, 122, 0.85);
   animation-delay: 1.2s;
 }
 .c-minmax dd:nth-child(4) {
-  background: rgba(238, 149, 155, 0.8);
+  background: rgba(107, 187, 214, 0.8);
   animation-delay: 1.6s;
 }
 .c-minmax dd:nth-child(5) {
-  background: rgba(148, 43, 214, 0.75);
+  background: rgba(249, 221, 194, 0.75);
   animation-delay: 2s;
 }
 .c-minmax dd:nth-child(6) {
-  background: rgba(69, 27, 133, 0.7);
+  background: rgba(176, 239, 39, 0.7);
   animation-delay: 2.4s;
 }
 .c-minmax dd:nth-child(7) {
-  background: rgba(116, 149, 28, 0.65);
+  background: rgba(113, 246, 55, 0.65);
   animation-delay: 2.8s;
 }
 .c-minmax dd:nth-child(8) {
-  background: rgba(68, 141, 9, 0.6);
+  background: rgba(102, 168, 219, 0.6);
   animation-delay: 3.2s;
 }
 .c-minmax dd:nth-child(9) {
-  background: rgba(182, 14, 219, 0.55);
+  background: rgba(20, 88, 66, 0.55);
   animation-delay: 3.6s;
 }
 .c-minmax dd:nth-child(10) {
-  background: rgba(195, 245, 163, 0.5);
+  background: rgba(97, 64, 90, 0.5);
   animation-delay: 4s;
 }
 .c-minmax dd:nth-child(11) {
-  background: rgba(205, 19, 14, 0.45);
+  background: rgba(45, 188, 83, 0.45);
   animation-delay: 4.4s;
 }
 .c-minmax dd:nth-child(12) {
-  background: rgba(185, 70, 143, 0.4);
+  background: rgba(93, 239, 245, 0.4);
   animation-delay: 4.8s;
 }
 .c-minmax dd:nth-child(13) {
-  background: rgba(107, 125, 83, 0.35);
+  background: rgba(57, 1, 24, 0.35);
   animation-delay: 5.2s;
 }
 .c-minmax dd:nth-child(14) {
-  background: rgba(86, 253, 79, 0.3);
+  background: rgba(204, 29, 234, 0.3);
   animation-delay: 5.6s;
 }
 .c-minmax dd:nth-child(15) {
-  background: rgba(211, 69, 239, 0.25);
+  background: rgba(239, 126, 170, 0.25);
   animation-delay: 6s;
 }
 .c-minmax dd:nth-child(16) {
-  background: rgba(232, 12, 110, 0.2);
+  background: rgba(135, 234, 180, 0.2);
   animation-delay: 6.4s;
 }
 .c-minmax dd:nth-child(17) {
-  background: rgba(244, 116, 253, 0.15);
+  background: rgba(119, 148, 19, 0.15);
   animation-delay: 6.8s;
 }
 .c-minmax dd:nth-child(18) {
-  background: rgba(249, 167, 45, 0.1);
+  background: rgba(19, 233, 19, 0.1);
   animation-delay: 7.2s;
 }
 .c-minmax dd:nth-child(19) {
-  background: rgba(206, 123, 250, 0.05);
+  background: rgba(164, 75, 106, 0.05);
   animation-delay: 7.6s;
 }
 .c-minmax dd:nth-child(20) {
-  background: rgba(195, 82, 187, 0);
+  background: rgba(10, 53, 68, 0);
   animation-delay: 8s;
 }
 
@@ -633,83 +647,83 @@
   counter-increment: num;
 }
 .c-repeat-auto-fill dd:nth-child(1) {
-  background: rgba(126, 65, 198, 0.95);
+  background: rgba(50, 174, 8, 0.95);
   animation-delay: 0.4s;
 }
 .c-repeat-auto-fill dd:nth-child(2) {
-  background: rgba(79, 148, 16, 0.9);
+  background: rgba(252, 97, 236, 0.9);
   animation-delay: 0.8s;
 }
 .c-repeat-auto-fill dd:nth-child(3) {
-  background: rgba(135, 233, 3, 0.85);
+  background: rgba(191, 237, 180, 0.85);
   animation-delay: 1.2s;
 }
 .c-repeat-auto-fill dd:nth-child(4) {
-  background: rgba(38, 169, 251, 0.8);
+  background: rgba(182, 21, 221, 0.8);
   animation-delay: 1.6s;
 }
 .c-repeat-auto-fill dd:nth-child(5) {
-  background: rgba(105, 234, 2, 0.75);
+  background: rgba(254, 83, 223, 0.75);
   animation-delay: 2s;
 }
 .c-repeat-auto-fill dd:nth-child(6) {
-  background: rgba(121, 4, 70, 0.7);
+  background: rgba(128, 125, 223, 0.7);
   animation-delay: 2.4s;
 }
 .c-repeat-auto-fill dd:nth-child(7) {
-  background: rgba(193, 65, 104, 0.65);
+  background: rgba(51, 200, 100, 0.65);
   animation-delay: 2.8s;
 }
 .c-repeat-auto-fill dd:nth-child(8) {
-  background: rgba(138, 180, 125, 0.6);
+  background: rgba(213, 177, 5, 0.6);
   animation-delay: 3.2s;
 }
 .c-repeat-auto-fill dd:nth-child(9) {
-  background: rgba(41, 96, 114, 0.55);
+  background: rgba(234, 223, 156, 0.55);
   animation-delay: 3.6s;
 }
 .c-repeat-auto-fill dd:nth-child(10) {
-  background: rgba(126, 91, 75, 0.5);
+  background: rgba(113, 210, 35, 0.5);
   animation-delay: 4s;
 }
 .c-repeat-auto-fill dd:nth-child(11) {
-  background: rgba(226, 31, 106, 0.45);
+  background: rgba(185, 217, 96, 0.45);
   animation-delay: 4.4s;
 }
 .c-repeat-auto-fill dd:nth-child(12) {
-  background: rgba(200, 132, 219, 0.4);
+  background: rgba(34, 38, 186, 0.4);
   animation-delay: 4.8s;
 }
 .c-repeat-auto-fill dd:nth-child(13) {
-  background: rgba(41, 39, 98, 0.35);
+  background: rgba(85, 167, 112, 0.35);
   animation-delay: 5.2s;
 }
 .c-repeat-auto-fill dd:nth-child(14) {
-  background: rgba(190, 116, 40, 0.3);
+  background: rgba(165, 198, 98, 0.3);
   animation-delay: 5.6s;
 }
 .c-repeat-auto-fill dd:nth-child(15) {
-  background: rgba(134, 78, 254, 0.25);
+  background: rgba(17, 116, 212, 0.25);
   animation-delay: 6s;
 }
 .c-repeat-auto-fill dd:nth-child(16) {
-  background: rgba(61, 239, 35, 0.2);
+  background: rgba(251, 79, 63, 0.2);
   animation-delay: 6.4s;
 }
 .c-repeat-auto-fill dd:nth-child(17) {
-  background: rgba(117, 119, 243, 0.15);
+  background: rgba(33, 197, 216, 0.15);
   animation-delay: 6.8s;
 }
 .c-repeat-auto-fill dd:nth-child(18) {
-  background: rgba(144, 167, 173, 0.1);
+  background: rgba(187, 225, 93, 0.1);
   animation-delay: 7.2s;
 }
 .c-repeat-auto-fill dd:nth-child(19) {
-  background: rgba(240, 7, 54, 0.05);
+  background: rgba(56, 102, 167, 0.05);
   animation-delay: 7.6s;
 }
 .c-repeat-auto-fill dd:nth-child(20) {
-  background: rgba(173, 13, 66, 0);
+  background: rgba(238, 234, 160, 0);
   animation-delay: 8s;
 }
 .c-repeat-auto-fill dd::before {
@@ -734,83 +748,83 @@
   counter-increment: num;
 }
 .c-repeat-auto-fit dd:nth-child(1) {
-  background: rgba(5, 61, 245, 0.95);
+  background: rgba(84, 80, 203, 0.95);
   animation-delay: 0.4s;
 }
 .c-repeat-auto-fit dd:nth-child(2) {
-  background: rgba(136, 51, 145, 0.9);
+  background: rgba(37, 146, 49, 0.9);
   animation-delay: 0.8s;
 }
 .c-repeat-auto-fit dd:nth-child(3) {
-  background: rgba(12, 91, 219, 0.85);
+  background: rgba(69, 215, 60, 0.85);
   animation-delay: 1.2s;
 }
 .c-repeat-auto-fit dd:nth-child(4) {
-  background: rgba(234, 195, 186, 0.8);
+  background: rgba(56, 21, 51, 0.8);
   animation-delay: 1.6s;
 }
 .c-repeat-auto-fit dd:nth-child(5) {
-  background: rgba(31, 5, 58, 0.75);
+  background: rgba(192, 81, 240, 0.75);
   animation-delay: 2s;
 }
 .c-repeat-auto-fit dd:nth-child(6) {
-  background: rgba(99, 140, 183, 0.7);
+  background: rgba(58, 100, 28, 0.7);
   animation-delay: 2.4s;
 }
 .c-repeat-auto-fit dd:nth-child(7) {
-  background: rgba(117, 144, 12, 0.65);
+  background: rgba(72, 95, 93, 0.65);
   animation-delay: 2.8s;
 }
 .c-repeat-auto-fit dd:nth-child(8) {
-  background: rgba(148, 239, 249, 0.6);
+  background: rgba(94, 222, 94, 0.6);
   animation-delay: 3.2s;
 }
 .c-repeat-auto-fit dd:nth-child(9) {
-  background: rgba(171, 110, 53, 0.55);
+  background: rgba(72, 77, 62, 0.55);
   animation-delay: 3.6s;
 }
 .c-repeat-auto-fit dd:nth-child(10) {
-  background: rgba(198, 175, 56, 0.5);
+  background: rgba(34, 116, 242, 0.5);
   animation-delay: 4s;
 }
 .c-repeat-auto-fit dd:nth-child(11) {
-  background: rgba(194, 32, 36, 0.45);
+  background: rgba(152, 175, 240, 0.45);
   animation-delay: 4.4s;
 }
 .c-repeat-auto-fit dd:nth-child(12) {
-  background: rgba(40, 204, 20, 0.4);
+  background: rgba(48, 66, 88, 0.4);
   animation-delay: 4.8s;
 }
 .c-repeat-auto-fit dd:nth-child(13) {
-  background: rgba(37, 100, 86, 0.35);
+  background: rgba(17, 218, 212, 0.35);
   animation-delay: 5.2s;
 }
 .c-repeat-auto-fit dd:nth-child(14) {
-  background: rgba(9, 82, 52, 0.3);
+  background: rgba(175, 170, 130, 0.3);
   animation-delay: 5.6s;
 }
 .c-repeat-auto-fit dd:nth-child(15) {
-  background: rgba(203, 248, 218, 0.25);
+  background: rgba(19, 104, 197, 0.25);
   animation-delay: 6s;
 }
 .c-repeat-auto-fit dd:nth-child(16) {
-  background: rgba(244, 120, 98, 0.2);
+  background: rgba(113, 59, 81, 0.2);
   animation-delay: 6.4s;
 }
 .c-repeat-auto-fit dd:nth-child(17) {
-  background: rgba(195, 147, 231, 0.15);
+  background: rgba(250, 213, 99, 0.15);
   animation-delay: 6.8s;
 }
 .c-repeat-auto-fit dd:nth-child(18) {
-  background: rgba(101, 6, 101, 0.1);
+  background: rgba(87, 42, 124, 0.1);
   animation-delay: 7.2s;
 }
 .c-repeat-auto-fit dd:nth-child(19) {
-  background: rgba(130, 118, 245, 0.05);
+  background: rgba(183, 137, 248, 0.05);
   animation-delay: 7.6s;
 }
 .c-repeat-auto-fit dd:nth-child(20) {
-  background: rgba(192, 43, 217, 0);
+  background: rgba(55, 212, 207, 0);
   animation-delay: 8s;
 }
 .c-repeat-auto-fit dd::before {
@@ -834,83 +848,83 @@
   font-size: 20px;
 }
 .c-areas dd:nth-child(1) {
-  background: rgba(74, 48, 140, 0.95);
+  background: rgba(34, 25, 117, 0.95);
   animation-delay: 0.4s;
 }
 .c-areas dd:nth-child(2) {
-  background: rgba(245, 145, 28, 0.9);
+  background: rgba(161, 82, 72, 0.9);
   animation-delay: 0.8s;
 }
 .c-areas dd:nth-child(3) {
-  background: rgba(200, 46, 34, 0.85);
+  background: rgba(144, 235, 165, 0.85);
   animation-delay: 1.2s;
 }
 .c-areas dd:nth-child(4) {
-  background: rgba(9, 74, 42, 0.8);
+  background: rgba(178, 6, 5, 0.8);
   animation-delay: 1.6s;
 }
 .c-areas dd:nth-child(5) {
-  background: rgba(246, 204, 189, 0.75);
+  background: rgba(115, 111, 87, 0.75);
   animation-delay: 2s;
 }
 .c-areas dd:nth-child(6) {
-  background: rgba(41, 197, 28, 0.7);
+  background: rgba(173, 74, 246, 0.7);
   animation-delay: 2.4s;
 }
 .c-areas dd:nth-child(7) {
-  background: rgba(34, 225, 241, 0.65);
+  background: rgba(172, 56, 108, 0.65);
   animation-delay: 2.8s;
 }
 .c-areas dd:nth-child(8) {
-  background: rgba(29, 156, 229, 0.6);
+  background: rgba(226, 193, 80, 0.6);
   animation-delay: 3.2s;
 }
 .c-areas dd:nth-child(9) {
-  background: rgba(51, 194, 3, 0.55);
+  background: rgba(254, 26, 119, 0.55);
   animation-delay: 3.6s;
 }
 .c-areas dd:nth-child(10) {
-  background: rgba(142, 239, 26, 0.5);
+  background: rgba(246, 189, 37, 0.5);
   animation-delay: 4s;
 }
 .c-areas dd:nth-child(11) {
-  background: rgba(29, 16, 152, 0.45);
+  background: rgba(118, 144, 65, 0.45);
   animation-delay: 4.4s;
 }
 .c-areas dd:nth-child(12) {
-  background: rgba(39, 156, 67, 0.4);
+  background: rgba(137, 172, 98, 0.4);
   animation-delay: 4.8s;
 }
 .c-areas dd:nth-child(13) {
-  background: rgba(102, 183, 183, 0.35);
+  background: rgba(241, 174, 8, 0.35);
   animation-delay: 5.2s;
 }
 .c-areas dd:nth-child(14) {
-  background: rgba(106, 126, 141, 0.3);
+  background: rgba(179, 47, 16, 0.3);
   animation-delay: 5.6s;
 }
 .c-areas dd:nth-child(15) {
-  background: rgba(63, 238, 152, 0.25);
+  background: rgba(210, 2, 93, 0.25);
   animation-delay: 6s;
 }
 .c-areas dd:nth-child(16) {
-  background: rgba(141, 152, 1, 0.2);
+  background: rgba(163, 103, 211, 0.2);
   animation-delay: 6.4s;
 }
 .c-areas dd:nth-child(17) {
-  background: rgba(158, 151, 140, 0.15);
+  background: rgba(17, 173, 186, 0.15);
   animation-delay: 6.8s;
 }
 .c-areas dd:nth-child(18) {
-  background: rgba(20, 117, 180, 0.1);
+  background: rgba(80, 8, 163, 0.1);
   animation-delay: 7.2s;
 }
 .c-areas dd:nth-child(19) {
-  background: rgba(52, 185, 146, 0.05);
+  background: rgba(9, 232, 173, 0.05);
   animation-delay: 7.6s;
 }
 .c-areas dd:nth-child(20) {
-  background: rgba(242, 95, 55, 0);
+  background: rgba(87, 184, 194, 0);
   animation-delay: 8s;
 }
 .c-areas .a {
@@ -948,83 +962,83 @@
   counter-increment: num;
 }
 .c-areas-column dd:nth-child(1) {
-  background: rgba(184, 231, 47, 0.95);
+  background: rgba(255, 48, 209, 0.95);
   animation-delay: 0.4s;
 }
 .c-areas-column dd:nth-child(2) {
-  background: rgba(124, 40, 238, 0.9);
+  background: rgba(183, 19, 1, 0.9);
   animation-delay: 0.8s;
 }
 .c-areas-column dd:nth-child(3) {
-  background: rgba(217, 194, 55, 0.85);
+  background: rgba(184, 114, 106, 0.85);
   animation-delay: 1.2s;
 }
 .c-areas-column dd:nth-child(4) {
-  background: rgba(107, 199, 135, 0.8);
+  background: rgba(18, 155, 116, 0.8);
   animation-delay: 1.6s;
 }
 .c-areas-column dd:nth-child(5) {
-  background: rgba(70, 86, 36, 0.75);
+  background: rgba(61, 189, 126, 0.75);
   animation-delay: 2s;
 }
 .c-areas-column dd:nth-child(6) {
-  background: rgba(172, 28, 142, 0.7);
+  background: rgba(112, 219, 125, 0.7);
   animation-delay: 2.4s;
 }
 .c-areas-column dd:nth-child(7) {
-  background: rgba(252, 6, 11, 0.65);
+  background: rgba(206, 1, 13, 0.65);
   animation-delay: 2.8s;
 }
 .c-areas-column dd:nth-child(8) {
-  background: rgba(40, 229, 17, 0.6);
+  background: rgba(102, 174, 54, 0.6);
   animation-delay: 3.2s;
 }
 .c-areas-column dd:nth-child(9) {
-  background: rgba(9, 3, 217, 0.55);
+  background: rgba(31, 166, 240, 0.55);
   animation-delay: 3.6s;
 }
 .c-areas-column dd:nth-child(10) {
-  background: rgba(109, 142, 66, 0.5);
+  background: rgba(214, 36, 149, 0.5);
   animation-delay: 4s;
 }
 .c-areas-column dd:nth-child(11) {
-  background: rgba(162, 182, 46, 0.45);
+  background: rgba(69, 173, 182, 0.45);
   animation-delay: 4.4s;
 }
 .c-areas-column dd:nth-child(12) {
-  background: rgba(112, 89, 96, 0.4);
+  background: rgba(242, 116, 137, 0.4);
   animation-delay: 4.8s;
 }
 .c-areas-column dd:nth-child(13) {
-  background: rgba(214, 50, 239, 0.35);
+  background: rgba(226, 127, 53, 0.35);
   animation-delay: 5.2s;
 }
 .c-areas-column dd:nth-child(14) {
-  background: rgba(171, 18, 13, 0.3);
+  background: rgba(117, 128, 4, 0.3);
   animation-delay: 5.6s;
 }
 .c-areas-column dd:nth-child(15) {
-  background: rgba(122, 249, 27, 0.25);
+  background: rgba(168, 200, 80, 0.25);
   animation-delay: 6s;
 }
 .c-areas-column dd:nth-child(16) {
-  background: rgba(210, 27, 124, 0.2);
+  background: rgba(214, 75, 81, 0.2);
   animation-delay: 6.4s;
 }
 .c-areas-column dd:nth-child(17) {
-  background: rgba(171, 25, 151, 0.15);
+  background: rgba(77, 122, 97, 0.15);
   animation-delay: 6.8s;
 }
 .c-areas-column dd:nth-child(18) {
-  background: rgba(217, 42, 106, 0.1);
+  background: rgba(104, 179, 136, 0.1);
   animation-delay: 7.2s;
 }
 .c-areas-column dd:nth-child(19) {
-  background: rgba(221, 30, 82, 0.05);
+  background: rgba(253, 102, 107, 0.05);
   animation-delay: 7.6s;
 }
 .c-areas-column dd:nth-child(20) {
-  background: rgba(35, 162, 46, 0);
+  background: rgba(17, 181, 216, 0);
   animation-delay: 8s;
 }
 .c-areas-column dd::before {
@@ -1052,83 +1066,83 @@
   counter-increment: num;
 }
 .c-area-logogram dd:nth-child(1) {
-  background: rgba(169, 153, 214, 0.95);
+  background: rgba(140, 36, 10, 0.95);
   animation-delay: 0.4s;
 }
 .c-area-logogram dd:nth-child(2) {
-  background: rgba(112, 67, 48, 0.9);
+  background: rgba(225, 238, 153, 0.9);
   animation-delay: 0.8s;
 }
 .c-area-logogram dd:nth-child(3) {
-  background: rgba(16, 55, 60, 0.85);
+  background: rgba(21, 139, 177, 0.85);
   animation-delay: 1.2s;
 }
 .c-area-logogram dd:nth-child(4) {
-  background: rgba(103, 94, 157, 0.8);
+  background: rgba(5, 56, 151, 0.8);
   animation-delay: 1.6s;
 }
 .c-area-logogram dd:nth-child(5) {
-  background: rgba(247, 236, 218, 0.75);
+  background: rgba(48, 162, 156, 0.75);
   animation-delay: 2s;
 }
 .c-area-logogram dd:nth-child(6) {
-  background: rgba(129, 16, 246, 0.7);
+  background: rgba(184, 178, 96, 0.7);
   animation-delay: 2.4s;
 }
 .c-area-logogram dd:nth-child(7) {
-  background: rgba(225, 246, 30, 0.65);
+  background: rgba(127, 195, 123, 0.65);
   animation-delay: 2.8s;
 }
 .c-area-logogram dd:nth-child(8) {
-  background: rgba(49, 60, 83, 0.6);
+  background: rgba(106, 80, 21, 0.6);
   animation-delay: 3.2s;
 }
 .c-area-logogram dd:nth-child(9) {
-  background: rgba(247, 221, 20, 0.55);
+  background: rgba(4, 246, 127, 0.55);
   animation-delay: 3.6s;
 }
 .c-area-logogram dd:nth-child(10) {
-  background: rgba(49, 181, 87, 0.5);
+  background: rgba(64, 172, 189, 0.5);
   animation-delay: 4s;
 }
 .c-area-logogram dd:nth-child(11) {
-  background: rgba(59, 152, 70, 0.45);
+  background: rgba(112, 55, 217, 0.45);
   animation-delay: 4.4s;
 }
 .c-area-logogram dd:nth-child(12) {
-  background: rgba(219, 34, 150, 0.4);
+  background: rgba(1, 71, 59, 0.4);
   animation-delay: 4.8s;
 }
 .c-area-logogram dd:nth-child(13) {
-  background: rgba(134, 15, 142, 0.35);
+  background: rgba(255, 18, 112, 0.35);
   animation-delay: 5.2s;
 }
 .c-area-logogram dd:nth-child(14) {
-  background: rgba(20, 238, 27, 0.3);
+  background: rgba(178, 200, 147, 0.3);
   animation-delay: 5.6s;
 }
 .c-area-logogram dd:nth-child(15) {
-  background: rgba(1, 78, 105, 0.25);
+  background: rgba(234, 19, 157, 0.25);
   animation-delay: 6s;
 }
 .c-area-logogram dd:nth-child(16) {
-  background: rgba(17, 22, 42, 0.2);
+  background: rgba(48, 122, 254, 0.2);
   animation-delay: 6.4s;
 }
 .c-area-logogram dd:nth-child(17) {
-  background: rgba(47, 101, 129, 0.15);
+  background: rgba(167, 247, 224, 0.15);
   animation-delay: 6.8s;
 }
 .c-area-logogram dd:nth-child(18) {
-  background: rgba(216, 49, 110, 0.1);
+  background: rgba(216, 85, 166, 0.1);
   animation-delay: 7.2s;
 }
 .c-area-logogram dd:nth-child(19) {
-  background: rgba(208, 23, 67, 0.05);
+  background: rgba(102, 100, 215, 0.05);
   animation-delay: 7.6s;
 }
 .c-area-logogram dd:nth-child(20) {
-  background: rgba(79, 43, 116, 0);
+  background: rgba(43, 232, 8, 0);
   animation-delay: 8s;
 }
 .c-area-logogram dd::before {
